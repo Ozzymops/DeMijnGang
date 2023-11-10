@@ -4,7 +4,7 @@ CLS
 goto InstallCheck
 
 :InstallCheck
-if exist install_check (
+if exist %~dp0/scripts/install_check (
 	goto Menu
 ) else (
 	goto FirstTimeMenu
@@ -12,6 +12,7 @@ if exist install_check (
 
 :FirstTimeMenu
 CLS
+CD %~dp0
 echo Keuzemenu:
 echo - 1. Installeer programma
 echo - 2. Sluit programma af
@@ -23,9 +24,10 @@ if errorlevel 1 goto Install
 
 :Menu
 CLS
+CD %~dp0
 echo Keuzemenu:
-echo - 1. Hernoem foto's naar nummersequentie (0000, 0001, ...)
-echo - 2. Converteer foto's naar .webp formaat
+echo - 1. Converteer foto's naar .webp formaat
+echo - 2. Hernoem foto's naar nummersequentie (0000, 0001, ...)
 echo - 3. Voer 1. en 2. achter elkaar uit
 echo - 4. Update programma
 echo - 5. Sluit programma af
@@ -33,12 +35,17 @@ echo.
 choice /c 12345 /n /m "> "
 
 if errorlevel 5 goto End
-if errorlevel 4 goto End
-if errorlevel 3 goto End
-if errorlevel 2 goto End
-if errorlevel 1 goto End
+if errorlevel 4 goto Update
+if errorlevel 3 goto ConvertAndRename
+if errorlevel 2 goto Rename
+if errorlevel 1 goto Convert
 
 :Install
+ECHO Creating folders...
+IF NOT EXIST "input" MKDIR "input"
+IF NOT EXIST "output" MKDIR "output"
+IF NOT EXIST "scripts" MKDIR "scripts"
+
 echo Creating Python virtual environment...
 PYTHON -m venv .venv
 
@@ -50,79 +57,43 @@ ECHO Installing requirements...
 CALL python.exe -m pip install --upgrade pip
 CALL python.exe -m pip install Pillow
 
-ECHO Creating folders...
-CD ../../
-IF NOT EXIST "input" MKDIR "input"
-IF NOT EXIST "output" MKDIR "output"
-IF NOT EXIST "scripts" MKDIR "scripts"
-
 ECHO Downloading scripts...
-CD scripts
-git clone --no-checkout https://github.com/Ozzymops/DeMijngang.git
-git sparse-checkout set png_to_webp/scripts
-git checkout @
+CD %~dp0/scripts
+CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
 
-ECHO.
-ECHO Finished! Enjoy.
+COPY NUL install_check
+GOTO InstallCheck
+
+:Update
+CLS
+cd scripts
+ECHO Downloading scripts...
+CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
+GOTO InstallCheck
+
+:Convert
+CLS
+CD .venv/Scripts
+CALL python.exe %~dp0/scripts/png_to_webp.py
 PAUSE
 GOTO InstallCheck
 
-:ExtrasSelect
+:Rename
 CLS
-echo Select Extras classification model:
-echo - 1. Default (6 emotions)
-echo - 2. Extended (28 emotions)
-echo.
-choice /c 12 /n /m "> "
+CD .venv/Scripts
+CALL python.exe %~dp0/scripts/rename_to_number_sequence.py
+PAUSE
+GOTO InstallCheck
 
-if errorlevel 2 goto LaunchExtrasLarge
-if errorlevel 1 goto LaunchExtrasSmall
-
-:LaunchMain
-cd SillyTavern-main
-start /min start.bat
-goto ExtrasSelect
-
-:LaunchStaging
-cd SillyTavern-staging
-start /min start.bat
-goto ExtrasSelect
-
-:LaunchExtrasSmall
-cd ../SillyTavern-extras
-call conda.bat activate "D:\Artificial Intelligence\SillyTavern\conda"
-start /min python server.py --enable-modules=classify
-call conda.bat deactivate
-goto End
-
-:LaunchExtrasLarge
-cd ../SillyTavern-extras
-call conda.bat activate "D:\Artificial Intelligence\SillyTavern\conda"
-start /min python server.py --enable-modules=classify --classification-model "joeddav/distilbert-base-uncased-go-emotions-student"
-call conda.bat deactivate
-goto End
-
-:UpdateBranches
-call conda.bat activate "D:\Artificial Intelligence\SillyTavern\conda"
+:ConvertAndRename
+CLS
+CD .venv/Scripts
+CALL python.exe %~dp0/scripts/png_to_webp.py
 echo.
-echo ~Updating Main branch~
-cd SillyTavern-main
-git pull
-echo ~Finished~
+echo ---
 echo.
-echo ~Updating Staging branch~
-cd ../SillyTavern-staging
-git pull
-echo ~Finished~
-echo.
-echo ~Updating Extras~
-cd ../SillyTavern-extras
-git pull
-echo.
-call conda.bat deactivate
-echo ~Finished~
-echo.
-cd ..
-goto BranchSelect
+CALL python.exe %~dp0/scripts/rename_to_number_sequence.py
+PAUSE
+GOTO InstallCheck
 
 :End

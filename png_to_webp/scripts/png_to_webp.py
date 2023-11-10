@@ -56,6 +56,7 @@ def main():
     
     stop_time = time.perf_counter()
     elapsed_time = stop_time - start_time
+    print()
     print(f"> Conversion of {image_amount} images finished in {stop_time - start_time:0.1f} seconds.")
 
 # Execute
