@@ -60,6 +60,7 @@ CALL python.exe -m pip install Pillow
 ECHO Downloading scripts...
 CD %~dp0/scripts
 CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
+CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/rename_to_number_sequence.py > rename_to_number_sequence.py
 
 COPY NUL install_check
 GOTO InstallCheck
@@ -69,6 +70,7 @@ CLS
 cd scripts
 ECHO Downloading scripts...
 CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
+CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/rename_to_number_sequence.py > rename_to_number_sequence.py
 GOTO InstallCheck
 
 :Convert
