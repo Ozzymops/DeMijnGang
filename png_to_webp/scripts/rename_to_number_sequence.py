@@ -1,1 +1,0 @@
-rename files to 00001.jpg etc
