@@ -45,6 +45,14 @@ def main():
     else:
         print("> No images with file extension .jpg found, continuing...")
     
+    # .jpeg
+    if (extension_check(path_input, ".jpeg")):
+        print("> Starting conversion of images with file extension .jpeg")
+        path = Path(path_input).glob("**/*.jpeg")
+        convert_to_webp(path, path_output)
+    else:
+        print("> No images with file extension .jpeg found, continuing...")
+    
     # .png
     if (extension_check(path_input, ".png")):
         print()
