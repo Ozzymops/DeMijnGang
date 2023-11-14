@@ -7,6 +7,11 @@ def dir_check(path):
         return False
     return True
 
+# ask to start from 0 or later number
+def give_input():
+    print("> Start from beginning or from specific number? [1/#]")
+    return input("> ")
+
 def main():
     increment = 1
     path_output = os.path.abspath("../../output/")
@@ -15,6 +20,20 @@ def main():
     if (dir_check(path_output) == False):
         print("> Output directory is empty. Cancelling...")
         return
+        
+    # ask for input
+    input_given = False
+    while input_given == False:
+        input = give_input()
+        
+        try:
+            int(input)
+        except ValueError:
+            print("Input is not valid. Try again.")
+               
+        input_given = True
+        if int(input) > 1:
+            increment = int(input)
         
     print("> Renaming images...")
     for image in os.listdir(path_output):
