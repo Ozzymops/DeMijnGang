@@ -17,16 +17,28 @@ def extension_check(path, extension):
     return False
 
 # convert given images to .webp
-def convert_to_webp(input, output):
+def convert_to_webp(input, output, resize):
     for image in input:
         new_filename = image.with_suffix(".webp").name
         destination = output + "\\" + str(new_filename)
         converted_image = Image.open(image)
-        converted_image.save(destination, format="webp")
+
+        if resize == True:
+            fixed_height = 768
+            height_percent = (fixed_height / float(converted_image.size[1]))
+            width_size = int(float(converted_image.size[0]) * float(height_percent))
+            converted_image = converted_image.resize((width_size, fixed_height), Image.NEAREST)
+
+        converted_image.save(destination, format="webp", optimize=True, quality=90)
         print(f"> Converted {image.name} to {new_filename}")
         global image_amount
         image_amount += 1
-       
+
+# ask to resize images or keep original size
+def give_input():
+    print("> Resize to a fixed height of 1080px? [Y/N]")
+    return input("> ")
+
 def main():
     start_time = time.perf_counter()
     path_input = os.path.abspath("../../input/")
@@ -37,11 +49,24 @@ def main():
         print("> Input directory is empty. Cancelling...")
         return
 
+    # ask for input
+    resize = False
+    while True:
+        resize_input = give_input()
+        if resize_input.lower() == 'y':
+            resize = True
+            break
+        elif resize_input.lower() == 'n':
+            resize = False
+            break
+        else:
+            print("Input is not valid. Try again.")
+
     # .jpg
     if (extension_check(path_input, ".jpg")):
         print("> Starting conversion of images with file extension .jpg")
         path = Path(path_input).glob("**/*.jpg")
-        convert_to_webp(path, path_output)
+        convert_to_webp(path, path_output, resize)
     else:
         print("> No images with file extension .jpg found, continuing...")
     
@@ -49,7 +74,7 @@ def main():
     if (extension_check(path_input, ".jpeg")):
         print("> Starting conversion of images with file extension .jpeg")
         path = Path(path_input).glob("**/*.jpeg")
-        convert_to_webp(path, path_output)
+        convert_to_webp(path, path_output, resize)
     else:
         print("> No images with file extension .jpeg found, continuing...")
     
@@ -58,7 +83,7 @@ def main():
         print()
         print("> Starting conversion of images with file extension .png")
         path = Path(path_input).glob("**/*.png")
-        convert_to_webp(path, path_output)
+        convert_to_webp(path, path_output, resize)
     else:
         print("> No images with file extension .png found, continuing...")
     
