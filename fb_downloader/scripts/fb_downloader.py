@@ -1,3 +1,37 @@
+import facebook
+import json
+
+ACCESS_TOKEN = "970d1b751e7995c0ace05f18b1028131"
+SAFE_CHARACTERS = '-_() abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
+def query():
+    print("> Enter target Facebook public page ID")
+    id = input("> ")
+    print("> Enter target album")
+    album_name = input("> ")
+    return [id, album_name]
+
+def get_album(graph, target_id, album_name):
+    return graph.get_connections(id=target_id, connection_name='album')
+
+def main():
+    #query = query()
+    #target_id = query[0]
+    #album_name = query[1]
+
+    target_id = "justin.muris"
+    album_name = "Uitgelichte foto's"
+    graph = facebook.GraphAPI(access_token=ACCESS_TOKEN)
+
+    album = get_album(graph, target_id, album_name)
+    print(album['name'])
+
+      
+# Execute
+main()
+
+
+# old shit
 import os
 import json
 import urllib
