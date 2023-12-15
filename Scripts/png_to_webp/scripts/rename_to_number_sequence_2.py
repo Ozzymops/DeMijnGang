@@ -35,11 +35,12 @@ def main():
         for name in files:
             if fnmatch(name, '*.webp'):       
                 adjusted_path = os.path.relpath(path).removeprefix("..\\..\\output\\")
+                
                 if not 'no_rename' in adjusted_path.lower():               
-                    if not previous_path in path.lower():
+                    if not previous_path in adjusted_path:
                         increment = 1
                     previous_path = adjusted_path
-
+                    
                     file = os.path.join(root_input, adjusted_path, name)
                     rename_image(file, adjusted_path, increment)
                     global image_amount
