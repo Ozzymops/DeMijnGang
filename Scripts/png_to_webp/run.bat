@@ -1,6 +1,6 @@
 :: Vars
-SET CONVERT-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/png_to_webp.py
-SET RENAME-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/rename_to_number_sequence.py
+SET CONVERT-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/png_to_webp_2.py
+SET RENAME-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/rename_to_number_sequence_2.py
 
 @ECHO OFF
 CLS
@@ -64,8 +64,8 @@ CALL python.exe -m pip install Pillow
 
 ECHO Downloading scripts...
 CD %~dp0/scripts
-CURL %CONVERT-SCRIPT% > png_to_webp.py
-CURL %RENAME-SCRIPT% > rename_to_number_sequence.py
+CURL %CONVERT-SCRIPT% > png_to_webp_2.py
+CURL %RENAME-SCRIPT% > rename_to_number_sequence_2.py
 
 COPY NUL install_check
 GOTO InstallCheck
@@ -74,32 +74,32 @@ GOTO InstallCheck
 CLS
 cd scripts
 ECHO Downloading scripts...
-CURL %CONVERT-SCRIPT% > png_to_webp.py
-CURL %RENAME-SCRIPT% > rename_to_number_sequence.py
+CURL %CONVERT-SCRIPT% > png_to_webp_2.py
+CURL %RENAME-SCRIPT% > rename_to_number_sequence_2.py
 GOTO InstallCheck
 
 :Convert
 CLS
 CD .venv/Scripts
-CALL python.exe %~dp0/scripts/png_to_webp.py
+CALL python.exe %~dp0/scripts/png_to_webp_2.py
 PAUSE
 GOTO InstallCheck
 
 :Rename
 CLS
 CD .venv/Scripts
-CALL python.exe %~dp0/scripts/rename_to_number_sequence.py
+CALL python.exe %~dp0/scripts/rename_to_number_sequence_2.py
 PAUSE
 GOTO InstallCheck
 
 :ConvertAndRename
 CLS
 CD .venv/Scripts
-CALL python.exe %~dp0/scripts/png_to_webp.py
+CALL python.exe %~dp0/scripts/png_to_webp_2.py
 echo.
 echo ---
 echo.
-CALL python.exe %~dp0/scripts/rename_to_number_sequence.py
+CALL python.exe %~dp0/scripts/rename_to_number_sequence_2.py
 PAUSE
 GOTO InstallCheck
 
