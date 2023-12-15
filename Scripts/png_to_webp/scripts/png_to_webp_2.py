@@ -37,7 +37,7 @@ def convert_image(file, relative_path, resize):
     converted_image = Image.open(file)
 
     if resize == True:
-            if not 'no_resize' in file.lower():
+            if not 'no-resize' in file.lower():
                 fixed_height = 1080
                 height_percent = (fixed_height / float(converted_image.size[1]))
                 width_size = int(float(converted_image.size[0]) * float(height_percent))

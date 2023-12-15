@@ -36,7 +36,7 @@ def main():
             if fnmatch(name, '*.webp'):       
                 adjusted_path = os.path.relpath(path).removeprefix("..\\..\\output\\")
                 
-                if not 'no_rename' in adjusted_path.lower():               
+                if not 'no-rename' in adjusted_path:               
                     if not previous_path in adjusted_path:
                         increment = 1
                     previous_path = adjusted_path
