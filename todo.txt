@@ -1,0 +1,11 @@
+[http://goodoldtimestattoo.nl/]
+- Inzendingsformulier
+	o Referentie foto
+	o Locatie tattoo
+	o Afmeting tattoo
+	o Agenda inzien (iPhone/Google Agenda), gewenste tijd kiezen
+	o Bericht sturen naar mailbox (good.old.times@outlook.com)
+- Plugins
+	o WP Booking Calendar?
+	
+asdada_Good-Old-Times-2023
