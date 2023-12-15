@@ -1,4 +1,7 @@
-:: Rename, convert, do both, install or update, exit
+:: Vars
+SET CONVERT-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/png_to_webp.py
+SET RENAME-SCRIPT=https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/Scripts/png_to_webp/scripts/rename_to_number_sequence.py
+
 @ECHO OFF
 CLS
 goto InstallCheck
@@ -34,6 +37,8 @@ echo - 5. Sluit programma af
 echo.
 choice /c 12345 /n /m "> "
 
+
+
 if errorlevel 5 goto End
 if errorlevel 4 goto Update
 if errorlevel 3 goto ConvertAndRename
@@ -59,8 +64,8 @@ CALL python.exe -m pip install Pillow
 
 ECHO Downloading scripts...
 CD %~dp0/scripts
-CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
-CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/rename_to_number_sequence.py > rename_to_number_sequence.py
+CURL %CONVERT-SCRIPT% > png_to_webp.py
+CURL %RENAME-SCRIPT% > rename_to_number_sequence.py
 
 COPY NUL install_check
 GOTO InstallCheck
@@ -69,8 +74,8 @@ GOTO InstallCheck
 CLS
 cd scripts
 ECHO Downloading scripts...
-CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/png_to_webp.py > png_to_webp.py
-CURL https://raw.githubusercontent.com/Ozzymops/DeMijngang/main/png_to_webp/scripts/rename_to_number_sequence.py > rename_to_number_sequence.py
+CURL %CONVERT-SCRIPT% > png_to_webp.py
+CURL %RENAME-SCRIPT% > rename_to_number_sequence.py
 GOTO InstallCheck
 
 :Convert
