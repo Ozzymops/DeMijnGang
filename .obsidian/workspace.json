@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "acc74772f11050b2",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb6a54c1e13afc01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc5a416f3b09302a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b9c843721d25c774",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a7b03510f3bb8d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5c8d06927f8ad52",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b8041d3d7fda310a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9f421c41137c4fe7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dc587eb62f627bcd",
+    "type": "split",
+    "children": [
+      {
+        "id": "86e7fc79e055c463",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "327b38ca14fe8727",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "560f822362ea7b45",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ec1772e37c4d19a1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bb00675d8e421d4e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          },
+          {
+            "id": "5992b897ffb62ef6",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "meld-encrypt:New encrypted note": false,
+      "meld-encrypt:Convert to or from an Encrypted note": false
+    }
+  },
+  "active": "fc5a416f3b09302a",
+  "lastOpenFiles": [
+    "Coding/FileZilla.mdenc",
+    "Coding/Index.md",
+    "Coding/scripts_bat.md",
+    "Notes/Todo.md",
+    "Images/GoodOldTimes/original/albums/18519671_744955962380537_4216191734487984243_n.jpg",
+    "Images/GoodOldTimes/original/albums/18403296_741610752715058_4869447873761457627_n.jpg",
+    "Images/GoodOldTimes/original/albums/18301881_739631069579693_7072004770639328607_n.jpg",
+    "Images/Folderstructure.png",
+    "README.md",
+    "Coding/rename_to_number_sequence.md",
+    "Coding/png_to_webp.md",
+    "Gebruik.md",
+    "Coding.md",
+    "Coding",
+    "Files/Scripts/scripts/rename_to_number_sequence.py",
+    "Files/Scripts/scripts/png_to_webp.py",
+    "Files/Scripts/scripts/png_to_webp_2.py",
+    "Files/Scripts/scripts/rename_to_number_sequence_2.py",
+    "Files/Scripts/scripts",
+    "Files/Scripts/run.bat",
+    "Files/Scripts",
+    "Files/Programs/scripts/rename_to_number_sequence_2.py",
+    "Images/GoodOldTimes/webp/albums/00535.webp",
+    "Images/GoodOldTimes/webp/albums/00534.webp",
+    "Images/GoodOldTimes/webp/albums/00533.webp",
+    "Images/GoodOldTimes/webp/albums/00532.webp",
+    "Images/GoodOldTimes/webp/albums/00530.webp",
+    "Images/GoodOldTimes/webp/albums/00531.webp",
+    "Scripts/Scripts.md",
+    "Scripts/scripts_bat.md",
+    "Scripts/png_to_webp.md",
+    "Scripts/rename_to_number_sequence.md",
+    "().md",
+    "demijngang.nl.md",
+    "Untitled.md"
+  ]
+}
