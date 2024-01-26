@@ -1,0 +1,20 @@
+<p id="current_activities" class="has-text-align-center">A</p>
+<p id="em_list">B</p>
+
+<script>
+    //show_only_first_recurring=true 
+
+    var todayDate = new Date();
+    var futureDate = new Date();
+    futureDate.setDate(todayDate.getDate() + 30)
+
+    let todayString = todayDate.toLocaleDateString("local", {weekday:"long", year:"numeric", month:"long", day:"numeric"})
+    let futureString = futureDate.toLocaleDateString("local", {weekday:"long", year:"numeric", month:"long", day:"numeric"}) 
+    let scope = `scope="${todayDate.toISOString().split('T')[0]},${futureDate.toISOString().split('T')[0]}"`
+
+	let activities = `<em>Opkomende activiteiten van ${todayString} tot en met ${futureString}. Meer op de <a href="http://demijngang.nl/evenementen/" data-type="page" data-id="13">activiteiten</a> pagina:</em>`;
+    let emList = `[events_list $(scope)]<p class="has-text-align-center">#_EVENTLINK – #_EVENTDATES, #_EVENTTIMES</p>[/events_list]`;
+
+	document.getElementById("current_activities").innerHTML = activities;
+    document.getElementById("em_list").innerHTML = emList;
+</script>

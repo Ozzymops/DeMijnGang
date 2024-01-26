@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "h4Jaow1lBmZt3MUYZLg7QDekjZuoXcrep1/iHzXgQNSF27OK9JF9TRpNyvMDtFuXZU6h+dKp7kAiwK97vzSX2A==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\DeMijngang\\Coding\\FacebookRipper\\FacebookRipper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Justin\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Facebook 7.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Facebook",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
