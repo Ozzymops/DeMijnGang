@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Notes/Todo.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Notes/Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Notes/Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Notes/Todo.md"
               }
             }
           },
@@ -157,17 +157,18 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
-    "Coding/FileZilla.mdenc",
-    "Coding/Index.md",
-    "Coding/scripts_bat.md",
+    "Notes/Temporary storage.md",
     "Notes/Todo.md",
+    "Coding/rename_to_number_sequence.md",
+    "Coding/png_to_webp.md",
+    "Coding/Index.md",
+    "README.md",
+    "Coding/FileZilla.mdenc",
+    "Coding/scripts_bat.md",
     "Images/GoodOldTimes/original/albums/18519671_744955962380537_4216191734487984243_n.jpg",
     "Images/GoodOldTimes/original/albums/18403296_741610752715058_4869447873761457627_n.jpg",
     "Images/GoodOldTimes/original/albums/18301881_739631069579693_7072004770639328607_n.jpg",
     "Images/Folderstructure.png",
-    "README.md",
-    "Coding/rename_to_number_sequence.md",
-    "Coding/png_to_webp.md",
     "Gebruik.md",
     "Coding.md",
     "Coding",
