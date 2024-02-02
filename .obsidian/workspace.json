@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Notes/Temporary storage.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Notes/Temporary storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Notes/Temporary storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Todo.md"
+                "file": "Notes/Temporary storage.md"
               }
             }
           },
@@ -157,6 +157,7 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
+    "Notes/Todo.md",
     "Coding/FacebookRipper/obj/Debug/net8.0/FacebookRipper.csproj.FileListAbsolute.txt",
     "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.pdb",
     "Coding/FacebookRipper/obj/Debug/net8.0/ref/FacebookRipper.dll",
@@ -167,11 +168,9 @@
     "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.exe",
     "Coding/FacebookRipper/obj/Debug/net8.0/FacebookRipper.csproj.CopyComplete",
     "Coding/FacebookRipper/bin/Debug/net8.0/Facebook.dll",
-    "Coding/FacebookRipper/obj/Debug/net8.0/apphost.exe",
     "TODO.md",
     "Notes/Temporary storage.md",
     "Coding/Index.md",
-    "Notes/Todo.md",
     "Coding/rename_to_number_sequence.md",
     "Coding/png_to_webp.md",
     "README.md",
