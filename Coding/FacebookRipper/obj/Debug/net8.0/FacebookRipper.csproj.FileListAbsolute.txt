@@ -16,3 +16,4 @@ D:\GitHub\DeMijngang\Coding\FacebookRipper\obj\Debug\net8.0\refint\FacebookRippe
 D:\GitHub\DeMijngang\Coding\FacebookRipper\obj\Debug\net8.0\FacebookRipper.pdb
 D:\GitHub\DeMijngang\Coding\FacebookRipper\obj\Debug\net8.0\FacebookRipper.genruntimeconfig.cache
 D:\GitHub\DeMijngang\Coding\FacebookRipper\obj\Debug\net8.0\ref\FacebookRipper.dll
+D:\GitHub\DeMijngang\Coding\FacebookRipper\bin\Debug\net8.0\Newtonsoft.Json.dll

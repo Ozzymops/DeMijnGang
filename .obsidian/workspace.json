@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Temporary storage.md",
+                "file": "Notes/Facebook image ripper.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Temporary storage.md",
+                "file": "Notes/Facebook image ripper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Temporary storage.md",
+                "file": "Notes/Facebook image ripper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Temporary storage.md"
+                "file": "Notes/Facebook image ripper.md"
               }
             }
           },
@@ -137,11 +137,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,19 +159,22 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
-    "Notes/Todo.md",
-    "Coding/FacebookRipper/obj/Debug/net8.0/FacebookRipper.csproj.FileListAbsolute.txt",
-    "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.pdb",
-    "Coding/FacebookRipper/obj/Debug/net8.0/ref/FacebookRipper.dll",
-    "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.dll",
-    "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.runtimeconfig.json",
-    "Coding/FacebookRipper/obj/Debug/net8.0/FacebookRipper.genruntimeconfig.cache",
-    "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.deps.json",
-    "Coding/FacebookRipper/bin/Debug/net8.0/FacebookRipper.exe",
-    "Coding/FacebookRipper/obj/Debug/net8.0/FacebookRipper.csproj.CopyComplete",
-    "Coding/FacebookRipper/bin/Debug/net8.0/Facebook.dll",
-    "TODO.md",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon_background.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xhdpi_appicon_foreground.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/values_maui_colors.arsc.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon_foreground.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon_foreground.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-mdpi_appicon_background.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon_background.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xhdpi_appicon_background.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon.png.flat",
+    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-hdpi_appicon_foreground.png.flat",
     "Notes/Temporary storage.md",
+    "Notes/Facebook image ripper.md",
+    "Notes/Mobile app.md",
+    "Notes/Todo.md",
+    "TODO.md",
     "Coding/Index.md",
     "Coding/rename_to_number_sequence.md",
     "Coding/png_to_webp.md",

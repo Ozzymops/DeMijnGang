@@ -1,19 +1,18 @@
 ﻿using Facebook;
+using FacebookRipper.Code;
 
-// https://github.com/facebook-csharp-sdk/facebook-csharp-sdk/wiki/Making-Synchronous-Requests
-// https://developers.facebook.com/docs/graph-api
+// set up instance
+FacebookFunctions instance = new FacebookFunctions("EAAQ9Jvkt12EBO5ZCGFZAkltAP2R0qCFudON0rcZBDWToQ2wykLn28Ax0ZAB2TTIAdyj39xsQrmFazNjdN3cLsikzFSy147OBYcFM0E6zKLzTEoqsQQ80uuoVG8vu5qNN6MYMjOOR7XF68rYKYLExneQZCAgfMcyEtUj56229LAGAEqKyJqMNMrsoY84T731Cfg2Xrr7LWHyT8rJ1fFQZDZD");
 
-// log in
-// ask for permissions
-// ask for album
-// fetch album
-// download album
+// make call
+//Group DeMijngang = instance.FetchGroupData(106522215647024);
+List<long> longList = instance.Debugging();
 
-// obfuscate/request
-var accessToken = "EAACXWdewi1cBO3BJsLi9YfIsuIZBxmw2AhUhEsGKQetUjdblx6q7UnVHPMP0LsXsdt4UcDDPJo3b8nH1cRDcfd2ifmZCKYEgu29kgrpnZCSKZAaiEdfrb0da3sKFaOnGvncOEdoBaZAdr3NWBBjrQP1ZAaiut64Mmox49qmKEw9iXvKUYzk2N2OS3NEbTxXZCA5OpG6ZCYWGCvZBrmK3wB85zZCs33zTX8WQ8fxtvddwZDZD";
+foreach (long lon in longList)
+{
+    Console.WriteLine(lon);
+}
 
-var fb = new FacebookClient { AccessToken = accessToken };
-dynamic result = fb.Get("me", new { fields = new[] { "id", "name" } });
-var name = result.name;
-
-Console.WriteLine(String.Format("Literally me: {0}", name));
+// print results
+//Console.WriteLine("Fetch group data: " + DeMijngang.Name + ", " + DeMijngang.Id);
+//Console.WriteLine(jsonString);

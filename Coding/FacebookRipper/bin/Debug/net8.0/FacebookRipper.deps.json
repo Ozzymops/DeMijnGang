@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "FacebookRipper/1.0.0": {
         "dependencies": {
-          "Facebook": "7.0.6"
+          "Facebook": "7.0.6",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "FacebookRipper.dll": {}
@@ -19,6 +20,14 @@
           "lib/net45/Facebook.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "7.0.6.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
           }
         }
       }
@@ -36,6 +45,13 @@
       "sha512": "sha512-D9nlWZb88S4U+eh1pUDQ+AkSkiht6m0eFpxKFddZnQSSFTnncvDMBEnNODy4fOIOjWQIiOXRVbuY04jCPyWqkw==",
       "path": "facebook/7.0.6",
       "hashPath": "facebook.7.0.6.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     }
   }
 }
