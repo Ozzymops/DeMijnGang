@@ -21,7 +21,7 @@ namespace FacebookRipper.Models
             Dimensions = dimensions;
             Link = link;
 
-            Filename = CreatedTime.ToString("yyyy-MM-dd") + "_" + Id.ToString();
+            Filename = CreatedTime.ToString("yyyyMMdd") + "_" + Id.ToString();
         }
     }
 }
