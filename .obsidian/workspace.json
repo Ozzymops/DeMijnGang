@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Facebook Scraper.md",
+                "file": "Notes/TODO.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Facebook Scraper.md",
+                "file": "Notes/TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Facebook Scraper.md",
+                "file": "Notes/TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Facebook Scraper.md"
+                "file": "Notes/TODO.md"
               }
             }
           },
@@ -159,6 +159,17 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
+    "Notes/TEMPORARY NOTES.md",
+    "Notes/TODO.md",
+    "README.md",
+    "TODO.md",
+    "Coding/Index.md",
+    "Coding/scripts_bat.md",
+    "Coding/rename_to_number_sequence.md",
+    "Coding/png_to_webp.md",
+    "Notes/Mobile app.md",
+    "Notes/Facebook Scraper.md",
+    "Notes/Facebook image ripper.md",
     "Coding/FacebookScraper/FB_SCRAPED",
     "Coding/FacebookScraper/geckodriver.exe",
     "Coding/FacebookScraper/FacebookScraper.ipynb",
@@ -167,20 +178,8 @@
     "Coding/FacebookScraper/New Text Document.txt",
     "Coding/FacebookScraper/first-time-setup.bat",
     "Coding/FacebookScraper/chromedriver.exe",
-    "Notes/Facebook image ripper.md",
-    "Notes/Facebook Scraper.md",
     "Coding/FacebookScraper",
     "Coding/New folder",
-    "Hitomi/GoodOldTimes",
-    "Notes/Mobile app.md",
-    "Notes/Todo.md",
-    "Notes/Temporary storage.md",
-    "TODO.md",
-    "Coding/Index.md",
-    "Coding/rename_to_number_sequence.md",
-    "Coding/png_to_webp.md",
-    "README.md",
-    "Coding/scripts_bat.md",
     "Images/GoodOldTimes/original/albums/18519671_744955962380537_4216191734487984243_n.jpg",
     "Images/GoodOldTimes/original/albums/18403296_741610752715058_4869447873761457627_n.jpg",
     "Images/GoodOldTimes/original/albums/18301881_739631069579693_7072004770639328607_n.jpg",

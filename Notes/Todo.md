@@ -1,13 +1,50 @@
-Updated: 26-01-2024
+# WEEKLY TASKS (23-2-2024)
+- [ ] Update De Mijngang news
+- [ ] Update De Mijngang photo albums
+- [ ] Update Good Old Times news
+- [ ] Update Good Old Times photo albums
 
-# Wekelijkse taken
-- [ ] Update DeMijngang.nl nieuwssectie en fotoalbums
+# LONG TERM
+- [ ] De Mijngang website redesign?
+	- [ ] Mockup (Adobe XD)
+	- [ ] Implementation
+	- [ ] Functionality
+- [ ] Good Old Times website
+	- [ ] Mockup
+	- [ ] Implementation
+	- [ ] Functionality
+- [ ] Safe Harbor website
+- [ ] Find a way to synchronize Facebook news and/or photo albums with WordPress sites
 
-# DeMijngang.nl
-- [ ] Facebook image ripper in Python of C#
+# FACEBOOK IMAGE RIPPER
+- [x] Access API for photo data ✅ 2024-02-23
+- [x] Retrieve photo data ✅ 2024-02-23
+- [x] Download photo data ✅ 2024-02-23
+- [ ] Download to specific folder
+- [ ] Duplicate checking
+- [ ] Paging
+- [ ] Conversion and resizing
+- [ ] Access Token automation/refresh
+- [ ] Secure app-ID and app-secret (encryption?)
 
-# GoodOldTimesTattoo.nl
-- [x] Verwijder bio van Wendy (lasering, etc.) ✅ 2024-01-20
-- [x] Openingstijden: open wanneer open, geen vaste tijden ✅ 2024-01-20
-- [x] Voorpagina; "ook in ons pand:" Tattoo Roy en Eline's Tattoos ✅ 2024-01-20
-- [ ] Inzendingsformulier voor inplannen tattoos, inclusief referentiefoto, locatie tattoo, afmeting tattoo, inzien van agenda en gewenst moment kiezen, bericht sturen naar mailbox (good.old.times@outlook.com)
+# MIJNGANG APP
+- [ ] Retrieve current events from website (maybe using RSS? https://demijngang.nl/evenementen-permalink/feed/)
+- [ ] Display current events
+- [ ] Display recurring events
+- [ ] Access current events
+- [ ] Subscribe to events
+- [ ] Subscribe to event type
+- [ ] Participate in events
+- [ ] Push notification after posting of major events
+- [ ] Push notification for subscribed events
+- [ ] Push notification for upcoming event (within three days or so)
+- [ ] Leave comments on event
+
+# GOOD OLD TIMES
+- [ ] Form for customers
+	- [ ] Preferred time/date (view owner's agenda?)
+	- [ ] Reference photo
+	- [ ] Location (photo or in text)
+	- [ ] Dimensions
+	- [ ] Extra message
+- [ ] Send form to mailbox (good.old.times@outlook.com)
