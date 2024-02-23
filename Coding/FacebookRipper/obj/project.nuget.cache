@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fFeGQ2jOS+//2P/slSsZAjIBy4we9IKobM8xaiz1pXwW2cs+b/Knzxb8HMKA9oQ2TZ9ST0j7s+DHYPELZLfd0Q==",
+  "dgSpecHash": "w6WpG9JSIIIyFKc3hjWaYorwWeEb2oamAoTe1JdEAi+JA7bLo+X5rkSf/OPWfJJcskg6/9G+WRniRK18zjEPLA==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\DeMijngang\\Coding\\FacebookRipper\\FacebookRipper.csproj",
+  "projectFilePath": "E:\\Projects\\DeMijngang\\Coding\\FacebookRipper\\FacebookRipper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Justin\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512",
-    "C:\\Users\\Justin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Ozzymops\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512",
+    "C:\\Users\\Ozzymops\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": [
     {

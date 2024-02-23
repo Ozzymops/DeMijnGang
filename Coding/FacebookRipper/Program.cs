@@ -1,18 +1,17 @@
 ﻿using Facebook;
 using FacebookRipper.Code;
+using FacebookRipper.Models;
 
 // set up instance
-FacebookFunctions instance = new FacebookFunctions("EAAQ9Jvkt12EBO5ZCGFZAkltAP2R0qCFudON0rcZBDWToQ2wykLn28Ax0ZAB2TTIAdyj39xsQrmFazNjdN3cLsikzFSy147OBYcFM0E6zKLzTEoqsQQ80uuoVG8vu5qNN6MYMjOOR7XF68rYKYLExneQZCAgfMcyEtUj56229LAGAEqKyJqMNMrsoY84T731Cfg2Xrr7LWHyT8rJ1fFQZDZD");
+FacebookFunctions instance = new FacebookFunctions("EAAQ9Jvkt12EBO6abiRJf5lZBfJgjG395wMx7iGJA3STNEC5B2dBorVTUXvAsZASYZAlKLoNyEg0DZCY400KprPC85O5w1kZClY8cv3m4lK4bjW4TEwCFW6Po4PULKLIAEUb481OXxuZCpx9OUxOFDldrwiZCPJB0VxDScEa7TZCsxfk5rl2mX0egCViinrvYlJxD3AZC9giVQZCAWUKuRAzlIZD");
 
 // make call
 //Group DeMijngang = instance.FetchGroupData(106522215647024);
-List<long> longList = instance.Debugging();
+List<Photo> photoList = instance.FetchPhotosFromGroup(106522215647024);
+int count = 0;
 
-foreach (long lon in longList)
+foreach (Photo photo in photoList)
 {
-    Console.WriteLine(lon);
+    count++;
+    Console.WriteLine(count + " - " + photo.Filename);
 }
-
-// print results
-//Console.WriteLine("Fetch group data: " + DeMijngang.Name + ", " + DeMijngang.Id);
-//Console.WriteLine(jsonString);

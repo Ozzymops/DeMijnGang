@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Facebook image ripper.md",
+                "file": "Notes/Facebook Scraper.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Facebook image ripper.md",
+                "file": "Notes/Facebook Scraper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Facebook image ripper.md",
+                "file": "Notes/Facebook Scraper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Facebook image ripper.md"
+                "file": "Notes/Facebook Scraper.md"
               }
             }
           },
@@ -159,21 +159,22 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon_background.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xhdpi_appicon_foreground.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/values_maui_colors.arsc.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxxhdpi_appicon_foreground.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon_foreground.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-mdpi_appicon_background.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon_background.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xhdpi_appicon_background.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-xxhdpi_appicon.png.flat",
-    "Coding/MijngangApp/obj/Debug/net8.0-android/resizetizer/flat/mipmap-hdpi_appicon_foreground.png.flat",
-    "Notes/Temporary storage.md",
+    "Coding/FacebookScraper/FB_SCRAPED",
+    "Coding/FacebookScraper/geckodriver.exe",
+    "Coding/FacebookScraper/FacebookScraper.ipynb",
+    "Coding/FacebookScraper/Untitled.ipynb",
+    "Coding/FacebookScraper/launch.bat",
+    "Coding/FacebookScraper/New Text Document.txt",
+    "Coding/FacebookScraper/first-time-setup.bat",
+    "Coding/FacebookScraper/chromedriver.exe",
     "Notes/Facebook image ripper.md",
+    "Notes/Facebook Scraper.md",
+    "Coding/FacebookScraper",
+    "Coding/New folder",
+    "Hitomi/GoodOldTimes",
     "Notes/Mobile app.md",
     "Notes/Todo.md",
+    "Notes/Temporary storage.md",
     "TODO.md",
     "Coding/Index.md",
     "Coding/rename_to_number_sequence.md",
