@@ -4,6 +4,9 @@
 - [ ] Update Good Old Times news
 - [ ] Update Good Old Times photo albums
 
+# SHORT TERM
+- [ ] Order cable for printer (https://www.fruugo.nl/usb-gegevenskabel-voor-brother-dcp-j4120dw/p-49870038-98489960)
+- [ ] Order ink for printer?
 # LONG TERM
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
@@ -21,9 +24,10 @@
 - [x] Retrieve photo data ✅ 2024-02-23
 - [x] Download photo data ✅ 2024-02-23
 - [ ] Download to specific folder
-- [ ] Duplicate checking
-- [ ] Paging
+- [x] Duplicate checking ✅ 2024-03-01
+- [ ] Paging: string split, correct sequence
 - [ ] Conversion and resizing
+- [x] Access Token validity check ✅ 2024-03-01
 - [ ] Access Token automation/refresh
 - [ ] Secure app-ID and app-secret (encryption?)
 

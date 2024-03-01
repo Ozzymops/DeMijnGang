@@ -1,6 +1,7 @@
 ﻿using FacebookRipper.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -10,11 +11,26 @@ namespace FacebookRipper.Code
 {
     internal class FileDownloader
     {
-        public void DownloadFile(Photo photo)
+        WebClient client = new WebClient();
+
+        public void DownloadFile(Photo photo, string directory)
         {
-            using (var client = new WebClient())
+            using (client)
             {
-                client.DownloadFile(photo.Link, photo.Filename + ".webp");
+                if (!Directory.Exists(directory))
+                {
+                    Console.WriteLine($"Directory {directory} does not exist. Creating...");
+                    Directory.CreateDirectory(directory);
+                }
+
+                if (!File.Exists(directory + photo.Filename + ".webp"))
+                {
+                    client.DownloadFile(photo.Link, directory + photo.Filename + ".webp");
+                }
+                else
+                {
+                    Console.WriteLine("File exists, skipping...");
+                }
             }
         }
     }

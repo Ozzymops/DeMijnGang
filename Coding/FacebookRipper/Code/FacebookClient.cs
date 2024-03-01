@@ -17,7 +17,7 @@ namespace FacebookRipper.Code
     public class FacebookClient : IFacebookClient
     {
         private readonly HttpClient _httpClient;
-        private readonly string _accessToken = "EAAQ9Jvkt12EBO8dVjHLneZBDEO36jSo1pzJU7I4mBZAwZAUKVC3v0YcehVzgaNaZABo4VS1ZCZAiOCDRVGaQS7vt16kZCV5KxPT43BNZBNRB0AZCzvpIq0Pthxj64VY6r0nN2hGr39ZAUO3HUw3jxeGae2ZAmazMHp2n0meNDqwNLKo02xrUM6yZAvRwZCDZBtuz48gMloTmFHmyZBeU1VpWZCcIUQZDZD";
+        private readonly string _accessToken = "EAAQ9Jvkt12EBOyTORBxQqVeVKLfxPOam246iEAxUEghkXNACrXrlsAKeWqapZBwEgsIPRWtoSkKT4skn0NiQDv8UwDgFYGZCcLpJ0w6gAyMG6MVBB2AYFj5at2dzlPnjKzCcJXqzKPkuLXg7EaAcQl2W2KavzliHR9HLgr2uuCbFLxHU4i2ImZAqVQjosGAuyvHZBRCb3Kt1d8x4DdUZD";
         private Uri _graphUri = new Uri("https://graph.facebook.com/v19.0/");
 
         public FacebookClient()
