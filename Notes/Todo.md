@@ -5,8 +5,8 @@
 - [ ] Update Good Old Times photo albums
 
 # SHORT TERM
-- [ ] Order cable for printer (https://www.fruugo.nl/usb-gegevenskabel-voor-brother-dcp-j4120dw/p-49870038-98489960)
-- [ ] Order ink for printer?
+- [x] Order cable for printer (https://www.fruugo.nl/usb-gegevenskabel-voor-brother-dcp-j4120dw/p-49870038-98489960) ✅ 2024-03-03
+- [x] Order ink for printer (https://www.inktweb.nl/cartridges/brother/flwr-brother-lc-223-multipack-zwart-en-kleur/flwr-lc223mp/) ✅ 2024-03-08
 # LONG TERM
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
