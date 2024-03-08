@@ -7,6 +7,7 @@
 # SHORT TERM
 - [x] Order cable for printer (https://www.fruugo.nl/usb-gegevenskabel-voor-brother-dcp-j4120dw/p-49870038-98489960) ✅ 2024-03-03
 - [x] Order ink for printer (https://www.inktweb.nl/cartridges/brother/flwr-brother-lc-223-multipack-zwart-en-kleur/flwr-lc223mp/) ✅ 2024-03-08
+- [ ] Line 42 in WebClient.cs: fix error that causes WebClient to exit prematurely/without result
 # LONG TERM
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
