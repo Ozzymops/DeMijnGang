@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using FacebookRipper.Models;
+using System.Diagnostics;
 
 namespace FacebookRipper.Code
 {
@@ -28,6 +29,7 @@ namespace FacebookRipper.Code
         public bool ValidateAuthenticationToken()
         {
             var result = _webClient.Get<dynamic>("me");
+            result.Wait();
 
             if (result != null)
             {
@@ -45,6 +47,7 @@ namespace FacebookRipper.Code
         public bool ValidatePageId(string pageId)
         {
             var result = _webClient.Get<dynamic>(pageId);
+            result.Wait();
 
             if (result != null)
             {
@@ -62,6 +65,7 @@ namespace FacebookRipper.Code
         public List<string> GetAlbumIdsFromPage(string pageId)
         {
             var result = _webClient.Get<dynamic>(pageId, "fields=albums{id}");
+            result.Wait();
 
             JObject albumData = JsonConvert.DeserializeObject<JObject>(result.Result["albums"].ToString());
             var albumIds = albumData.SelectTokens("data[*].id").ToList();
@@ -80,7 +84,9 @@ namespace FacebookRipper.Code
         {
             List<Photo> photos = new List<Photo>();
             int pageCount = 0;
+            int photoCount = 0;
             string nextPage = null;
+            List<string> pageMemory = new List<string>();
 
             bool busy = true;
 
@@ -90,29 +96,52 @@ namespace FacebookRipper.Code
 
                 if (String.IsNullOrEmpty(nextPage))
                 {
-                    result = _webClient.Get<dynamic>($"{albumId}/photos", "fields=created_time,id,webp_images&limit=25");                   
+                    result = _webClient.Get<dynamic>($"{albumId}/photos", "fields=created_time,id,webp_images&limit=25");
                 }
                 else
                 {
-                    result = _webClient.Get<dynamic>(albumId + "/photos", "fields=webp_images&created_time&id&limit=25&after=" + nextPage);
+                    result = _webClient.Get<dynamic>(albumId + "/photos", "fields=created_time,id,webp_images&limit=25&after=" + nextPage);
                 }
 
-                if (result == null)
+                result.Wait();
+
+                if (result.Result == null)
                 {
                     busy = false;
                     break;
                 }
 
-                JObject photoData = JsonConvert.DeserializeObject<JObject>(result.Result["data"].ToString());
-                nextPage = photoData.SelectToken("paging.cursors.after").ToString();
-                var photoObjects = photoData.SelectTokens("data[*]").ToList();
+                var photoObjects = JsonConvert.DeserializeObject<JToken>(result.Result["data"].ToString());
+                
+                try
+                {
+                    nextPage = JsonConvert.DeserializeObject<JObject>(result.Result["paging"].ToString()).SelectToken("cursors.after").ToString();
+                    pageCount++;
+                }
+                catch
+                {
+                    nextPage = null;
+                }               
+
+                if (!pageMemory.Contains(nextPage))
+                {
+                    pageMemory.Add(nextPage);
+                }
+                else
+                {
+                    // avoid duplicate paging stuff
+                    busy = false;
+                    break;
+                }
 
                 foreach (JObject obj in photoObjects)
                 {
+                    photoCount++;
                     Photo photo = new Photo((long)obj.SelectToken("id"),
                                               (DateTime)obj.SelectToken("created_time"),
                                               obj.SelectToken("webp_images[0].source").ToString());
                     photos.Add(photo);
+                    Console.WriteLine($"[{nextPage}, page {pageCount}] Added photo {photoCount} with id {photo.Id}");
                 }
             }
 

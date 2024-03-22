@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FacebookRipper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+209c94055a4ff5e4ec479d88b2423f9a8b53b5c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8af12cef92d60dcd262248f40a00523b1b877fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("FacebookRipper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FacebookRipper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

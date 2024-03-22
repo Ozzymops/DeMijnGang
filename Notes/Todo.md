@@ -5,9 +5,7 @@
 - [ ] Update Good Old Times photo albums
 
 # SHORT TERM
-- [x] Order cable for printer (https://www.fruugo.nl/usb-gegevenskabel-voor-brother-dcp-j4120dw/p-49870038-98489960) ✅ 2024-03-03
-- [x] Order ink for printer (https://www.inktweb.nl/cartridges/brother/flwr-brother-lc-223-multipack-zwart-en-kleur/flwr-lc223mp/) ✅ 2024-03-08
-- [ ] Line 42 in WebClient.cs: fix error that causes WebClient to exit prematurely/without result
+- [ ] Order power cable for monitor
 # LONG TERM
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
@@ -17,7 +15,6 @@
 	- [ ] Mockup
 	- [ ] Implementation
 	- [ ] Functionality
-- [ ] Safe Harbor website
 - [ ] Find a way to synchronize Facebook news and/or photo albums with WordPress sites
 
 # FACEBOOK IMAGE RIPPER
@@ -26,8 +23,7 @@
 - [x] Download photo data ✅ 2024-02-23
 - [ ] Download to specific folder
 - [x] Duplicate checking ✅ 2024-03-01
-- [ ] Paging: string split, correct sequence
-- [ ] Conversion and resizing
+- [x] Paging: string split, correct sequence ✅ 2024-03-22
 - [x] Access Token validity check ✅ 2024-03-01
 - [ ] Access Token automation/refresh
 - [ ] Secure app-ID and app-secret (encryption?)

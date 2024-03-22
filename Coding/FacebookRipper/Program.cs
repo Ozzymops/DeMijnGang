@@ -7,14 +7,15 @@ namespace FacebookRipper
     public class Program
     {
         // setup
-        static APIHandler apiHandler = new APIHandler("EAAQ9Jvkt12EBO2iawi0QbDYsR58NEVINwQpEPGJXA5ygjMb7yo05ErB1UIe2CHdyYgDMcIYzqumVuVQM8mCaXzT14AcPCWlo0a6ZB0nQlx01hcX7pwDNfC1kB78idZA0Ezi1KvxCJ5jZCZBCbzwJM8Br6WwZCyKnv8LzBjvTmZA59K112FVzOGBPwrB6Ue6nKE6jOK6JZA7xZBZBdg11OgwZDZD");
+        static APIHandler apiHandler = new APIHandler("EAAQ9Jvkt12EBO8KlZCHGArgwOS0PqJBuoNZCy5MMHTt9oxcS4bLQCMS3N3QQdCvdhhtW8MBCGXZA4FzRYkq9XOcrcyPbfPytUSDBaF2YMn0GkMZBdhU1nwuyQiWZCkHADOIld15ZB44JrZBcmDMmfrZC2n2RjP9P830kMkWGTbWfTFT9mWkJmKZAca6QYbKfR9ZAuTfFQl3bM7jsaFzqT3xAZDZD");
         static CustomConsole customConsole = new CustomConsole();
+        static WebDownloader webDownloader = new WebDownloader();
 
         static void Main(string[] args)
         {
             ValidateAuthenticationToken();
-            // ValidateGroupId("DeMijngang");
-            // Debug();
+            ValidateGroupId("DeMijngang");
+            GetPhotos("DeMijngang");
         }
 
         static void ValidateAuthenticationToken()
@@ -72,76 +73,29 @@ namespace FacebookRipper
             Console.WriteLine();
         }
 
-        // WIP!
-        static void Debug()
+        static void GetPhotos(string groupId)
         {
-            List<Photo> photos = apiHandler.GetPhotosFromAlbum("119285344359716");
-        }
-
-        static void GetPhotos()
-        {
-            List<string> albumIds = apiHandler.GetAlbumIdsFromPage("DeMijngang");
+            List<string> albumIds = apiHandler.GetAlbumIdsFromPage(groupId);
 
             foreach (string albumId in albumIds)
             {
-                // parse until end
+                List<Photo> photos = apiHandler.GetPhotosFromAlbum(albumId);
+                
+                foreach (Photo photo in photos)
+                {
+                    CustomConsole.WriteLine($"Downloading file [{photo.Filename}]...", ConsoleColor.Yellow);
+
+                    if (webDownloader.DownloadFile(photo, AppDomain.CurrentDomain.BaseDirectory + $"pictures\\{albumId}\\"))
+                    {
+                        CustomConsole.WriteLine($"File [{photo.Filename}] [successfully] downloaded.", ConsoleColor.Yellow, ConsoleColor.Green);
+                    }
+                    else
+                    {
+                        CustomConsole.WriteLine($"File [{photo.Filename}] exists, [skipping].", ConsoleColor.Yellow, ConsoleColor.Red);
+                    }
+                    Console.WriteLine();
+                }
             }
         }
     }
 }
-
-// retrieve pictures
-//var photos = await instance.ConvertPhotos(groupId);
-//int amount = photos.Count;
-
-// input picture download location
-// - default location ("root/pictures") or specified location
-
-//bool isLocationValid = false;
-//string directory = "";
-//CustomConsole.WriteLine($"Download to default location [({AppDomain.CurrentDomain.BaseDirectory + "pictures\\"})] or specify a [directory]?", ConsoleColor.Yellow);
-
-//while (!isLocationValid)
-//{
-//    Console.WriteLine("> [D]efault or [S]pecify");
-//    string answer = Console.ReadLine();
-
-//    if (answer.ToLower() == "d")
-//    {
-//        isLocationValid = true;
-//        directory = AppDomain.CurrentDomain.BaseDirectory + "pictures\\";
-//        CustomConsole.WriteLine($"Pictures will be saved to default location [({directory})].", ConsoleColor.Yellow);
-//    }
-//    else if (answer.ToLower() == "s")
-//    {
-//        Console.WriteLine("Input folder path: ");
-//        string path = Console.ReadLine();
-
-//        Console.WriteLine("Invalid path input.");
-//    }
-//    else
-//    {
-//        Console.WriteLine("Invalid input.");
-//    }
-//}
-//Console.WriteLine();
-
-// ask if pictures should be converted to .webp if not .webp
-// ask if pictures should be resized to a maximum height
-
-// download pictures
-//FileDownloader fileDownloader = new FileDownloader();
-//CustomConsole.WriteLine($"Downloading [{amount}] photos to directory [{directory}]...", ConsoleColor.Yellow);
-//int count = 0;
-
-//foreach (Photo photo in photos)
-//{
-//    count++;
-//    Console.WriteLine($"Photo {count}: {photo.Filename}");
-//    fileDownloader.DownloadFile(photo, directory);
-//    Console.WriteLine();
-//}
-
-//Console.WriteLine("Finished!");
-
-// finish
