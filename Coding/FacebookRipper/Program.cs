@@ -1,5 +1,7 @@
 ﻿using FacebookRipper.Code;
 using FacebookRipper.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 
 namespace FacebookRipper
@@ -7,39 +9,66 @@ namespace FacebookRipper
     public class Program
     {
         // setup
-        static APIHandler apiHandler = new APIHandler("EAAQ9Jvkt12EBO8KlZCHGArgwOS0PqJBuoNZCy5MMHTt9oxcS4bLQCMS3N3QQdCvdhhtW8MBCGXZA4FzRYkq9XOcrcyPbfPytUSDBaF2YMn0GkMZBdhU1nwuyQiWZCkHADOIld15ZB44JrZBcmDMmfrZC2n2RjP9P830kMkWGTbWfTFT9mWkJmKZAca6QYbKfR9ZAuTfFQl3bM7jsaFzqT3xAZDZD");
+        static APIHandler apiHandler = null;
         static CustomConsole customConsole = new CustomConsole();
         static WebDownloader webDownloader = new WebDownloader();
 
         static void Main(string[] args)
         {
-            ValidateAuthenticationToken();
-            ValidateGroupId("DeMijngang");
-            GetPhotos("DeMijngang");
+            using StreamReader reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "config.json");
+            var json = reader.ReadToEnd();
+            string authenticationToken = JsonConvert.DeserializeObject<JObject>(json).SelectToken("AuthenticationToken").ToString();
+
+            if (!String.IsNullOrEmpty(authenticationToken))
+            {
+                apiHandler = new APIHandler(authenticationToken);
+            }
+            else
+            {
+                CustomConsole.WriteLine($"[No authentication token found in the configuration file].\nPlease make sure the configuration file contains an [authentication token].\nPress ENTER to close the application.", ConsoleColor.Red, ConsoleColor.Yellow);
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+
+            if (args.Length == 1)
+            {
+                ValidateAuthenticationToken();
+                ValidateGroupId(args[0]);
+                GetPhotos(args[0]);
+            }
+            else
+            {
+                if (args.Length > 1)
+                {
+                    CustomConsole.WriteLine($"[Too many arguments ({args.Length})].\nTry again with [only 1 argument]; the target group ID/name.\nPress ENTER to close the application.", ConsoleColor.Red, ConsoleColor.Yellow);
+                }
+
+                if (args.Length <= 0)
+                {
+                    CustomConsole.WriteLine($"[No arguments found].\nTry again with [only 1 argument]; the target group ID/name.\nPress ENTER to close the application.", ConsoleColor.Red, ConsoleColor.Yellow);
+                }
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
         }
 
         static void ValidateAuthenticationToken()
         {
             // auth check
-            // - continue or re-enter token
-            bool isAuthValid = false;
             CustomConsole.WriteLine("Checking if [authentication token] is still valid...", ConsoleColor.Yellow);
 
-            while (!isAuthValid)
+            if (apiHandler.ValidateAuthenticationToken())
             {
-                if (apiHandler.ValidateAuthenticationToken())
-                {
-                    isAuthValid = true;
-                    CustomConsole.WriteLine("[Authentication token] is [valid].", ConsoleColor.Yellow, ConsoleColor.Green);
-                }
-                else
-                {
-                    CustomConsole.WriteLine("[Authentication token] is [invalid].", ConsoleColor.Yellow, ConsoleColor.Red);
-                    CustomConsole.WriteLine("Please reenter [authentication] token:", ConsoleColor.Yellow);
-                    Console.ReadLine();
-                    // input blah blah
-                }
+                CustomConsole.WriteLine("[Authentication token] is [valid].", ConsoleColor.Yellow, ConsoleColor.Green);
             }
+            else
+            {
+                CustomConsole.WriteLine("[Authentication token] is [invalid].", ConsoleColor.Yellow, ConsoleColor.Red);
+                CustomConsole.WriteLine("Please enter a [valid] [authentication token] (from https://developers.facebook.com/tools/explorer/) in the configuration file and restart the application.\nPress ENTER to close the application.", ConsoleColor.Green, ConsoleColor.Yellow);
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+
             Console.WriteLine();
         }
 
@@ -85,7 +114,7 @@ namespace FacebookRipper
                 {
                     CustomConsole.WriteLine($"Downloading file [{photo.Filename}]...", ConsoleColor.Yellow);
 
-                    if (webDownloader.DownloadFile(photo, AppDomain.CurrentDomain.BaseDirectory + $"pictures\\{albumId}\\"))
+                    if (webDownloader.DownloadFile(photo, AppDomain.CurrentDomain.BaseDirectory + $"pictures\\{groupId}\\{albumId}\\"))
                     {
                         CustomConsole.WriteLine($"File [{photo.Filename}] [successfully] downloaded.", ConsoleColor.Yellow, ConsoleColor.Green);
                     }

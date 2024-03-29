@@ -1,11 +1,10 @@
-# WEEKLY TASKS (23-2-2024)
+# WEEKLY TASKS (29-3-2024)
 - [ ] Update De Mijngang news
 - [ ] Update De Mijngang photo albums
 - [ ] Update Good Old Times news
 - [ ] Update Good Old Times photo albums
-
 # SHORT TERM
-- [ ] Order power cable for monitor
+Nothing
 # LONG TERM
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
@@ -16,7 +15,6 @@
 	- [ ] Implementation
 	- [ ] Functionality
 - [ ] Find a way to synchronize Facebook news and/or photo albums with WordPress sites
-
 # FACEBOOK IMAGE RIPPER
 - [x] Access API for photo data ✅ 2024-02-23
 - [x] Retrieve photo data ✅ 2024-02-23
@@ -27,7 +25,6 @@
 - [x] Access Token validity check ✅ 2024-03-01
 - [ ] Access Token automation/refresh
 - [ ] Secure app-ID and app-secret (encryption?)
-
 # MIJNGANG APP
 - [ ] Retrieve current events from website (maybe using RSS? https://demijngang.nl/evenementen-permalink/feed/)
 - [ ] Display current events
@@ -40,7 +37,6 @@
 - [ ] Push notification for subscribed events
 - [ ] Push notification for upcoming event (within three days or so)
 - [ ] Leave comments on event
-
 # GOOD OLD TIMES
 - [ ] Form for customers
 	- [ ] Preferred time/date (view owner's agenda?)
