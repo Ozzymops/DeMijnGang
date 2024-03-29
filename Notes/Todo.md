@@ -1,6 +1,6 @@
 # WEEKLY TASKS (29-3-2024)
 - [ ] Update De Mijngang news
-- [ ] Update De Mijngang photo albums
+- [x] Update De Mijngang photo albums ✅ 2024-03-29
 - [ ] Update Good Old Times news
 - [ ] Update Good Old Times photo albums
 # SHORT TERM
