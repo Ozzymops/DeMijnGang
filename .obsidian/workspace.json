@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Todo.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Todo.md",
+                "file": "Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Todo.md"
+                "file": "Todo.md"
               }
             }
           },
@@ -159,30 +159,30 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
-    "Images/DeMijngang/berichten/2023/2022-12-23/20221223_119285191026398.webp",
+    "TEMPORARY NOTES.md",
+    "Todo.md",
+    "README.md",
+    "Images/DeMijngang/berichten/2024/2024-04-04/20240404_392304240391157.webp",
+    "Images/DeMijngang/berichten/2024/2024-04-04",
+    "Images/DeMijngang/berichten/2024/New folder",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389434037344844.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432194011695.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432227345025.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432260678355.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432287345019.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432334011681.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432357345012.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432394011675.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432427345005.webp",
+    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang",
+    "Images/DeMijngang/albums/New folder",
+    "Coding/FacebookRipper/obj/Release/net8.0/Facebook.C970CAF4.Up2Date",
+    "Coding/FacebookRipper/obj/Release/net8.0/FacebookRipper.csproj.AssemblyReference.cache",
+    "Coding/FacebookRipper/obj/7c4a3c61-efc6-443d-9a64-28b3d162b698.tmp",
+    "Coding/FacebookRipper/obj/390c6793-5096-47a1-8274-bfb9bbfb6dd4.tmp",
     "Images/DeMijngang/berichten/2023/2022-12-23",
     "Images/DeMijngang/berichten/2023/Nieuwe map",
-    "Images/DeMijngang/berichten/2023/2023-01-25/20230125_131695299785387.webp",
-    "Images/DeMijngang/berichten/2023/2023-01-25/20230125_131696183118632.webp",
-    "Images/DeMijngang/berichten/2023/2023-01-25",
-    "Images/DeMijngang/berichten/2023/2023-01-25-1",
-    "Images/DeMijngang/berichten/2023/2023-03-22/20230322_159268727028044.webp",
-    "Images/DeMijngang/berichten/2023/2023-03-22/20230322_159271237027793.webp",
-    "Images/DeMijngang/berichten/2023/2023-03-22/20230322_159271240361126.webp",
-    "Images/DeMijngang/berichten/2023/2023-03-22",
-    "Images/DeMijngang/berichten/2023/2023-04-29/20230429_183842204570696.webp",
-    "Images/DeMijngang/berichten/2023/2023-04-29",
-    "Images/DeMijngang/berichten/2023/2023-05-04/20230504_187300334224883.webp",
-    "Images/DeMijngang/berichten/2023/2023-05-04/20230504_187300347558215.webp",
-    "Images/DeMijngang/berichten/2023/2023-05-04",
-    "Images/DeMijngang/berichten/2023/2023-05-13/20230513_193745263580390.webp",
-    "Images/DeMijngang/berichten/2023/2023-05-13/20230513_193745293580387.webp",
-    "Images/DeMijngang/berichten/2023/2023-05-13",
-    "Images/DeMijngang/berichten/2023/2023-06-10",
-    "Images/DeMijngang/berichten/2023/2023-06-21",
-    "Notes/TEMPORARY NOTES.md",
     "Notes/TODO.md",
-    "README.md",
     "TODO.md",
     "Coding/Index.md",
     "Coding/scripts_bat.md",

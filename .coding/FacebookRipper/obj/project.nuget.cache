@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IMUCfDrsLlVBYU5qttI3g0XPeHuP3ztmHUrpPL4L4RVPC1y67PPf7U+FM06fKWDTMiebx5KOCiT7B6KHyu2QZQ==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\DeMijngang\\Coding\\FacebookRipper\\FacebookRipper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ozzymops\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
