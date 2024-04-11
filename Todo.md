@@ -6,11 +6,7 @@
 # SHORT TERM
 Nothing
 # LONG TERM
-- [ ] Home page: featured event front-and-center
-	- [x] No structural, recurring activities ✅ 2024-04-05
-- [ ] In ons gebouw: RAP
-- [ ] GMS?
-- [ ] Delete Safe Harbor
+- [ ] outlook gedeelde agenda herinner wendy
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
 	- [ ] Implementation
