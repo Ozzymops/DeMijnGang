@@ -1,8 +1,8 @@
 # WEEKLY TASKS (29-3-2024)
-- [x] Update De Mijngang news ✅ 2024-04-05
-- [x] Update De Mijngang photo albums ✅ 2024-04-05
-- [ ] Update Good Old Times news
-- [ ] Update Good Old Times photo albums
+- [ ] Update De Mijngang news
+- [ ] Update De Mijngang photo albums
+- [ ] ~~Update Good Old Times news~~
+- [ ] ~~Update Good Old Times photo albums~~
 # SHORT TERM
 Nothing
 # LONG TERM
@@ -11,6 +11,9 @@ Nothing
 	- [ ] Mockup (Adobe XD)
 	- [ ] Implementation
 	- [ ] Functionality
+	- [ ] Custom theme
+		- [ ] Roboto font
+		- [ ] Current 'old page' style
 - [ ] Good Old Times website
 	- [ ] Mockup
 	- [ ] Implementation
