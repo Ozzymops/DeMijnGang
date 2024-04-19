@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todo.md",
+                "file": "Redesign/Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Todo.md",
+                "file": "Redesign/Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Todo.md",
+                "file": "Redesign/Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo.md"
+                "file": "Redesign/Notes.md"
               }
             }
           },
@@ -159,47 +159,51 @@
   },
   "active": "fc5a416f3b09302a",
   "lastOpenFiles": [
-    "Images/DeMijngang/resources/div_background-2.png",
-    "Images/DeMijngang/resources/div-background-2.png",
-    "Images/DeMijngang/resources/div_background-1.png",
-    "Images/DeMijngang/resources/div_background.png",
-    "Images/DeMijngang/resources/Naamloos.png",
-    "TEMPORARY NOTES.md",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted/style.min.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted/style.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted/style-rtl.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted/style-rtl.min.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted/block.json",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/preformatted",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/nextpage/block.json",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/nextpage/editor.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/nextpage/editor-rtl.min.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/nextpage/editor.min.css",
+    "Redesign/LocalWordpress/app/public/wp-includes/blocks/nextpage/editor-rtl.css",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Parser/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.svg",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/CHANGELOG.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-svg-lib/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/UPGRADING.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/RELEASE.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_9.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_8.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_7.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_6.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_5.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_40.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_4.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_39.png",
+    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
+    "Redesign/LocalWordpress/app/public/wp-includes/sodium_compat/src/Core/Curve25519/README.md",
+    "Redesign/LocalWordpress/app/public/wp-includes/sodium_compat/src/Core32/Curve25519/README.md",
+    "Redesign/LocalWordpress/app/public/wp-content/themes/twentytwentytwo/assets/fonts/source-serif-pro/LICENSE.md",
+    "Redesign/LocalWordpress/app/public/wp-content/themes/twentytwentythree/assets/fonts/source-serif-pro/LICENSE.md",
+    "Redesign/Notes.md",
     "Todo.md",
+    "TEMPORARY NOTES.md",
     "README.md",
-    "Images/DeMijngang/berichten/2024/2024-04-04/20240404_392304240391157.webp",
-    "Images/DeMijngang/berichten/2024/2024-04-04",
-    "Images/DeMijngang/berichten/2024/New folder",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389434037344844.webp",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432194011695.webp",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432227345025.webp",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432260678355.webp",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang/20240330_389432287345019.webp",
-    "Images/DeMijngang/albums/2024-03-30 Pasen De MijnGang",
-    "Images/DeMijngang/albums/New folder",
-    "Coding/FacebookRipper/obj/Release/net8.0/Facebook.C970CAF4.Up2Date",
-    "Coding/FacebookRipper/obj/Release/net8.0/FacebookRipper.csproj.AssemblyReference.cache",
-    "Coding/FacebookRipper/obj/7c4a3c61-efc6-443d-9a64-28b3d162b698.tmp",
-    "Coding/FacebookRipper/obj/390c6793-5096-47a1-8274-bfb9bbfb6dd4.tmp",
-    "Images/DeMijngang/berichten/2023/2022-12-23",
-    "Images/DeMijngang/berichten/2023/Nieuwe map",
     "Notes/TODO.md",
     "TODO.md",
     "Coding/Index.md",
-    "Coding/scripts_bat.md",
-    "Coding/rename_to_number_sequence.md",
-    "Coding/png_to_webp.md",
-    "Notes/Mobile app.md",
-    "Notes/Facebook Scraper.md",
-    "Notes/Facebook image ripper.md",
-    "Gebruik.md",
-    "Coding.md",
-    "Scripts/Scripts.md",
-    "Scripts/scripts_bat.md",
-    "Scripts/png_to_webp.md",
-    "Scripts/rename_to_number_sequence.md",
-    "().md",
-    "demijngang.nl.md",
-    "Untitled.md"
+    "Coding/scripts_bat.md"
   ]
 }

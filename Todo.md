@@ -6,7 +6,6 @@
 # SHORT TERM
 Nothing
 # LONG TERM
-- [ ] outlook gedeelde agenda herinner wendy
 - [ ] De Mijngang website redesign?
 	- [ ] Mockup (Adobe XD)
 	- [ ] Implementation
