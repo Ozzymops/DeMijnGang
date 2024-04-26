@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "461f56c0a0b7bf85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Redesign/HTML.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Redesign/Notes.md",
+                "file": "Redesign/HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Redesign/Notes.md",
+                "file": "Redesign/HTML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Redesign/Notes.md"
+                "file": "Redesign/HTML.md"
               }
             }
           },
@@ -157,53 +170,53 @@
       "meld-encrypt:Convert to or from an Encrypted note": false
     }
   },
-  "active": "fc5a416f3b09302a",
+  "active": "461f56c0a0b7bf85",
   "lastOpenFiles": [
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-post.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-paused-extensions-storage.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-object-cache.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-network.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-network-query.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-navigation-fallback.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-metadata-lazyloader.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-matchesmapregex.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-locale.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-image-editor.php",
-    "Redesign/LocalWordpress/app/public/wp-includes/class-wp-image-editor-gd.php",
-    "Redesign/LocalWordpress/app/public/wp-content/themes/twentytwentytwo/screenshot.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Parser/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.svg",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/CHANGELOG.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-svg-lib/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/UPGRADING.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/RELEASE.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_9.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_8.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_7.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_6.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_5.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_40.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_4.png",
-    "Redesign/LocalWordpress/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
-    "Redesign/LocalWordpress/app/public/wp-includes/sodium_compat/src/Core/Curve25519/README.md",
-    "Redesign/LocalWordpress/app/public/wp-includes/sodium_compat/src/Core32/Curve25519/README.md",
-    "Redesign/LocalWordpress/app/public/wp-content/themes/twentytwentytwo/assets/fonts/source-serif-pro/LICENSE.md",
-    "Redesign/LocalWordpress/app/public/wp-content/themes/twentytwentythree/assets/fonts/source-serif-pro/LICENSE.md",
+    "Redesign/LocalWP/app/sql/local.sql.tmp",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-logs/general-2024-04-26.txt",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-logs",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/os2.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/post.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/nameRecord.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/name.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/maxp.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/loca.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/kern.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/src/FontLib/Table/Type/hmtx.php",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Parser/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.svg",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/lib/res/broken_image.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-svg-lib/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/UPGRADING.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/CHANGELOG.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/RELEASE.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/dompdf/dompdf/README.md",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_9.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_8.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_6.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_7.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_5.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_40.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_4.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/bookings-manager/phpqrcode/cache/frame_39.png",
+    "Redesign/LocalWP/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Parser/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/sabberworm/php-css-parser/CHANGELOG.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-svg-lib/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/UPGRADING.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/RELEASE.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/README.md",
+    "Redesign/LocalWP/app/public/wp-content/upgrade/events-manager-pro.3.2.8.1/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-font-lib/README.md",
     "Redesign/Notes.md",
-    "Todo.md",
-    "TEMPORARY NOTES.md",
-    "README.md",
-    "Notes/TODO.md",
-    "TODO.md",
-    "Coding/Index.md",
-    "Coding/scripts_bat.md"
+    "Redesign/HTML.md",
+    "Redesign/LocalWP_old/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/README.md",
+    "Redesign/LocalWP_old/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/masterminds/html5/src/HTML5/Parser/README.md",
+    "Redesign/LocalWP_old/app/public/wp-content/plugins/events-manager-pro/add-ons/printables/dompdf/vendor/phenx/php-svg-lib/README.md"
   ]
 }

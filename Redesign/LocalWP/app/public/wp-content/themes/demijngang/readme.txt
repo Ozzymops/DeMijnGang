@@ -1,0 +1,1 @@
+Thanks to followandrew (https://www.youtube.com/watch?v=-h7gOJbIpmo) and hostinger.com (https://www.hostinger.com/tutorials/create-wordpress-theme-html5)
