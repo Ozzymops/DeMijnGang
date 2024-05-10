@@ -1,0 +1,32 @@
+## Weekly
+- [ ] Update news
+- [ ] Update photo albums
+## Short term tasks
+n/a
+## Long term tasks
+- [ ] "De MijnGang" website development/redesign
+	- [ ] Mock-ups
+	- [ ] Theme/Style creation
+	- [ ] Functionality & Plugins
+	- [ ] Push to STRATO
+- [ ] "Good Old Times" website development
+	- [ ] Mock-ups
+	- [ ] Theme/Style set-up/creation
+	- [ ] Functionality & Plugins
+		- [ ] Form for customers
+			- [ ] Preferred time/date (view schedule?)
+			- [ ] Reference picture of tattoo
+			- [ ] Location picture/description of tattoo
+			- [ ] Dimensions of tattoo
+			- [ ] Extra message/comment
+			- [ ] Send form to mailbox (good.old.times@outlook.com)
+	- [ ] Push to STRATO
+- [ ] "De MijnGang" smartphone application
+	- [ ] Retrieve current evens from website (RSS if possible https://demijngang.nl/evenementen-permalink/feed/)
+	- [ ] Display events/event type
+	- [ ] Subscribe to events/event type
+	- [ ] Participate in events
+	- [ ] Receive push-notification of new major events
+	- [ ] Receive push-notification for upcoming, subscribed event
+	- [ ] Receive push-notification for upcoming, major event
+	- [ ] Comment on event

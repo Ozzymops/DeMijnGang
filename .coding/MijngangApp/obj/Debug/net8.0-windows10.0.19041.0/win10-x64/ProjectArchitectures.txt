@@ -1,1 +1,0 @@
-D:\GitHub\DeMijngang\Coding\MijngangApp\MijngangApp.csproj;x64
