@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To do.md",
+                "file": "DeMijnGangSite.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To do.md",
+                "file": "DeMijnGangSite.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "To do.md",
+                "file": "DeMijnGangSite.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "To do.md"
+                "file": "DeMijnGangSite.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "71a8a6c6aa069ddc",
   "lastOpenFiles": [
-    "DeMijnGangSite.md",
     "To do.md",
     "Notes.md",
-    "FileZilla.md"
+    "FileZilla.md",
+    "DeMijnGangSite.md"
   ]
 }

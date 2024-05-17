@@ -1,0 +1,1 @@
+[17-May-2024 10:40:39 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in D:\GitHub\DeMijngang\Projects\DeMijnGangSite\Site\app\public\wp-content\plugins\events-manager-pro\add-ons\user-fields.php on line 58

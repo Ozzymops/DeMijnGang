@@ -6743,9 +6743,10 @@
 	  }
 	})();
 
-	window.onload = function () {
-	  // Add a <div> to the page with the class `em-list`  
-	  if (document.getElementsByClassName("em-list").length) {
+	function eventsList() {
+	  var emList = document.getElementsByClassName('em-customlist');
+	  if (emList.length > 0) {
+	    // Add a <div> to the page with the class `em-customlist`  
 	    var dateToday = new Date();
 	    dateToday.toLocaleDateString("local", {
 	      weekday: "long",
@@ -6760,9 +6761,10 @@
 	      day: "numeric"
 	    });
 	    `scope="${dateToday.toISOString().split('T')[0]},${dateFuture.toISOString().split('T')[0]}"`;
-	    document.getElementById("em-list").innerHTML = '[events_list $(scope)]<span><p class="event-list-entry-left">#_EVENTLINK</p><p class="event-list-entry-right">#_EVENTDATES, #_EVENTTIMES</p><p>#_EVENTEXCERPT</p></span>[/events_list]';
+	    emList[0].innerHTML = '[events_list $(scope)]<span><p class="event-list-entry-left">#_EVENTLINK</p><p class="event-list-entry-right">#_EVENTDATES, #_EVENTTIMES</p><p>#_EVENTEXCERPT</p></span>[/events_list]';
 	  }
-	};
+	}
+	window.onload = eventsList();
 
 	exports.Alert = alert;
 	exports.Button = button;
