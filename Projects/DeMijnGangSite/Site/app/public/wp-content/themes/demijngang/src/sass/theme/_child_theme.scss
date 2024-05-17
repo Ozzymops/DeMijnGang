@@ -12,6 +12,23 @@
     }
 }
 
+// Navbar gradient
+.navbar {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 2%, rgba(93,53,0,1) 30%, rgba(0,0,0,1) 100%); 
+}
+
+// Navbar links outline
+.nav-link {
+    font-size: 20px;
+    color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+}
+
 // Hide site name on navbar
 .navbar-brand {
     display: none !important;

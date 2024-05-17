@@ -1,3 +1,15 @@
+## Bookmarks
+
+| SITE                        | PURPOSE        | LINK                                            |
+| --------------------------- | -------------- | ----------------------------------------------- |
+| STRATO                      | Webhost        | https://www.strato.nl/                          |
+| De MijnGang                 | Primary site   | https://demijngang.nl/                          |
+| Good Old Times              | Secondary site | http://goodoldtimestattoo.nl/                   |
+| Events Manager docs         | Documentation  | https://wp-events-plugin.com/documentation/     |
+| Facebook Graph API Explorer | Tool           | https://developers.facebook.com/tools/explorer/ |
+| De MijnGang Facebook        | Facebook page  | https://www.facebook.com/demijngang/            |
+| Good Old times Facebook     | Facebook page  | https://www.facebook.com/GoodOldTimesShop/      |
+
 ## Credentials
 
 | SITE                       | USERNAME                  | PASSWORD                   |

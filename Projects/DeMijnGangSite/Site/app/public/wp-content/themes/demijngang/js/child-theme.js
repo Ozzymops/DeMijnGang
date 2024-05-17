@@ -6747,6 +6747,7 @@
 	  var emList = document.getElementsByClassName('em-customlist');
 	  if (emList.length > 0) {
 	    // Add a <div> to the page with the class `em-customlist`  
+	    // TODO: Featured event on left-hand side, list of next five miscellaneous events on right-hand side
 	    var dateToday = new Date();
 	    dateToday.toLocaleDateString("local", {
 	      weekday: "long",
