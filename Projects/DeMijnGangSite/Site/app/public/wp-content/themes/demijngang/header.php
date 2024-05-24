@@ -34,9 +34,19 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<header id="wrapper-navbar">
 
 		<div class="top-header">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-5">
+						<p class="header-title"><a href="/">De MijnGang</a></p>
+						<p class="header-subtitle">Van O.V.S. naar De MijnGang</p>
+					</div>			
+				</div>
+			</div>
+			<!--
 			<div class="row">
 				<img class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header.png" alt="Header image" >
 			</div>
+			-->
 		</div>
 
 		<a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">

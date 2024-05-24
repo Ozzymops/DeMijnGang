@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Chomsky";
+    src: url(../fonts/Chomsky.otf) format('embedded-opentype');
+    src: url(../fonts/Chomsky.woff) format('woff');
+    src: url(../fonts/Chomsky.woff2) format('woff2');
+}
+
 // Main content width
 @media (min-width: 1400px) {
     .container {
@@ -10,6 +17,46 @@
     .col-md-4 {
         width: 25% !important;
     }
+}
+
+// Header
+.top-header {
+    background: rgb(0, 0, 0);
+    background-image: url(../img/header-fade-notext.png);
+    background-image: url(../img/header-fade-notext.png), radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(93,53,0,1) 50%, rgba(0,0,0,1) 100%); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+// Header text
+.header-title, .header-title a, .header-subtitle {
+    height: 57%;
+    font-family: "Chomsky";
+    font-size: 110px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000;
+}
+
+.header-subtitle {
+    font-size: 33px;
+    font-style: italic;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
 }
 
 // Navbar gradient

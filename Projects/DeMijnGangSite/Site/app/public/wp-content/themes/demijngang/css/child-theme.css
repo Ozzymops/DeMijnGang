@@ -14964,6 +14964,12 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+@font-face {
+  font-family: "Chomsky";
+  src: url(../fonts/Chomsky.otf) format("embedded-opentype");
+  src: url(../fonts/Chomsky.woff) format("woff");
+  src: url(../fonts/Chomsky.woff2) format("woff2");
+}
 @media (min-width: 1400px) {
   .container {
     max-width: 90% !important;
@@ -14974,6 +14980,36 @@ figure.woocommerce-product-gallery__wrapper {
     width: 25% !important;
   }
 }
+.top-header {
+  background: rgb(0, 0, 0);
+  background-image: url(../img/header-fade-notext.png);
+  background-image: url(../img/header-fade-notext.png), radial-gradient(circle, rgb(255, 255, 255) 10%, rgb(93, 53, 0) 50%, rgb(0, 0, 0) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title, .header-title a, .header-subtitle {
+  height: 57%;
+  font-family: "Chomsky";
+  font-size: 110px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
+}
+
+.header-subtitle {
+  font-size: 33px;
+  font-style: italic;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+}
+
 .navbar {
   background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgb(255, 255, 255) 2%, rgb(93, 53, 0) 30%, rgb(0, 0, 0) 100%);
