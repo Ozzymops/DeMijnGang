@@ -2,16 +2,8 @@
 - [ ] Update news
 - [ ] Update photo albums
 ## Short term tasks
-- [ ] Events Manager list JavaScript
-	- [ ] Featured event (using tag/category? maybe shortcode?)
-		- [ ] Image
-		- [ ] Title
-		- [ ] Date
-		- [ ] Full text/blurb
-	- [ ] Miscellaneous events as list (scope future, limit 5?)
-		- [ ] Title
-		- [ ] Date
-		- [ ] Short blurb/no text
+- [ ] Header banner too wide/high?
+- [ ] Upcoming soup -> something else?
 ## Long term tasks
 - [ ] "De MijnGang" website development/redesign
 	- [ ] Mock-ups

@@ -15033,6 +15033,14 @@ figure.woocommerce-product-gallery__wrapper {
   justify-content: center !important;
 }
 
+#eventslist div {
+  margin-bottom: 1rem;
+}
+
+#eventslist p {
+  margin-bottom: 0;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

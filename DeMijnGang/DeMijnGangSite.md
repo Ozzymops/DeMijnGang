@@ -8,7 +8,6 @@
 4. Remove everything, replace with files from GitHub
 ## Tricks and tips
 - Alt-255 = empty space
-
 # Balsamiq
 https://balsamiq.com/
 https://gist.github.com/HoussemNasri/c09e55e0e5f451aa10f8621a6680ba28
