@@ -19,6 +19,22 @@
     }
 }
 
+// Background image
+body {
+    background-image: url("../img/background.webp");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.entry-content, #right-sidebar {
+    background-image: url("../img/div.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
 // Header
 .top-header {
     background: rgb(0, 0, 0);
@@ -61,8 +77,8 @@
 
 // Navbar gradient
 .navbar {
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 2%, rgba(93,53,0,1) 30%, rgba(0,0,0,1) 100%); 
+    background-color: #330f03 !important;
+    --bs-navbar-padding-y: 0 !important;
 }
 
 // Navbar links outline
@@ -90,7 +106,61 @@
     justify-content: center !important;
 }
 
-// Events Manager Pro
+// ~ Main styling ~
+h1 { 
+    font-family: "Chomsky";
+}
+
+// Minimum height for proper footer placement
+#page-wrapper, #error-404-wrapper {
+    min-height: calc(100vh - 150px - 150px); // - header, - footer
+}
+
+// Footer
+#wrapper-footer {
+    background-color: #330f03;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    // E-Mail/Facebook icons
+    .footer-links {
+        display: flex !important;
+        justify-content: center;      
+
+        a {
+            color: #c7a56b;
+            font-size: 36px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }      
+    }
+
+    // Copyright
+    .footer-information {
+        display: flex !important;
+        justify-content: center;
+
+        p {
+            color: #c7a56b;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        i {
+            color: #c7a56b;
+            font-size: 24px;
+            margin: 0;
+            padding: 7px;
+        }
+    }
+}
+
+:where(.wp-block-columns) {
+    margin-bottom: 0px;
+}
+
+// ~ Plugins and add-ons ~
+// = Events Manager Pro =
 #eventslist div {
     margin-bottom: 1rem;
 }
@@ -98,3 +168,46 @@
 #eventslist p {
     margin-bottom: 0;
 }
+
+.em.em-calendar {
+    --date-color: black;
+    --calendar-background: #c7a56b;
+    --date-background: #c7a56b;
+}
+
+.em-cal-head {
+    --calendar-background: #aa8a53;
+    --header-color: black;
+    font-family: "Chomsky";
+    font-size: 32px;
+}
+
+.em-cal-day-date {
+    --date-border-color: #330f03 !important;
+}
+
+.eventless-today, .eventful-today {
+    --date-color: red;
+    text-shadow:
+        0.5px 0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000;
+}
+
+// Calendar pop-up
+.em-modal-title {
+    font-family: "Chomsky";
+    font-size: 32px;
+}
+
+.em-modal-popup {
+    background-image: url("../img/div.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// ~ Page tweaks ~
+
+// ~ Media queries ~

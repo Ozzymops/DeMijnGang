@@ -1,3 +1,24 @@
+## Website theme
+- [ ] Style
+	- [x] Colors
+	- [x] Font
+	- [x] Header
+	- [ ] Navigation
+	- [ ] Sidebar
+		- [ ] Upcoming soup?
+		- [x] News
+		- [x] Calendar with events/news
+	- [x] Footer
+	- [ ] Media queries
+- [x] Front page
+	- [x] Welcome section
+	- [x] Events section
+		- [x] Featured
+		- [x] Events list
+- [ ] News (should be automated)
+- [ ] Events (should be automated)
+- [ ] Pictures (NextGen gallery with custom styling)
+- [ ] Contact (contact information and form -> e-mail)
 ## Weekly
 - [ ] Update news
 - [ ] Update photo albums
