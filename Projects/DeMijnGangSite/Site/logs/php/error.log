@@ -1,1 +1,3 @@
 [17-May-2024 10:40:39 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in D:\GitHub\DeMijngang\Projects\DeMijnGangSite\Site\app\public\wp-content\plugins\events-manager-pro\add-ons\user-fields.php on line 58
+[07-Jun-2024 11:57:35 UTC] Cron reschedule event error for hook: em_gateways_cron, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"em_minute","args":[],"interval":60}
+[07-Jun-2024 11:57:35 UTC] Cron unschedule event error for hook: em_gateways_cron, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"em_minute","args":[],"interval":60}

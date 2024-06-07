@@ -1,15 +1,14 @@
 ## Website theme
-- [ ] Style
+- [x] Style
 	- [x] Colors
 	- [x] Font
 	- [x] Header
-	- [ ] Navigation
-	- [ ] Sidebar
-		- [ ] Upcoming soup?
+	- [x] Navigation
+	- [x] Sidebar
 		- [x] News
 		- [x] Calendar with events/news
 	- [x] Footer
-	- [ ] Media queries
+	- [x] Media queries
 - [x] Front page
 	- [x] Welcome section
 	- [x] Events section

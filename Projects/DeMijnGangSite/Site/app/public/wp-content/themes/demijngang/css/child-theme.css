@@ -14964,12 +14964,15 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+/* #region Global */
 @font-face {
   font-family: "Chomsky";
   src: url(../fonts/Chomsky.otf) format("embedded-opentype");
   src: url(../fonts/Chomsky.woff) format("woff");
   src: url(../fonts/Chomsky.woff2) format("woff2");
 }
+/* #endregion*/
+/* #region Style */
 @media (min-width: 1400px) {
   .container {
     max-width: 90% !important;
@@ -14980,6 +14983,12 @@ figure.woocommerce-product-gallery__wrapper {
     width: 25% !important;
   }
 }
+@media only screen and (max-width: 768px) {
+  .hideme {
+    display: none;
+  }
+}
+
 body {
   background-image: url("../img/background.webp");
   background-position: center top;
@@ -15018,11 +15027,31 @@ body {
   margin-bottom: 0px;
   text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
 }
+@media only screen and (max-width: 1540px) {
+  .header-title, .header-title a, .header-subtitle {
+    font-size: 72px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-title, .header-title a, .header-subtitle {
+    font-size: 64px;
+  }
+}
 
 .header-subtitle {
   font-size: 33px;
   font-style: italic;
   text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+}
+@media only screen and (max-width: 1540px) {
+  .header-subtitle {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-subtitle {
+    font-size: 22px;
+  }
 }
 
 .navbar {
@@ -15048,8 +15077,39 @@ body {
   justify-content: center !important;
 }
 
+.dropdown {
+  --bs-dropdown-spacer: 0;
+}
+.dropdown .dropdown-menu {
+  background-color: #330f03 !important;
+  margin-top: 0;
+}
+.dropdown .dropdown-menu li a {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  #right-sidebar {
+    margin-top: 20px;
+  }
+}
+
 h1, .h1 {
   font-family: "Chomsky";
+}
+
+a {
+  color: #212529;
+}
+
+a:hover {
+  color: #696a6b;
 }
 
 #page-wrapper, #error-404-wrapper {
@@ -15071,6 +15131,9 @@ h1, .h1 {
   padding-left: 15px;
   padding-right: 15px;
 }
+#wrapper-footer .footer-links a:hover {
+  color: white;
+}
 #wrapper-footer .footer-information {
   display: flex !important;
   justify-content: center;
@@ -15091,6 +15154,8 @@ h1, .h1 {
   margin-bottom: 0px;
 }
 
+/* #endregion */
+/* #region Plugin support */
 #eventslist div {
   margin-bottom: 1rem;
 }
@@ -15111,14 +15176,34 @@ h1, .h1 {
   font-family: "Chomsky";
   font-size: 32px;
 }
+.em-cal-head div {
+  overflow: hidden;
+}
 
 .em-cal-day-date {
   --date-border-color: #330f03 !important;
+}
+@media only screen and (max-width: 1200px) {
+  .em-cal-day-date span {
+    width: 22px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .em-cal-day-date span {
+    width: 22px !important;
+  }
 }
 
 .eventless-today, .eventful-today {
   --date-color: red;
   text-shadow: 0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000;
+}
+.eventless-today a:hover, .eventful-today a:hover {
+  background-color: white !important;
+}
+
+.eventful a:hover {
+  background-color: white !important;
 }
 
 .em-modal-title {
@@ -15133,6 +15218,34 @@ h1, .h1 {
   background-repeat: no-repeat;
 }
 
+.em.pixelbones a {
+  color: #212529 !important;
+}
+.em.pixelbones a:hover {
+  color: #696a6b !important;
+}
+
+/* #endregion */
+/* #region Per-page tweaks */
+.entry-header {
+  background-image: url("../img/div.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.comments-area {
+  background-image: url("../img/div.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.comments-area .comment-respond {
+  padding: 20px;
+}
+
+/* #endregion */
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

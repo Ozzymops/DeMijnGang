@@ -1,10 +1,13 @@
+/* #region Global */
 @font-face {
     font-family: "Chomsky";
     src: url(../fonts/Chomsky.otf) format('embedded-opentype');
     src: url(../fonts/Chomsky.woff) format('woff');
     src: url(../fonts/Chomsky.woff2) format('woff2');
 }
+/* #endregion*/
 
+/* #region Style */
 // Main content width
 @media (min-width: 1400px) {
     .container {
@@ -16,6 +19,13 @@
 @media (min-width: 768px) {
     .col-md-4 {
         width: 25% !important;
+    }
+}
+
+// Useless padding when under certain width
+.hideme {
+    @media only screen and (max-width: 768px) {
+        display: none;
     }
 }
 
@@ -63,6 +73,14 @@ body {
         -2px 2px 0 #000,
         -2px -2px 0 #000,
         2px -2px 0 #000;
+
+    @media only screen and (max-width: 1540px) {
+        font-size: 72px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 64px;
+    }
 }
 
 .header-subtitle {
@@ -73,9 +91,17 @@ body {
         -1px 1px 0 #000,
         -1px -1px 0 #000,
         1px -1px 0 #000;
+
+    @media only screen and (max-width: 1540px) {
+        font-size: 28px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 22px;
+    }
 }
 
-// Navbar gradient
+// Navbar
 .navbar {
     background-color: #330f03 !important;
     --bs-navbar-padding-y: 0 !important;
@@ -106,9 +132,49 @@ body {
     justify-content: center !important;
 }
 
-// ~ Main styling ~
+// Dropdown
+.dropdown {
+    --bs-dropdown-spacer: 0;
+
+    .dropdown-menu {
+        background-color: #330f03 !important;
+        margin-top: 0;
+
+        li a {
+            font-size: 20px;
+            color: white;
+            text-shadow:
+                1px 1px 0 #000,
+                -1px 1px 0 #000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000;
+        }
+    }
+}
+
+// Dropdown toggle -> hover
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+// Sidebar
+#right-sidebar {
+    @media only screen and (max-width: 768px) {
+        margin-top: 20px;
+    }   
+}
+
+// Chomsky font for H1
 h1 { 
     font-family: "Chomsky";
+}
+
+a {
+    color: #212529;
+}
+
+a:hover {
+    color: #696a6b;
 }
 
 // Minimum height for proper footer placement
@@ -133,6 +199,10 @@ h1 {
             padding-left: 15px;
             padding-right: 15px;
         }      
+
+        a:hover {
+            color: white;
+        }
     }
 
     // Copyright
@@ -158,8 +228,9 @@ h1 {
 :where(.wp-block-columns) {
     margin-bottom: 0px;
 }
+/* #endregion */
 
-// ~ Plugins and add-ons ~
+/* #region Plugin support */
 // = Events Manager Pro =
 #eventslist div {
     margin-bottom: 1rem;
@@ -180,10 +251,26 @@ h1 {
     --header-color: black;
     font-family: "Chomsky";
     font-size: 32px;
+
+    div {
+        overflow: hidden;
+    }
 }
 
 .em-cal-day-date {
     --date-border-color: #330f03 !important;
+
+    @media only screen and (max-width: 1200px) {
+        span {
+            width: 22px !important;
+        }       
+    }
+
+    @media only screen and (max-width: 992px) {
+        span {
+            width: 22px !important;
+        }       
+    }
 }
 
 .eventless-today, .eventful-today {
@@ -193,6 +280,16 @@ h1 {
         -0.5px 0.5px 0 #000,
         -0.5px -0.5px 0 #000,
         0.5px -0.5px 0 #000;
+    
+    a:hover {
+        background-color: white !important;
+    }
+}
+
+.eventful {
+    a:hover {
+        background-color: white !important;
+    }
 }
 
 // Calendar pop-up
@@ -208,6 +305,37 @@ h1 {
     background-repeat: no-repeat;
 }
 
-// ~ Page tweaks ~
+.em.pixelbones {
+    a {
+        color: #212529 !important;
+    }
+    
+    a:hover {
+        color: #696a6b !important;
+    }
+}
 
-// ~ Media queries ~
+/* #endregion */
+
+/* #region Per-page tweaks */
+// Nieuws
+.entry-header {
+    background-image: url("../img/div.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+// Post
+.comments-area {
+    background-image: url("../img/div.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .comment-respond {
+        padding: 20px;
+    }
+}
+/* #endregion */

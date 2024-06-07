@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="container">
 <?php endif; ?>
 
-		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
+		<?php get_template_part( 'templates/navbar-branding' ); ?>
 
 		<button
 			class="navbar-toggler"
