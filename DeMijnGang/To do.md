@@ -1,4 +1,11 @@
-## Website theme
+# Repeat weekly
+- [ ] Facebook news -> site news
+- [ ] Facebook photo albums -> site photo albums
+# Todo
+- [ ] Separated blog page for 'Voorzitter aan het woord', uses same logic as news page, use categories to separate?
+- [ ] 'In ons gebouw' should become one page instead of multiple dropdown pages, everything within the build and every structural activity on one page stacked on each other
+- [ ] Donators and sponsors page, logo placement and short blurb, see Koelpungel
+## Custom theme
 - [x] Style
 	- [x] Colors
 	- [x] Font
@@ -18,30 +25,7 @@
 - [ ] Events (should be automated)
 - [ ] Pictures (NextGen gallery with custom styling)
 - [ ] Contact (contact information and form -> e-mail)
-## Weekly
-- [ ] Update news
-- [ ] Update photo albums
-## Short term tasks
-- [ ] Header banner too wide/high?
-- [ ] Upcoming soup -> something else?
-## Long term tasks
-- [ ] "De MijnGang" website development/redesign
-	- [ ] Mock-ups
-	- [ ] Theme/Style creation
-	- [ ] Functionality & Plugins
-	- [ ] Push to STRATO
-- [ ] "Good Old Times" website development
-	- [ ] Mock-ups
-	- [ ] Theme/Style set-up/creation
-	- [ ] Functionality & Plugins
-		- [ ] Form for customers
-			- [ ] Preferred time/date (view schedule?)
-			- [ ] Reference picture of tattoo
-			- [ ] Location picture/description of tattoo
-			- [ ] Dimensions of tattoo
-			- [ ] Extra message/comment
-			- [ ] Send form to mailbox (good.old.times@outlook.com)
-	- [ ] Push to STRATO
+## De MijnGang app
 - [ ] "De MijnGang" smartphone application
 	- [ ] Retrieve current evens from website (RSS if possible https://demijngang.nl/evenementen-permalink/feed/)
 	- [ ] Display events/event type
