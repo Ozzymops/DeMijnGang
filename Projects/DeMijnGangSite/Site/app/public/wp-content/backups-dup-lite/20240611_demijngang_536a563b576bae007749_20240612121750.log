@@ -1,0 +1,75 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: June 12, 2024 12:18
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.5.9
+WORDPRESS:	6.5.3
+PHP INFO:	8.1.23 | SAPI: cgi-fcgi
+SERVER:		nginx/1.16.0 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 4294967296 (256M default) 
+MEMORY STACK: 12MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported
+TABLES: total:46 | filtered:0 | create:46
+FILTERED: []
+SQL CREATED: 20240611_demijngang_536a563b576bae007749_20240612121750_database.sql
+SQL FILE SIZE: 2.39MB (2504391)
+SQL FILE TIME: 2024-06-12 12:18:59
+SQL RUNTIME: 1.77 sec.
+
+********************************************************************************
+ARCHIVE (ZIP):
+********************************************************************************
+ARCHIVE DIR:  E:/Projects/DeMijnGang/Projects/DeMijnGangSite/Site/app/public
+ARCHIVE FILE: 20240611_demijngang_536a563b576bae007749_20240612121750_archive.zip
+FILTERS: *OFF*
+DIRS:
+	not set
+FILES:
+	not set
+EXTS:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	559.61MB
+STATS:	Dirs 4,296 | Files 30,770
+SQL ADDED: 20240611_demijngang_536a563b576bae007749_20240612121750_database.sql
+ZipArchive Object
+(
+    [lastId] => 35065
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 35066
+    [filename] => E:\Projects\DeMijnGang\Projects\DeMijnGangSite\Site\app\public\wp-content\backups-dup-lite\tmp\20240611_demijngang_536a563b576bae007749_20240612121750_archive.zip
+    [comment] => 
+)
+
+FILE ADDED TO ZIP: 35065
+COMPRESSION RESULT: '1'
+COMPRESSED SIZE: 279.26MB
+ARCHIVE RUNTIME: 150.73 sec.
+MEMORY STACK: 26MB
+building installer
+ARCHIVE CONSISTENCY TEST: PASS
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 2.39MB
+INSTALLER FILE: 73.48KB
+ARCHIVE FILE: 281.56MB 
+EXPECTED FILE/DIRECTORY COUNT: 35,066
+ACTUAL FILE/DIRECTORY COUNT: 35,065
+ARCHIVE CONSISTENCY TEST: Pass
+
+********************************************************************************
+RECORD ID:[2]
+TOTAL PROCESS RUNTIME: 166.88 sec.
+PEAK PHP MEMORY USED: 34MB
+DONE PROCESSING => 20240611_demijngang June 12, 2024 12:21
+

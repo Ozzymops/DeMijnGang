@@ -2,9 +2,9 @@
 - [ ] Facebook news -> site news
 - [ ] Facebook photo albums -> site photo albums
 # Todo
-- [ ] Separated blog page for 'Voorzitter aan het woord', uses same logic as news page, use categories to separate?
-- [ ] 'In ons gebouw' should become one page instead of multiple dropdown pages, everything within the build and every structural activity on one page stacked on each other
-- [ ] Donators and sponsors page, logo placement and short blurb, see Koelpungel
+- [x] Separated blog page for 'Voorzitter aan het woord', uses same logic as news page, use categories to separate?
+- [x] 'In ons gebouw' should become one page instead of multiple dropdown pages, everything within the build and every structural activity on one page stacked on each other
+- [x] Donators and sponsors page, logo placement and short blurb, see Koelpungel
 ## Custom theme
 - [x] Style
 	- [x] Colors
@@ -21,8 +21,8 @@
 	- [x] Events section
 		- [x] Featured
 		- [x] Events list
-- [ ] News (should be automated)
-- [ ] Events (should be automated)
+- [x] News (should be automated)
+- [x] Events (should be automated)
 - [ ] Pictures (NextGen gallery with custom styling)
 - [ ] Contact (contact information and form -> e-mail)
 ## De MijnGang app

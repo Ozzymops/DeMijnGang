@@ -45,6 +45,16 @@ body {
     padding: 20px;
 }
 
+.page-header {
+    background-image: url("../img/div.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 // Header
 .top-header {
     background: rgb(0, 0, 0);
@@ -81,6 +91,10 @@ body {
     @media only screen and (max-width: 600px) {
         font-size: 64px;
     }
+}
+
+.header-title a:hover {
+    color: rgb(230, 230, 230);
 }
 
 .header-subtitle {
@@ -165,7 +179,7 @@ body {
 }
 
 // Chomsky font for H1
-h1 { 
+h1, .entry-title { 
     font-family: "Chomsky";
 }
 
@@ -210,6 +224,13 @@ a:hover {
         display: flex !important;
         justify-content: center;
 
+        a {
+            color: #c7a56b;
+            font-size: 16px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }  
+
         p {
             color: #c7a56b;
             font-size: 24px;
@@ -232,6 +253,15 @@ a:hover {
 
 /* #region Plugin support */
 // = Events Manager Pro =
+#featured-image img {
+    max-height: 500px;
+}
+
+#featured-exerpt {
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
 #eventslist div {
     margin-bottom: 1rem;
 }

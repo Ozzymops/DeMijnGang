@@ -30,6 +30,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<i class="far fa-copyright"></i>
 		<p>De MijnGang</p>
 	</div>
+	<div class="footer-information">
+		<a href="http://de-mijngang.local/wpautoterms/privacy-policy">Privacy</a>
+		<a href="http://de-mijngang.local/wpautoterms/terms-and-conditions">Voorwaarden</a>
+	</div>
 
 </div><!-- #wrapper-footer -->
 
