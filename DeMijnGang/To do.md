@@ -1,10 +1,16 @@
 # Repeat weekly
 - [ ] Facebook news -> site news
 - [ ] Facebook photo albums -> site photo albums
+# Previously...
+FacebookHandler -> GetPageToken(), needed appId and appSecret for testing, was locked out by Facebook
 # Todo
-- [x] Separated blog page for 'Voorzitter aan het woord', uses same logic as news page, use categories to separate?
-- [x] 'In ons gebouw' should become one page instead of multiple dropdown pages, everything within the build and every structural activity on one page stacked on each other
-- [x] Donators and sponsors page, logo placement and short blurb, see Koelpungel
+- [ ] Facebook Extractor
+	- [ ] Extended Page Token getter/generator
+	- [ ] Retrieve posts
+	- [ ] Put posts in model
+	- [ ] Export posts to date-sorted folder as text files (yyyy-MM-dd X/yyyMMdd.txt)
+	- [ ] Download images to date-sorted folder in webp format (yyyyMMdd_000X.webp)
+	- [ ] Command line arguments to target specific page
 ## Custom theme
 - [x] Style
 	- [x] Colors
