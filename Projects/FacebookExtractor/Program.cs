@@ -1,4 +1,5 @@
 ﻿using FacebookExtractor.Code;
+using FacebookExtractor.Models;
 
 /// TO DO:
 /// - Retrieve posts
@@ -16,13 +17,15 @@ public class Program
     static FacebookHandler fb = null;
     static Downloader dl = null;
 
-    static string token = "EAAQ9Jvkt12EBOwAZCDZC5jviED05kVVirga1b3FCfRR7c78dDD3MLcANx2u2zuXPEjJqvtjRzgL8uxJAJhEQZA3OHOJzFKsSqFtieMzEoLhfA3ejqjAOA8OGMkyQON144sB2ZC7ClnPQZAdmpssjjj19mAEvuI6U1ZBDGHcZBZACphhN5KtxI0EaZAfW3PAailJyVptcA6mSBARCTVhN09xYkZCMgZD";
+    static string token = "EAAQ9Jvkt12EBOZCcz66ByqZAi5vZBPYwTzbLeTV4iru2GfBApZCekwYGRxCKR29gAnIxsqq6vHmiNRMydiHqX79j7vRiYoaRUeV8oXJ2oOn1QYZAc3JFaeRkuPlLC8ZB9FOsb1xVcQkSwUHQJsFZA6h6gNZCc5o6HcZBaxbotUncQZBIi99yPuPLr0wr53Lk0PcZA2BZBnImrG8Cd7idEfBrZCLDb06MZD";
 
     static void Main()
     {
         fb = new FacebookHandler(token);
+        dl = new Downloader();
 
-        // Validation("DeMijnGang");
+        // fb.GetPageToken();
+        Validation("DeMijnGang");
         Extract("DeMijnGang");
     }
 
@@ -40,7 +43,7 @@ public class Program
             Environment.Exit(0);
         }
 
-        CustomConsole.WriteLine("\nValidating [page id]...", ConsoleColor.Yellow);
+        CustomConsole.WriteLine("Validating [page id]...", ConsoleColor.Yellow);
         if (fb.ValidatePage(page))
         {
             CustomConsole.WriteLine("[Page id] is [valid].", ConsoleColor.Yellow, ConsoleColor.Green);
@@ -55,8 +58,30 @@ public class Program
 
     static void Extract(string page)
     {
-        CustomConsole.WriteLine($"\nBeginning extraction of posts from page [{page}].", ConsoleColor.Yellow);
+        CustomConsole.WriteLine($"Beginning extraction of posts from page [{page}].", ConsoleColor.Yellow);
 
-        fb.RetrievePosts(page);
+        List<Post> posts = new List<Post>();
+        posts = fb.RetrievePosts(page);
+
+        CustomConsole.WriteLine($"Finished extraction of posts from page [{page}], beginning downloads.", ConsoleColor.Yellow);
+
+        foreach (Post post in posts)
+        {
+            int tempCounter = 1;
+            bool trying = true;
+
+            while (trying)
+            {
+                if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + $"downloads\\{page}\\{post.Date.ToString("yyyy-MM-dd")} {tempCounter}\\"))
+                {
+                    tempCounter++;
+                }
+                else
+                {
+                    dl.Download(post, $"downloads\\{page}\\{post.Date.ToString("yyyy-MM-dd")} {tempCounter}\\");
+                    trying = false;
+                }
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace FacebookExtractor.Code
             }
             else
             {
-                query = $"{endpoint}?access_token={_accessToken}&{args}";
+                query = $"{endpoint}/{args}&access_token={_accessToken}";
             }
 
             // ERROR SOMEWHERE AROUND HERE?

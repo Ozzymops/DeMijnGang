@@ -11,5 +11,12 @@ namespace FacebookExtractor.Models
         public string Content { get; set; }
         public DateTime Date { get; set; }
         public List<Uri> Images { get; set; }
+
+        public Post(string Content, DateTime Date, List<Uri> Images)
+        {
+            this.Content = Content;
+            this.Date = Date;
+            this.Images = Images;
+        }
     }
 }

@@ -2,15 +2,18 @@
 - [ ] Facebook news -> site news
 - [ ] Facebook photo albums -> site photo albums
 # Previously...
-FacebookHandler -> GetPageToken(), needed appId and appSecret for testing, was locked out by Facebook
+Finished FacebookExtractor, extra features: automated page token getter, command line arguments, configuration file
 # Todo
 - [ ] Facebook Extractor
 	- [ ] Extended Page Token getter/generator
-	- [ ] Retrieve posts
-	- [ ] Put posts in model
-	- [ ] Export posts to date-sorted folder as text files (yyyy-MM-dd X/yyyMMdd.txt)
-	- [ ] Download images to date-sorted folder in webp format (yyyyMMdd_000X.webp)
+	- [x] Retrieve posts
+	- [x] Put posts in model
+	- [x] Export posts to date-sorted folder as text files (yyyy-MM-dd X/yyyMMdd.txt)
+	- [x] Download images to date-sorted folder in webp format (yyyyMMdd_000X.webp)
 	- [ ] Command line arguments to target specific page
+	- [ ] Configuration file for tokens
+	- [x] Fix duplicate post issue (somehow posts are doubled in list)
+	- [x] Subattachments does not contain ALL pictures?
 ## Custom theme
 - [x] Style
 	- [x] Colors
