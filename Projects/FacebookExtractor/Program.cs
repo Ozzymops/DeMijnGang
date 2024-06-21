@@ -17,16 +17,59 @@ public class Program
     static FacebookHandler fb = null;
     static Downloader dl = null;
 
-    static string token = "EAAQ9Jvkt12EBOZCcz66ByqZAi5vZBPYwTzbLeTV4iru2GfBApZCekwYGRxCKR29gAnIxsqq6vHmiNRMydiHqX79j7vRiYoaRUeV8oXJ2oOn1QYZAc3JFaeRkuPlLC8ZB9FOsb1xVcQkSwUHQJsFZA6h6gNZCc5o6HcZBaxbotUncQZBIi99yPuPLr0wr53Lk0PcZA2BZBnImrG8Cd7idEfBrZCLDb06MZD";
+    static string token = null;
+    static string page = null;
 
-    static void Main()
+    static void Main(string[] args)
     {
-        fb = new FacebookHandler(token);
         dl = new Downloader();
+        var arguments = ParseArguments(args);
 
-        // fb.GetPageToken();
-        Validation("DeMijnGang");
-        Extract("DeMijnGang");
+        if (arguments.TryGetValue("--token", out string token))
+        {
+            CustomConsole.WriteLine("Found [authentication token] in arguments. Applying...", ConsoleColor.Yellow);
+        }
+        else
+        {
+            CustomConsole.WriteLine("Please supply an [authentication token] using the argument '[--token=/authentication token/]'. Press ENTER to exit the application.", ConsoleColor.Yellow, ConsoleColor.Yellow);
+            Console.ReadLine();
+            Environment.Exit(0);
+        }
+
+        fb = new FacebookHandler(token);
+
+        if (arguments.TryGetValue("--page", out string page))
+        {
+            Validation(page);
+            Extract(page);
+        }
+        else
+        {
+            CustomConsole.WriteLine("Please supply a [page id] using the argument '[--page=/page id/]'. Press ENTER to exit the application.", ConsoleColor.Yellow, ConsoleColor.Yellow);
+            Console.ReadLine();
+            Environment.Exit(0);
+        }
+    }
+
+    static Dictionary<string, string> ParseArguments(string[] args)
+    {
+        var arguments = new Dictionary<string, string>();
+
+        foreach (var arg in args)
+        {
+            string[] parts = arg.Split('=');
+
+            if (parts.Length == 2)
+            {
+                arguments[parts[0]] = parts[1];
+            }
+            else
+            {
+                arguments[arg] = null;
+            }
+        }
+
+        return arguments;
     }
 
     static void Validation(string page)
@@ -38,7 +81,7 @@ public class Program
         }
         else
         {
-            CustomConsole.WriteLine("[Authentication token] is [invalid]. Please regenerate the token from https://developers.facebook.com/tools/explorer/, supply it in the configuration file and restart the application.\nPress any key to close the application.", ConsoleColor.Yellow, ConsoleColor.Red);
+            CustomConsole.WriteLine("[Authentication token] is [invalid]. Please follow the instructions from https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-long-lived/, supply a valid token in the configuration file and restart the application.\nPress ENTER to close the application.", ConsoleColor.Yellow, ConsoleColor.Red);
             Console.ReadLine();
             Environment.Exit(0);
         }
@@ -50,7 +93,7 @@ public class Program
         }
         else
         {
-            CustomConsole.WriteLine("[Page id] is [invalid or page does not exist]. Please double check the supplied page id and restart the application.\nPress any key to close the application.", ConsoleColor.Yellow, ConsoleColor.Red);
+            CustomConsole.WriteLine("[Page id] is [invalid or the supplied authentication token has insufficient privileges]. Please double check the supplied page id and restart the application.\nPress ENTER to close the application.", ConsoleColor.Yellow, ConsoleColor.Red);
             Console.ReadLine();
             Environment.Exit(0);
         }
@@ -64,6 +107,11 @@ public class Program
         posts = fb.RetrievePosts(page);
 
         CustomConsole.WriteLine($"Finished extraction of posts from page [{page}], beginning downloads.", ConsoleColor.Yellow);
+
+        if (File.Exists($"downloads\\{page}\\summary.txt"))
+        {
+            File.Delete($"downloads\\{page}\\summary.txt");
+        }
 
         foreach (Post post in posts)
         {
@@ -83,5 +131,12 @@ public class Program
                 }
             }
         }
+
+        dl.HandleSummarize(posts, $"downloads\\{page}\\", page);
+
+        Console.WriteLine();
+        CustomConsole.WriteLine($"Downloads [finished]. Press ENTER to exit the application.", ConsoleColor.Green);
+        Console.ReadLine();
+        Environment.Exit(0);
     }
 }

@@ -4,14 +4,12 @@
 # Previously...
 Finished FacebookExtractor, extra features: automated page token getter, command line arguments, configuration file
 # Todo
-- [ ] Facebook Extractor
-	- [ ] Extended Page Token getter/generator
+- [x] Facebook Extractor
 	- [x] Retrieve posts
 	- [x] Put posts in model
 	- [x] Export posts to date-sorted folder as text files (yyyy-MM-dd X/yyyMMdd.txt)
 	- [x] Download images to date-sorted folder in webp format (yyyyMMdd_000X.webp)
-	- [ ] Command line arguments to target specific page
-	- [ ] Configuration file for tokens
+	- [x] Command line arguments to target specific page
 	- [x] Fix duplicate post issue (somehow posts are doubled in list)
 	- [x] Subattachments does not contain ALL pictures?
 ## Custom theme

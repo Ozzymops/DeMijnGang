@@ -23,19 +23,6 @@ namespace FacebookExtractor.Code
             _webClient = new WebClient(accessToken);
         }
 
-        public string GetPageToken()
-        {
-            // feed via config
-            var result = _webClient.OAuth<dynamic>("1193137505425249", "2e66c2a9da4f7a0785c75537b1461695");
-            result.Wait();
-
-            /// generate and supply user token
-            /// extend via code
-            /// use extended user token to generate extended page token
-
-            return null;
-        }
-
         /// <summary>
         /// Check if current supplied authentication token is still valid by using the "me" endpoint.
         /// </summary>

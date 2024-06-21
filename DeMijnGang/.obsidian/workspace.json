@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To do.md",
+                "file": "Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To do.md",
+                "file": "Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "To do.md",
+                "file": "Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "To do.md"
+                "file": "Notes.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "e36b657f27a6e438",
   "lastOpenFiles": [
-    "Notes.md",
     "To do.md",
+    "Notes.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",
     "FileZilla.md"
