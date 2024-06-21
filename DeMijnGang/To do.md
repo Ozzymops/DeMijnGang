@@ -5,20 +5,19 @@
 
 # Todo
 - [ ] De MijnGang
-	- [ ] Contact
-		- [ ] Make form prettier
-		- [ ] Telephone number -> can also be reached via WhatsApp (plugin/disclaimer)
-	- [ ] Our team: pictures of me, Wendy, Mikael and Ryfa
-	- [ ] Donators
-		- [ ] Fix dead picture link
-		- [ ] Add FSI (steal picture from their site)
-	- [ ] In Ons Gebouw
-		- [ ] Move HeJo/Koempelkast to this section
-		- [ ] Add Ascenditur (see picture/Koelpungel)
-		- [ ] Repetitionroom with link to MKAUDIO (mkaudio.nl/repetitie)
-	- [ ] Activities
-		- [ ] Structural Activities from In Ons Gebouw to section under Activities
-		- [ ] Activity agenda = EM page
+	- [x] Contact
+		- [x] Telephone number -> can also be reached via WhatsApp (plugin/disclaimer)
+	- [x] Our team: pictures of me, Wendy, Mikael and Ryfa
+	- [x] Donators
+		- [x] Fix dead picture link
+		- [x] Add FSI (steal picture from their site)
+	- [x] In Ons Gebouw
+		- [x] Move HeJo/Koempelkast to this section
+		- [x] Add Ascenditur (see picture/Koelpungel)
+		- [x] Repetitionroom with link to MKAUDIO (mkaudio.nl/repetitie)
+	- [x] Activities
+		- [x] Structural Activities from In Ons Gebouw to section under Activities
+		- [x] Activity agenda = EM page
 	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
 - [ ] De MijnGang App
 	- [ ] Pricing for Google Play: 25,- one time fee
