@@ -2,16 +2,28 @@
 - [ ] Facebook news -> site news
 - [ ] Facebook photo albums -> site photo albums
 # Previously...
-Finished FacebookExtractor, extra features: automated page token getter, command line arguments, configuration file
+
 # Todo
-- [x] Facebook Extractor
-	- [x] Retrieve posts
-	- [x] Put posts in model
-	- [x] Export posts to date-sorted folder as text files (yyyy-MM-dd X/yyyMMdd.txt)
-	- [x] Download images to date-sorted folder in webp format (yyyyMMdd_000X.webp)
-	- [x] Command line arguments to target specific page
-	- [x] Fix duplicate post issue (somehow posts are doubled in list)
-	- [x] Subattachments does not contain ALL pictures?
+- [ ] De MijnGang
+	- [ ] Contact
+		- [ ] Make form prettier
+		- [ ] Telephone number -> can also be reached via WhatsApp (plugin/disclaimer)
+	- [ ] Our team: pictures of me, Wendy, Mikael and Ryfa
+	- [ ] Donators
+		- [ ] Fix dead picture link
+		- [ ] Add FSI (steal picture from their site)
+	- [ ] In Ons Gebouw
+		- [ ] Move HeJo/Koempelkast to this section
+		- [ ] Add Ascenditur (see picture/Koelpungel)
+		- [ ] Repetitionroom with link to MKAUDIO (mkaudio.nl/repetitie)
+	- [ ] Activities
+		- [ ] Structural Activities from In Ons Gebouw to section under Activities
+		- [ ] Activity agenda = EM page
+	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
+- [ ] De MijnGang App
+	- [ ] Pricing for Google Play: 25,- one time fee
+	- [ ] Pricing for iOS: 100,- annual + extra for Mac building
+		- [ ] https://appcircle.io/pricing
 ## Custom theme
 - [x] Style
 	- [x] Colors
