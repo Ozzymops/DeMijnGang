@@ -2,23 +2,9 @@
 - [ ] Facebook news -> site news
 - [ ] Facebook photo albums -> site photo albums
 # Previously...
-
+Attempted to create custom plugin for Events Manager to only display the first instance of a recurring event, failed miserably. Might continue...
 # Todo
 - [ ] De MijnGang
-	- [ ] Contact
-		- [ ] Make form prettier
-		- [ ] Telephone number -> can also be reached via WhatsApp (plugin/disclaimer)
-	- [ ] Our team: pictures of me, Wendy, Mikael and Ryfa
-	- [ ] Donators
-		- [ ] Fix dead picture link
-		- [ ] Add FSI (steal picture from their site)
-	- [ ] In Ons Gebouw
-		- [ ] Move HeJo/Koempelkast to this section
-		- [ ] Add Ascenditur (see picture/Koelpungel)
-		- [ ] Repetitionroom with link to MKAUDIO (mkaudio.nl/repetitie)
-	- [ ] Activities
-		- [ ] Structural Activities from In Ons Gebouw to section under Activities
-		- [ ] Activity agenda = EM page
 	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
 - [ ] De MijnGang App
 	- [ ] Pricing for Google Play: 25,- one time fee
