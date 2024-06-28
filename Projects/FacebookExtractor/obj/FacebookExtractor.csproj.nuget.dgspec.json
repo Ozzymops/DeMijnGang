@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj": {}
+    "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj": {
+    "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
+        "projectUniqueName": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
         "projectName": "FacebookExtractor",
-        "projectPath": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
-        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\obj\\",
+        "projectPath": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
+        "packagesPath": "C:\\Users\\Ozzymops\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Programs\\Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ozzymops\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

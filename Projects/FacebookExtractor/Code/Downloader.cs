@@ -74,7 +74,7 @@ namespace FacebookExtractor.Code
                     using (StreamWriter streamWriter = File.AppendText($"{directory}\\Summary.txt"))
                     {
                         streamWriter.Write("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-                        streamWriter.Write($"[{posts.IndexOf(post)} - {post.Date}]\nImage count: {post.Images.Count}\n{post.Content}\n");
+                        streamWriter.Write($"[{posts.IndexOf(post)} - {post.Date.ToString("yyyy-MM-dd")}]\nImage count: {post.Images.Count}\n{post.Content}\n");
                     }
                 }
             }

@@ -4,6 +4,7 @@
 # Previously...
 Attempted to create custom plugin for Events Manager to only display the first instance of a recurring event, failed miserably. Might continue...
 # Todo
+- [ ] Featured posts above Nieuws
 - [ ] De MijnGang
 	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
 - [ ] De MijnGang App

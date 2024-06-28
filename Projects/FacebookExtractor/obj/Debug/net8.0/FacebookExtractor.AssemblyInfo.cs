@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FacebookExtractor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80cf9fc38f4a4c967f6a0681ef0895afb8b6bf4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b692ab8a4c9cd9086d0ab44c8d5ede836743b67")]
 [assembly: System.Reflection.AssemblyProductAttribute("FacebookExtractor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FacebookExtractor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
