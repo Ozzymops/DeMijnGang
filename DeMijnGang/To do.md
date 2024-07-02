@@ -1,10 +1,7 @@
-# Repeat weekly
-- [ ] Facebook news -> site news
-- [ ] Facebook photo albums -> site photo albums
-# Previously...
-Attempted to create custom plugin for Events Manager to only display the first instance of a recurring event, failed miserably. Might continue...
+# Previously:
+Started on AndroidApp_Prototype as test for reading RSS/iCal files.
+Not everything is included in Ical.Net or the actual iCal file from the site, so I would need to extend both in some way, namely for UIDs and full (description) content.
 # Todo
-- [ ] Featured posts above Nieuws
 - [ ] De MijnGang
 	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
 - [ ] De MijnGang App
