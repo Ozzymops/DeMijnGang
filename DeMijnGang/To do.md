@@ -1,7 +1,8 @@
 # Previously:
-Started on AndroidApp_Prototype as test for reading RSS/iCal files.
-Not everything is included in Ical.Net or the actual iCal file from the site, so I would need to extend both in some way, namely for UIDs and full (description) content.
+Wrote custom Ical reader, still not perfect. Need to remove additional whitespaces somehow, and be able to stitch split words together. After that, and the hopeful RAM upgrade, start on the app properly.
 # Todo
+- [ ] FacebookExtractor bat file update
+	- [ ] @RD /S /Q "./downloads"
 - [ ] De MijnGang
 	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
 - [ ] De MijnGang App

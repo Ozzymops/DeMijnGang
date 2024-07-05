@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//wp-events-plugin.com//6.4.9//EN
+PRODID:-//wp-events-plugin.com//6.4.10//EN
 BEGIN:VEVENT
 UID:8@demijngang.nl
 DTSTART;TZID=Europe/Amsterdam:20240706T120000
@@ -20,27 +20,21 @@ BEGIN:VEVENT
 UID:9@demijngang.nl
 DTSTART;TZID=Europe/Amsterdam:20240817T140000
 DTEND;TZID=Europe/Amsterdam:20240818T010000
-DTSTAMP:20240611T110832Z
+DTSTAMP:20240705T121335Z
 URL:https://demijngang.nl/events/buurtfeest-2024
 SUMMARY:Buurtfeest 2024
 DESCRIPTION:Op zaterdag 17 augustus komt de buurt weer samen op het vertrou
- wde speelveldje aan de Diamantstraat/Granaatstraat voor het langverwachte 
- buurtfeest van 2024! Het belooft een dag vol plezier en vertier te worden 
- voor jong en oud.\n\nDe festiviteiten beginnen al vroeg in de middag met e
- en gezellige koffietafel\, waar buurtgenoten elkaar kunnen ontmoeten en bi
- jpraten. Voor de kinderen is er een uitgebreid programma met allerlei leuk
- e activiteiten\, waaronder een springkussen.\n\nNaarmate de dag vordert\, 
- wordt het tijd voor het avondprogramma dat op spectaculaire wijze wordt in
- geluid door onze vertrouwde “huis” DJ Paul\, in samenwerking met Mk Au
- dio Sound\, Light &amp\; More. De muzikale sfeer zal de perfecte opmaat zi
- jn voor de hoofdact van de avond.\n\nEn wat voor een act dat is! Niemand m
- inder dan de band “ANDERKOVVER” zal het podium betreden en de tent lat
- en schudden op zijn grondvesten. Met hun unieke mix van muzikaliteit\, hum
- or en een vleugje chaos beloven ze een avond vol energie en entertainment 
- te bezorgen waar nog lang over nagepraat zal worden.\n\nDus SAFE THE DATE 
- : zaterdag 17 augustus staat volledig in het teken van het buurtfeest. Mis
-  het niet en maak u klaar voor een onvergetelijke dag vol gezelligheid en 
- plezier!
+ wde speelveldje aan de Diamantstraat / Granaatstraat voor het langverwacht
+ e buurtfeest van 2024!\nHet belooft een dag vol plezier en vertier te word
+ en voor jong en oud.\n\nDe festiviteiten beginnen al vroeg in de middag me
+ t een gezellige koffietafel\, waar buurtgenoten elkaar kunnen ontmoeten en
+  bijpraten.\nVoor de kinderen is er een uitgebreid programma met allerlei 
+ leuke activiteiten\, waaronder een springkussen.\n\nLater op de avond word
+ t het tijd voor vertrouwde "huis" DJ Paul\, in samenwerking met MK Audio. 
+ De muzikale sfeer zal de perfecte opmaat zijn voor de hoofdact van de avon
+ d: ANDERKOVVER!\nMet hun unieke mix van muzikaliteit\, humor en een vleugj
+ e chaos beloven ze een avond vol energie en entertainment te bezorgen waar
+  nog lang over nagepraat zal worden.
 ATTACH;FMTTYPE=image/jpeg:https://demijngang.nl/wp-content/uploads/2024/06
  /image.png
 CATEGORIES:Uitgelicht

@@ -3,11 +3,10 @@ using AndroidApp_Prototype.Models;
 
 public class Program
 {
-    static iCalReader reader = new iCalReader();
+    static IcalHandler handler = new IcalHandler();
 
     static void Main()
     {
-        reader.FetchICS();
-        List<Event> events = reader.ParseICS();
+        handler.ParseIcal(handler.FetchIcal());
     }
 }

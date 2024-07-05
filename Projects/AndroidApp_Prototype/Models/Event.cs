@@ -18,6 +18,11 @@ namespace AndroidApp_Prototype.Models
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
+        public Event()
+        {
+            // lol
+        }
+
         /// <summary>
         /// Event datamodel
         /// </summary>
