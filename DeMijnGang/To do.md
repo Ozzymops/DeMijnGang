@@ -1,10 +1,10 @@
 # Previously:
 Wrote custom Ical reader, still not perfect. Need to remove additional whitespaces somehow, and be able to stitch split words together. After that, and the hopeful RAM upgrade, start on the app properly.
 # Todo
-- [ ] FacebookExtractor bat file update
-	- [ ] @RD /S /Q "./downloads"
+- [ ] FacebookExtractor
+	- [ ] Future posts?
 - [ ] De MijnGang
-	- [ ] Find or create thinner Chomski font (mainly for readibility of G and V characters)
+	- [ ] Privacy Policy/Terms of Service: translate to Dutch
 - [ ] De MijnGang App
 	- [ ] Pricing for Google Play: 25,- one time fee
 	- [ ] Pricing for iOS: 100,- annual + extra for Mac building
