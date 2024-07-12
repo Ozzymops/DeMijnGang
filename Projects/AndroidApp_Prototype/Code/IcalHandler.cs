@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -13,107 +15,86 @@ namespace AndroidApp_Prototype.Code
     {
         private readonly Uri _IcalUri = new Uri("https://demijngang.nl/events.ics");
 
-        public FileStream FetchIcal()
+        public async Task<List<Event>> RetrieveEvents()
         {
-            System.Net.WebClient webClient = new System.Net.WebClient();
-            webClient.DownloadFile(_IcalUri, "emCal.ics");
-            var Ical = File.Open(AppDomain.CurrentDomain.BaseDirectory + $"\\emCal.ics", FileMode.Open);
-            return Ical;
-        }
+            var ical = await new HttpClient().GetStringAsync(_IcalUri);
+            string[] icalContent = ical.Split(new string[] { Environment.NewLine }, StringSplitOptions.TrimEntries);
 
-        public List<Event> ParseIcal(FileStream Ical)
-        {
-            string[] content;
-            using (StreamReader reader = new StreamReader(Ical))
-            {
-                string temp = reader.ReadToEnd();
-                content = temp.Split('\n');
-            }
 
-            bool parsing = false;
-            bool checkNextLine = false;
+            bool inEvent = false;
+            bool multiLine = false;
             string combinedString = null;
-            int index = 0;
+            string[] forbiddenMultiLineContent = { "DESCRIPTION:", "ATTACH;", "LOCATION:", "CATEGORIES:" };
             List<Event> events = new List<Event>();
+            Event temporaryEvent = null;
 
-            foreach (string line in content)
+            foreach(string icalLine in icalContent)
             {
-                if (line.Contains("END:VEVENT"))
+                if (icalLine.Contains("BEGIN:VEVENT"))
                 {
-                    parsing = false;
-                    checkNextLine = false;
-                    index++;
+                    inEvent = true;
+                    temporaryEvent = new Event();
+                }
+                else if (icalLine.Contains("END:VEVENT"))
+                {
+                    inEvent = false;
+                    events.Add(temporaryEvent);
                 }
 
-                if (parsing)
+                if (inEvent)
                 {
-                    // fix line
-                    // TODO: remove additional, unneccessary spaces
-                    Regex regex = new Regex("[ ]{2,}", RegexOptions.None);
-                    string fixedLine = line.Replace("&amp\\;", "&").ReplaceLineEndings(" ");
-                    fixedLine = regex.Replace(fixedLine, " ");
-
-                    // extra code to make it more readable
-                    if (checkNextLine)
+                    if (multiLine) // duplicate protection
                     {
-                        if (!fixedLine.Contains("DESCRIPTION:") && !fixedLine.Contains("LOCATION:") && !fixedLine.Contains("X-APPLE-STRUCTURED-LOCATION;") && !fixedLine.Contains("ATTACH;") && !fixedLine.Contains("CATEGORIES:"))
+                        if (!forbiddenMultiLineContent.Any(icalLine.Contains))
                         {
-                            combinedString += fixedLine;
+                            combinedString += icalLine;
                         }
                         else
-                        { 
-                            if (fixedLine.Contains("LOCATION:") || fixedLine.Contains("ATTACH;")) // previous was DESCRIPTION
-                            {
-                                events[index].Description = combinedString;
-                            }
-                            else if (fixedLine.Contains("X-APPLE")) // previous was LOCATION
-                            {
-                                // TODO
-                                events[index].Location = null;
-                            }
-
-                            checkNextLine = false;
-                        }
+                        {
+                            temporaryEvent.Description = combinedString;
+                            multiLine = false;
+                        }                        
                     }
                     
-                    if (!checkNextLine)
+                    if (!multiLine) // second check for if disabled previous line
                     {
-                        if (fixedLine.Contains("UID:"))
+                        switch (icalLine)
                         {
-                            events[index].Id = Convert.ToInt32(fixedLine.Split(':')[1].Split('@')[0]);
-                        }
-                        else if (fixedLine.Contains("DTSTART;"))
-                        {
-                            events[index].StartTime = DateTime.ParseExact(fixedLine.Split(':')[1].Trim(), "yyyyMMdd'T'HHmmss", CultureInfo.InvariantCulture);
-                        }
-                        else if (fixedLine.Contains("DTEND;"))
-                        {
-                            events[index].EndTime = DateTime.ParseExact(fixedLine.Split(':')[1].Trim(), "yyyyMMdd'T'HHmmss", CultureInfo.InvariantCulture);
-                        }
-                        else if (fixedLine.Contains("SUMMARY:"))
-                        {
-                            events[index].Title = fixedLine.Split(':')[1].Trim();
-                        }
-                        else if (fixedLine.Contains("DESCRIPTION:") || fixedLine.Contains("LOCATION:"))
-                        {
-                            checkNextLine = true;
-                            combinedString = fixedLine.Split(':')[1];
-                        }
-                        else if (line.Contains("CATEGORIES:Uitgelicht"))
-                        {
-                            events[index].Featured = true;
-                        }
-                    }         
-                }
+                            case string line when line.Contains("UID:"):
+                                temporaryEvent.Id = Convert.ToInt32(line.Split(':')[1].Split('@')[0]);
+                                break;
 
-                if (line.Contains("BEGIN:VEVENT"))
-                {
-                    parsing = true;
-                    events.Add(new Event());
+                            case string line when line.Contains("SUMMARY:"):
+                                temporaryEvent.Title = line.Split(':')[1];
+                                break;
+
+                            // hardcoded, maybe add more conditions some other time
+                            case string line when line.Contains("CATEGORIES:Uitgelicht"):
+                                temporaryEvent.Featured = true;
+                                break;
+
+                            case string line when line.Contains("DTSTART;"):
+                                temporaryEvent.StartTime = DateTime.ParseExact(line.Split(':')[1].Trim(), "yyyyMMdd'T'HHmmss", CultureInfo.InvariantCulture);
+                                break;
+
+                            case string line when line.Contains("DTEND;"):
+                                temporaryEvent.EndTime = DateTime.ParseExact(line.Split(':')[1].Trim(), "yyyyMMdd'T'HHmmss", CultureInfo.InvariantCulture);
+                                break;
+
+                            case string line when line.Contains("DESCRIPTION:"):
+                                combinedString = line.Split(':')[1];
+                                multiLine = true;
+                                break;
+
+                            // TODO: Attachment, Location
+                            case null:
+                                break;
+                        }
+                    }                
                 }
             }
 
-            return null;
+            return events;
         }
     }
 }

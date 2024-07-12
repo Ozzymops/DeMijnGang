@@ -3,10 +3,8 @@ using AndroidApp_Prototype.Models;
 
 public class Program
 {
-    static IcalHandler handler = new IcalHandler();
-
-    static void Main()
+    static async Task Main()
     {
-        handler.ParseIcal(handler.FetchIcal());
+        await new IcalHandler().RetrieveEvents();
     }
 }

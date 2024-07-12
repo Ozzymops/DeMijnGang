@@ -1,10 +1,17 @@
-# Previously:
-Wrote custom Ical reader, still not perfect. Need to remove additional whitespaces somehow, and be able to stitch split words together. After that, and the hopeful RAM upgrade, start on the app properly.
 # Todo
 - [ ] FacebookExtractor
 	- [ ] Future posts?
-- [ ] De MijnGang
-	- [ ] Privacy Policy/Terms of Service: translate to Dutch
+- [ ] Events Manager plugin
+	- [ ] Custom event export ala RSS/iCal, but in more plain text/suitable for app to read
+	- [ ] Needs to export:
+		- [ ] Event ID
+		- [ ] Title
+		- [ ] Category (featured)
+		- [ ] Description (full)
+		- [ ] Excerpt (short)
+		- [ ] Location
+		- [ ] StartTime/EndTime/DateRange
+		- [ ] Embedded images/attachments
 - [ ] De MijnGang App
 	- [ ] Pricing for Google Play: 25,- one time fee
 	- [ ] Pricing for iOS: 100,- annual + extra for Mac building

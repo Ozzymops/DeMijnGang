@@ -1,0 +1,7 @@
+DevSite
+devsite.local
+DeMijngang\Projects\_Devsite
+
+Preferred
+
+admin / admin / dev-email@wpengine.local

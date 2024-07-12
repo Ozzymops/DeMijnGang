@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|d:\\github\\demijngang\\projects\\androidapp_prototype\\code\\icalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|solutionrelative:code\\icalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|d:\\github\\demijngang\\projects\\androidapp_prototype\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|d:\\github\\demijngang\\projects\\androidapp_prototype\\code\\icalreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|solutionrelative:code\\icalreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|d:\\github\\demijngang\\projects\\androidapp_prototype\\code\\icalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|solutionrelative:code\\icalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2659A944-FD49-4216-96E5-20051BE4DEBD}|AndroidApp_Prototype.csproj|d:\\github\\demijngang\\projects\\androidapp_prototype\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Event.cs",
               "DocumentMoniker": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Models\\Event.cs",
               "RelativeDocumentMoniker": "Models\\Event.cs",
               "ToolTip": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Models\\Event.cs",
               "RelativeToolTip": "Models\\Event.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBYAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T11:31:50.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IcalHandler.cs",
               "DocumentMoniker": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Code\\IcalHandler.cs",
               "RelativeDocumentMoniker": "Code\\IcalHandler.cs",
               "ToolTip": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Code\\IcalHandler.cs",
               "RelativeToolTip": "Code\\IcalHandler.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAIwGcAAAA6AAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAADwv1UAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T10:31:21.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T11:36:50.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "iCalReader.cs",
-              "DocumentMoniker": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Code\\iCalReader.cs",
-              "RelativeDocumentMoniker": "Code\\iCalReader.cs",
-              "ToolTip": "D:\\GitHub\\DeMijngang\\Projects\\AndroidApp_Prototype\\Code\\iCalReader.cs",
-              "RelativeToolTip": "Code\\iCalReader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T12:17:23.13Z",
               "EditorCaption": ""
             }
           ]
