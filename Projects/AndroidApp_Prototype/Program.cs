@@ -5,6 +5,6 @@ public class Program
 {
     static async Task Main()
     {
-        await new IcalHandler().RetrieveEvents();
+        await new XmlParser().Parse();
     }
 }

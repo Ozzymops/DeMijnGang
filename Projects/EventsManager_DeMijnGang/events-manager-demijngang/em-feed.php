@@ -46,12 +46,9 @@
                     $xml_location_state = $xml_location->addChild('state', $EM_Location->location_state);
                     $xml_location_postcode = $xml_location->addChild('postcode', $EM_Location->location_postcode);
                 }
-                
-                $xml_dateTime = $xml_child->addChild('dateTime');
-                $xml_startDate = $xml_dateTime->addChild('startDate', $EM_Event->start()->format('d-m-Y'));
-                $xml_endDate = $xml_dateTime->addChild('endDate', $EM_Event->end()->format('d-m-Y'));
-                $xml_startTime = $xml_dateTime->addChild('startTime', $EM_Event->start()->format('H:i'));
-                $xml_endTime = $xml_dateTime->addChild('endTime', $EM_Event->end()->format('H:i'));
+            
+                $xml_startDate = $xml_child->addChild('startDate', $EM_Event->start()->format('d-m-Y\TH:i'));
+                $xml_endDate = $xml_child->addChild('endDate', $EM_Event->end()->format('d-m-Y\TH:i'));
                 $xml_image = $xml_child->addChild('image', $EM_Event->get_image_url());
             }
                 

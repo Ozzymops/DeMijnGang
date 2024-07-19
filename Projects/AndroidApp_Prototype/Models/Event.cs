@@ -3,51 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace AndroidApp_Prototype.Models
 {
-    internal class Event
+    [XmlRoot("event")]
+    public class Event
     {
+        [XmlAttribute("id")]
         public int Id { get; set; }
+
+        [XmlElement("title")]
         public string Title { get; set; }
-        public bool Featured { get; set; }
+
+        [XmlElement("categories")]
+        public string Categories { get; set; }
+
+        [XmlElement("tags")]
+        public string Tags { get; set; }
+
+        [XmlElement("description")]
         public string Description { get; set; }
+
+        [XmlElement("excerpt")]
         public string Excerpt { get; set; }
+
+        [XmlElement("location")]
         public Location Location { get; set; }
-        public DateTime[] DateRange { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
 
-        public Event()
-        {
-            // lol
-        }
+        [XmlElement("startDate")]
+        public DateTime StartDate { get; set; }
 
-        /// <summary>
-        /// Event datamodel
-        /// </summary>
-        /// <param name="eventId">Event Manager's Event ID</param>
-        /// <param name="eventTitle">Title</param>
-        /// <param name="eventDateRange">Single or multiple days during which the event takes place</param>
-        /// <param name="eventStartTime">Start time (24h format)</param>
-        /// <param name="eventEndTime">Dnd time (24h format)</param>
-        /// <param name="eventDescription">Optional description</param>
-        /// <param name="eventExcerpt">Optional short description</param>
-        /// <param name="eventLocation">Optional location</param>
-        /// <param name="eventFeatured">Optional featured status</param>
-        public Event(int eventId, string eventTitle, DateTime[] eventDateRange,
-                     DateTime eventStartTime, DateTime eventEndTime, string eventDescription = null,
-                     string eventExcerpt = null, Location eventLocation = null, bool eventFeatured = false)
-        {
-            Id = eventId;
-            Title = eventTitle;
-            DateRange = eventDateRange;
-            StartTime = eventStartTime;
-            EndTime = eventEndTime;
-            Description = eventDescription;
-            Excerpt = eventExcerpt;
-            Location = eventLocation;
-            Featured = eventFeatured;
-        }
+        [XmlElement("endDate")]
+        public DateTime EndDate { get;set; }
     }
 }
