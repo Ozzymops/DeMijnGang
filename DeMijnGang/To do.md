@@ -4,13 +4,13 @@
 - [ ] Events Manager plugin
 	- [ ] Custom event export ala RSS/iCal, but in more plain text/suitable for app to read
 	- [ ] Needs to export:
-		- [ ] Event ID
-		- [ ] Title
-		- [ ] Category (featured)
-		- [ ] Description (full)
-		- [ ] Excerpt (short)
-		- [ ] Location
-		- [ ] StartTime/EndTime/DateRange
+		- [x] Event ID
+		- [x] Title
+		- [x] Category (featured)
+		- [x] Description (full)
+		- [x] Excerpt (short)
+		- [x] Location
+		- [x] StartTime/EndTime/DateRange
 		- [ ] Embedded images/attachments
 - [ ] De MijnGang App
 	- [ ] Pricing for Google Play: 25,- one time fee
