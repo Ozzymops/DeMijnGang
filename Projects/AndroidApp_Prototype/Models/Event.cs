@@ -32,9 +32,21 @@ namespace AndroidApp_Prototype.Models
         public Location Location { get; set; }
 
         [XmlElement("startDate")]
-        public DateTime StartDate { get; set; }
+        public string _StartDateString { get; set; }
 
         [XmlElement("endDate")]
-        public DateTime EndDate { get;set; }
+        public string _EndDateString { get; set; }
+
+        public DateTime StartDate
+        {
+            get { return DateTime.Parse(_StartDateString); }
+            set { _StartDateString = StartDate.ToString(); }
+        }
+
+        public DateTime EndDate
+        {
+            get { return DateTime.Parse(_EndDateString); }
+            set { _EndDateString = EndDate.ToString(); }
+        }
     }
 }

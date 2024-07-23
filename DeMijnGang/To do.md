@@ -1,51 +1,22 @@
-# Todo
-- [ ] FacebookExtractor
-	- [ ] Future posts?
-- [ ] Prototype
-	- [ ] Read XML
-	- [ ] Convert date string to date time within get/set
-- [x] Events Manager plugin
-	- [x] Custom event export ala RSS/iCal, but in more plain text/suitable for app to read
-	- [x] Needs to export:
-		- [x] Event ID
-		- [x] Title
-		- [x] Category (featured)
-		- [x] Description (full)
-		- [x] Excerpt (short)
-		- [x] Location
-		- [x] StartTime/EndTime/DateRange
-		- [x] Embedded images/attachments
-- [ ] De MijnGang App
-	- [ ] Pricing for Google Play: 25,- one time fee
-	- [ ] Pricing for iOS: 100,- annual + extra for Mac building
-		- [ ] https://appcircle.io/pricing
-## Custom theme
-- [x] Style
-	- [x] Colors
-	- [x] Font
-	- [x] Header
-	- [x] Navigation
-	- [x] Sidebar
-		- [x] News
-		- [x] Calendar with events/news
-	- [x] Footer
-	- [x] Media queries
-- [x] Front page
-	- [x] Welcome section
-	- [x] Events section
-		- [x] Featured
-		- [x] Events list
-- [x] News (should be automated)
-- [x] Events (should be automated)
-- [ ] Pictures (NextGen gallery with custom styling)
-- [ ] Contact (contact information and form -> e-mail)
-## De MijnGang app
-- [ ] "De MijnGang" smartphone application
-	- [ ] Retrieve current evens from website (RSS if possible https://demijngang.nl/evenementen-permalink/feed/)
-	- [ ] Display events/event type
-	- [ ] Subscribe to events/event type
-	- [ ] Participate in events
-	- [ ] Receive push-notification of new major events
-	- [ ] Receive push-notification for upcoming, subscribed event
-	- [ ] Receive push-notification for upcoming, major event
-	- [ ] Comment on event
+# FacebookExtractor
+- [ ] Future posts
+# De MijnGang App - Prototype
+- [ ] Import XML from site
+- [ ] Create objects from XML
+	- [ ] Convert date string to DateTime within setter
+# De MijnGang App
+- [ ] Import XML from site
+- [ ] Create objects from XML
+- [ ] Place objects in local database for future reference
+- [ ] Display events on a page
+- [ ] Allow user to subscribe to events
+- [ ] Allow user to participate in events
+- [ ] Allow user to comment on events
+- [ ] Receive push-notifications
+	- [ ] Newly added major events
+	- [ ] Upcoming subscribed event
+	- [ ] Upcoming major event
+- [ ] Upload the app
+	- [ ] Google Play Store: 25,- one-time fee
+	- [ ] iOS: 100,- annual fee, not including iOS machine for building the app (https://appcircle.io/pricing)
+	- [ ] Local on WordPress, linked via QR-code
