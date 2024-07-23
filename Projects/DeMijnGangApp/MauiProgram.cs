@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DeMijnGangApp.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace DeMijnGangApp
 {
@@ -14,6 +15,9 @@ namespace DeMijnGangApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainPageViewModel>();
 
 #if DEBUG
     		builder.Logging.AddDebug();

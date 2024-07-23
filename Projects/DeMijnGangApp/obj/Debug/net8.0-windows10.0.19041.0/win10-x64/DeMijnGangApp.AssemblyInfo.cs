@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeMijnGangApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f0fb928ee9d2109483d046d33d5e9e52096f880b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+99e9864273c98c406b24a199c7ddd8899536e03e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeMijnGangApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeMijnGangApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
