@@ -6,6 +6,7 @@
 	- [ ] Convert date string to DateTime within setter
 # De MijnGang App
 - [ ] Import XML from site
+	- [ ] Grouped object, tap to expand
 - [ ] Create objects from XML
 - [ ] Place objects in local database for future reference
 - [ ] Display events on a page
