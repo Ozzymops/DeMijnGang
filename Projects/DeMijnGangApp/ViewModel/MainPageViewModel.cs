@@ -8,31 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using DeMijnGangApp.Models;
 using System.Xml;
+using System.Security.Cryptography.X509Certificates;
+using System.Windows.Input;
+using Microsoft.Maui.Graphics.Text;
 
 namespace DeMijnGangApp.ViewModel
 {
     public partial class MainPageViewModel : ObservableObject
     {
+        public ObservableCollection<EventViewModel> Events { get; set; }
+
         public MainPageViewModel()
         {
-            Events = new ObservableCollection<Event>();
-            Fetch();
+            FetchEvents();
         }
 
-        [ObservableProperty]
-        ObservableCollection<Event> events;
-
         [RelayCommand]
-        void Fetch()
+        void FetchEvents()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Events));
+            XmlSerializer serializer = new XmlSerializer(typeof(Models.Events));
 
             using (XmlTextReader reader = new XmlTextReader("https://demijngang.nl/appfeed"))
             {
-                Events result = (Events)serializer.Deserialize(reader);
-                events = new ObservableCollection<Event>(result.eventList as List<Event>);
+                Models.Events result = (Models.Events)serializer.Deserialize(reader);
+
+                Events = new ObservableCollection<EventViewModel>();
+                foreach (Models.Event _event in result.eventList)
+                {
+                    Events.Add(new EventViewModel { Id = _event.Id,
+                                                    Title = _event.Title,
+                                                    Description = _event.Description,
+                                                    Excerpt = _event.Excerpt,
+                                                    Categories = _event.Categories,
+                                                    Tags = _event.Tags,
+                                                    StartDate = DateTime.Parse(_event.StartDate),
+                                                    EndDate = DateTime.Parse(_event.EndDate)
+                                                    });
+                }
             }
         }
     }

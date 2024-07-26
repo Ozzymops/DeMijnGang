@@ -1,25 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="DeMijnGangApp.MainPage"
              xmlns:viewmodel="clr-namespace:DeMijnGangApp.ViewModel">
 
-    <Grid RowDefinitions="100, Auto, *" ColumnDefinitions=".75*, .25*" Padding="10">
-        <Image Grid.ColumnSpan="2" Source="dotnet_bot.png" BackgroundColor="Orange" />
-        <CollectionView Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{Binding Events}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="0,5">
-                        <Frame>
-                            <HorizontalStackLayout Padding="5" Spacing="5">
-                                <Label Text="{Binding Id, StringFormat='ID: {0} ~ '}" FontSize="24" />
-                                <Label Text="{Binding Title}" FontSize="24"/>
-                            </HorizontalStackLayout>
-                        </Frame>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </Grid>
+    <CollectionView ItemsSource="{Binding Events}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="25" Margin="25" BackgroundColor="Blue" BorderColor="Gray" HasShadow="True">
+                    <VerticalStackLayout>
+                        <Grid ColumnDefinitions="*, 100, Auto">
+                            <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" />
+                            <Button Text="Toon meer" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Command="{Binding Expand}" />
+                        </Grid>
+                        <Label FontSize="Small">
+                            <Label.Text>
+                                <MultiBinding StringFormat="{}{0:d} van {0:t} tot {1:t}">
+                                    <Binding Path="StartDate"/>
+                                    <Binding Path="EndDate"/>
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+                        <Label Text="{Binding Excerpt}" FontSize="Small" />
+                        <VerticalStackLayout IsVisible="{Binding IsExpanded}">
+                            <BoxView Margin="10" HeightRequest="1" Color="White" />
+                            <Label Text="{Binding Description}" FontSize="Small" />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
 
 </ContentPage>

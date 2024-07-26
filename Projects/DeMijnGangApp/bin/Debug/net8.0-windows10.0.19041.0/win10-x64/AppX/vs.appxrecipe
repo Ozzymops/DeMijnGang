@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-23T12:35:06.650</Modified>
+      <Modified>2024-07-26T12:52:42.134</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-23T12:21:11.974</Modified>
+      <Modified>2024-07-26T12:14:30.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DeMijnGangApp.runtimeconfig.json">
       <PackagePath>DeMijnGangApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-23T12:21:11.650</Modified>
+      <Modified>2024-07-26T10:43:42.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DeMijnGangApp.dll">
       <PackagePath>DeMijnGangApp.dll</PackagePath>
-      <Modified>2024-07-23T12:35:06.032</Modified>
+      <Modified>2024-07-26T12:52:41.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DeMijnGangApp.exe</PackagePath>
-      <Modified>2024-07-23T12:35:06.164</Modified>
+      <Modified>2024-07-26T12:52:41.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DeMijnGangApp.deps.json">
       <PackagePath>DeMijnGangApp.deps.json</PackagePath>
-      <Modified>2024-07-23T12:21:11.444</Modified>
+      <Modified>2024-07-26T12:14:30.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -297,6 +297,14 @@
     <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-10-16T19:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\communitytoolkit.maui\9.0.2\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.dll">
+      <PackagePath>CommunityToolkit.Maui.dll</PackagePath>
+      <Modified>2024-07-05T12:06:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\communitytoolkit.maui.core\9.0.2\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
+      <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
+      <Modified>2024-07-05T12:06:04.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
@@ -429,6 +437,10 @@
     <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2024-03-11T10:57:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\system.speech\8.0.0\runtimes\win\lib\net8.0\System.Speech.dll">
+      <PackagePath>System.Speech.dll</PackagePath>
+      <Modified>2023-10-31T15:00:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Justin\.nuget\packages\microsoft.maui.controls.core\8.0.40\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>

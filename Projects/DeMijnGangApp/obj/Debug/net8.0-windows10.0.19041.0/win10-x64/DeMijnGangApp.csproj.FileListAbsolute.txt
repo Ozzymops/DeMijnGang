@@ -178,3 +178,6 @@ D:\GitHub\DeMijngang\Projects\DeMijnGangApp\obj\Debug\net8.0-windows10.0.19041.0
 D:\GitHub\DeMijngang\Projects\DeMijnGangApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\GitHub\DeMijngang\Projects\DeMijnGangApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
+D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+D:\GitHub\DeMijngang\Projects\DeMijnGangApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
