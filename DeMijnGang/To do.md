@@ -1,9 +1,13 @@
+# Website
+- [ ] Remove 'edit' button for admins
+- [ ] Improve 'news' post entry with better galleries for food menus
+- [ ] Events Manager post clean-up
+- [ ] News: grid instead of list?
 # FacebookExtractor
 - [ ] Future posts
-# De MijnGang App - Prototype
-- [ ] Import XML from site
-- [ ] Create objects from XML
-	- [ ] Convert date string to DateTime within setter
+- [ ] Error handling/up to five retries (?)
+- [ ] New format
+	- [ ] [12:00:00] Downloading file 1 of 60 from 2024-08-01 [0%, 1mbps]
 # De MijnGang App
 - [ ] Import XML from site
 	- [ ] Grouped object, tap to expand
