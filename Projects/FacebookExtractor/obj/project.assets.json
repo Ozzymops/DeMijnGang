@@ -55,23 +55,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ozzymops\\.nuget\\packages\\": {},
-    "D:\\Programs\\Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Justin\\.nuget\\packages\\": {},
+    "D:\\Programs\\Visual Studio Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
+      "projectUniqueName": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
       "projectName": "FacebookExtractor",
-      "projectPath": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
-      "packagesPath": "C:\\Users\\Ozzymops\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\DeMijnGang\\Projects\\FacebookExtractor\\obj\\",
+      "projectPath": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\FacebookExtractor.csproj",
+      "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\DeMijngang\\Projects\\FacebookExtractor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Programs\\Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Programs\\Visual Studio Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ozzymops\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -125,7 +125,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

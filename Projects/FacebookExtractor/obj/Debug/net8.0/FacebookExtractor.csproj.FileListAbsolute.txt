@@ -10,7 +10,6 @@ D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\FacebookExtract
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\FacebookExtractor.dll
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\FacebookExtractor.pdb
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.csproj.CopyComplete
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.dll
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\refint\FacebookExtractor.dll
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.pdb
@@ -34,3 +33,4 @@ E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\refint\Facebo
 E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.pdb
 E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.genruntimeconfig.cache
 E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\ref\FacebookExtractor.dll
+D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\Facebook.8CBC0B33.Up2Date
