@@ -1,9 +1,12 @@
 /* #region Global */
 @font-face {
-    font-family: "Chomsky";
-    src: url(../fonts/Chomsky.otf) format('embedded-opentype');
-    src: url(../fonts/Chomsky.woff) format('woff');
-    src: url(../fonts/Chomsky.woff2) format('woff2');
+    font-family: 'Bradley Gratis';
+    src: url('BradleyGratis.eot');
+    src: url('BradleyGratis.eot?#iefix') format('embedded-opentype'),
+         url('BradleyGratis.woff2') format('woff2'),
+         url('BradleyGratis.woff') format('woff'),
+         url('BradleyGratis.ttf') format('truetype'),
+         url('BradleyGratis.svg#BradleyGratis') format('svg');
 }
 /* #endregion*/
 
@@ -71,7 +74,7 @@ body {
 // Header text
 .header-title, .header-title a, .header-subtitle {
     height: 57%;
-    font-family: "Chomsky";
+    font-family: "Bradley Gratis";
     font-size: 110px;
     letter-spacing: 1px;
     text-decoration: none;
@@ -179,9 +182,9 @@ body {
     }   
 }
 
-// Chomsky font for H1
+// Bradley Gratis font for H1
 h1, .entry-title { 
-    font-family: "Chomsky";
+    font-family: "Bradley Gratis";
     letter-spacing: 1px;
 }
 
@@ -281,7 +284,7 @@ a:hover {
 .em-cal-head {
     --calendar-background: #aa8a53;
     --header-color: black;
-    font-family: "Chomsky";
+    font-family: "Bradley Gratis";
     font-size: 32px;
 
     div {
@@ -326,7 +329,7 @@ a:hover {
 
 // Calendar pop-up
 .em-modal-title {
-    font-family: "Chomsky";
+    font-family: "Bradley Gratis";
     font-size: 32px;
 }
 

@@ -1,16 +1,23 @@
+# De MijnGang
+- [x] Ticket link button
 # De MijnGang Theme 1.1
+- [ ] Revamp in local -> modern news grid layout (?)
 - [ ] Nieuws/Posts: grid view
 - [ ] NextGen Gallery: CSS
 - [ ] NinjaForms: CSS
 - [ ] Events Manager post list: grid view, CSS
-- [ ] Chomsky readability (letter spacing?)
+- [ ] Events Manager ticket page layout/template -> button styling
 # FacebookExtractor 1.2
-- [ ] Logger/ProgressBar fusion, follow format:
-	- [ ] [12:00:00] Downloading file 1 of 60 from 2024-08-01 [#||||||----- 25%, 1mbps (asterisk spin)]
-- [ ] Extract planned/future posts
+- [ ] Logging
+	- [ ] Fetching posts: [12:00:00] Found 3 posts on 2024-08-27 with 25 images.
+	- [ ] Overal progress: [12:00:00] Processing posts: 20 / 240.
+		- [ ] (Nested) Downloading images: [12:00:00] Downloading images from 2024-08-27_1: 1 / 80
+		- [ ] Fix via https://www.nuget.org/packages/ShellProgressBar/
+- [ ] Fix directory download
+- [ ] Sort by year, month, day, post number folders
+	- [ ] 2024 -> 08 -> 27 -> 1
+- [ ] Fetch planned/future posts
 - [ ] Error handling: retry up to five times over ten seconds before skipping, retry failed files at the very end one more time, notify how many/which files failed
-- [ ] Show download progress in new print format
-	- [ ] [12:00:00] Downloading file 1 of 60 from 2024-08-01 [0%, 1mbps]
 # De MijnGang App 1.0
 - [ ] Fetch events from site via exported XML
 	- [ ] Asynchronous/check every hour in background (?)

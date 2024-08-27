@@ -34,3 +34,5 @@ E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtra
 E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\FacebookExtractor.genruntimeconfig.cache
 E:\Projects\DeMijnGang\Projects\FacebookExtractor\obj\Debug\net8.0\ref\FacebookExtractor.dll
 D:\GitHub\DeMijngang\Projects\FacebookExtractor\obj\Debug\net8.0\Facebook.8CBC0B33.Up2Date
+D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\ShellProgressBar.dll
+D:\GitHub\DeMijngang\Projects\FacebookExtractor\bin\Debug\net8.0\ByteSize.dll

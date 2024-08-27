@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ByteSize" Version="2.1.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="ShellProgressBar" Version="5.2.0" />
   </ItemGroup>
 
 </Project>

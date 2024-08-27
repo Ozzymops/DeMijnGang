@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShellProgressBar;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -110,6 +111,31 @@ namespace FacebookExtractor
             }
 
             Console.WriteLine();
+        }
+
+        public static void DownloadProgress(string message)
+        {
+            
+
+            const int totalTicks = 10;
+            var options = new ProgressBarOptions
+            {
+                ProgressCharacter = '─',
+                ProgressBarOnBottom = true
+            };
+
+            using (var pbar = new ProgressBar(totalTicks, "Initial message", options))
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    if (i % 10 == 0)
+                    {
+                        pbar.Tick();
+                    }
+
+                    Thread.Sleep(100);
+                }
+            }
         }
     }
 }

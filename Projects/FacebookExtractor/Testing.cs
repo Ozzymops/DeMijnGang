@@ -1,4 +1,5 @@
 ﻿using FacebookExtractor.Models;
+using ShellProgressBar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,17 +33,14 @@ namespace FacebookExtractor
             api.FetchPosts("DeMijnGang");
         }
 
-        public static void TestDownloader()
+        public static async Task TestDownloader()
         {
             Logger.WriteLine("Test 1");
-            using (var progress = new ProgressBar())
-            {
-                for (int i = 0; i <= 100; i++)
-                {
-                    progress.Report((double)i / 100);
-                    Thread.Sleep(20);
-                }
-            }
+
+            string[] urls = { "https://link.testfile.org/300MB", "https://link.testfile.org/300MB", "https://link.testfile.org/300MB" };
+            string dir = "file.zip";
+
+            // await Downloader.Download(urls, dir);
         }
     }
 }
