@@ -8,18 +8,47 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1e4bf074a96be59a",
+            "id": "12d0906830888ab8",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "To do.md",
                 "mode": "source",
                 "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "424172845eafd882",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bookmarks.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "df81f2aaa483795d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To do.md",
+                "file": "Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "To do.md",
+                "file": "Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "To do.md"
+                "file": "Notes.md"
               }
             }
           }
@@ -149,13 +178,13 @@
       "meld-encrypt:Encrypt/Decrypt": false
     }
   },
-  "active": "1e4bf074a96be59a",
+  "active": "df81f2aaa483795d",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Bookmarks.md",
+    "Notes.md",
     "To do.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",
-    "Notes.md",
     "FileZilla.md"
   ]
 }

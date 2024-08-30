@@ -1,12 +1,12 @@
 # De MijnGang Theme 1.1
+- [ ] dev/release split -> only upload necessary files to reduce bloat
+	- [ ] shell link to site instance
 - [ ] Revamp in local -> modern news grid layout (?)
 - [ ] Nieuws/Posts: grid view
 - [ ] NextGen Gallery: CSS
 - [ ] NinjaForms: CSS
 - [ ] Events Manager post list: grid view, CSS
 - [ ] Events Manager ticket page layout/template -> button styling
-# FacebookExtractor 1.2
-- [ ] Clean up scheduledPost/Post code (combine?)
 # De MijnGang App 1.0
 - [ ] Fetch events from site via exported XML
 	- [ ] Asynchronous/check every hour in background (?)
