@@ -26,6 +26,23 @@ namespace FacebookExtractor
             progressBar.Message = $"Downloading images from {post.Date.ToString("yyyy-MM-dd")}: {imageCount} / {post.Images.Count} @ {downloadSpeed}mbps.";
             progress = progressBar.AsProgress<double>();
 
+            // check if directory exists
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            // post content
+            if (!File.Exists(dir + "Post.txt"))
+            {
+                using (FileStream fileStream = File.Create($"{dir}\\Post.txt"))
+                {
+                    Byte[] text = new UTF8Encoding(true).GetBytes($"Post date: {post.Date}\nPost content: {post.Content}");
+                    fileStream.Write(text, 0, text.Length);
+                }
+            }
+
+            // post media
             foreach (Uri link in post.Images)
             {
                 imageCount++;
@@ -39,7 +56,7 @@ namespace FacebookExtractor
                 bool isMoreToRead = true;
 
                 using Stream contentStream = await response.Content.ReadAsStreamAsync();
-                using FileStream fileStream = new FileStream(dir, FileMode.Create, FileAccess.Write, FileShare.None, buffer.Length, true);
+                using FileStream fileStream = new FileStream(dir + imageCount + ".webp", FileMode.Create, FileAccess.Write, FileShare.None, buffer.Length, true);
 
                 Stopwatch stopwatch = new Stopwatch();
 
@@ -66,8 +83,29 @@ namespace FacebookExtractor
                 }
                 while (isMoreToRead);
             }
+        }
 
-            progressBar.Message = $"Finished downloading images from {post.Date.ToString("yyyy-MM-dd")}: {post.Images.Count} images acquired.";
+        public static async Task Summarize(List<Post> posts, string dir, string page)
+        {
+            if (!File.Exists(dir + "Summary.txt"))
+            {
+                Logger.WriteLine($"Creating [Summary.txt] in root folder of page {page}...", 0, ConsoleColor.Yellow);
+
+                using (FileStream fileStream = File.Create($"{dir}\\Summary.txt"))
+                {
+                    Byte[] text = new UTF8Encoding(true).GetBytes($"Summary of posts from {page}, last downloaded {DateTime.Now}.\n");
+                    fileStream.Write(text, 0, text.Length);
+                }
+
+                foreach (Post post in posts)
+                {
+                    using (StreamWriter streamWriter = File.AppendText($"{dir}\\Summary.txt"))
+                    {
+                        streamWriter.Write("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+                        streamWriter.Write($"[{posts.IndexOf(post)} - {post.Date.ToString("yyyy-MM-dd")}]\nImage count: {post.Images.Count}\n{post.Content}\n");
+                    }
+                }
+            }
         }
     }
 }

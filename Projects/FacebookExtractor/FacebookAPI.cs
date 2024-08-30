@@ -61,32 +61,34 @@ namespace FacebookExtractor
         {
             List<Post> posts = new List<Post>();
             List<string> pageMemory = new List<string>();
-            int postCount = 0;
-            int pageCount = 0;
             string nextPage = null;
-            bool busy = true;
+            int pageCount = 0;
+            int postCount = 0;
+            DateTime previousDate = DateTime.MinValue;
+            bool processing = true;
 
-            while (busy)
+            while (processing)
             {
                 dynamic result = null;
 
+                // Change request string based on availability of next page
+                string request = "posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25&after=" + nextPage;
+
                 if (string.IsNullOrEmpty(nextPage))
                 {
-                    result = _apiHandler.Get<dynamic>(page, "posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25");
-                }
-                else
-                {
-                    result = _apiHandler.Get<dynamic>(page, "posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25&after=" + nextPage);
+                    request = "posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25";
                 }
 
+                result = _apiHandler.Get<dynamic>(page, request);
                 result.Wait();
 
                 if (result.Result == null)
                 {
-                    busy = false;
+                    processing = false;
                     break;
                 }
 
+                // Pagination check
                 try
                 {
                     nextPage = JsonConvert.DeserializeObject<JObject>(result.Result["paging"].ToString()).SelectToken("cursors.after").ToString();
@@ -103,70 +105,166 @@ namespace FacebookExtractor
                 }
                 else
                 {
-                    busy = false;
+                    processing = false;
                     break;
                 }
 
-                // Convert results to Posts
+                // Convert results to objects
                 var postObjects = JsonConvert.DeserializeObject<JToken>(result.Result["data"].ToString());
 
                 foreach (JObject obj in postObjects)
                 {
-                    // garbage check
-                    bool garbageCheck = false;
-
-                    JToken messageCheck = obj.SelectToken("message");
-                    JToken attachmentCheck = obj.SelectToken("attachments");
-
-                    if (messageCheck == null && attachmentCheck == null)
+                    if (obj.SelectToken("message") == null && obj.SelectToken("attachments") == null)
                     {
-                        garbageCheck = true;
+                        // useless post, return
+                        continue;
                     }
 
-                    if (!garbageCheck)
+                    Post post = new Post((string)obj.SelectToken("message"),
+                        (DateTime)obj.SelectToken("created_time"),
+                        new List<Uri>());
+
+                    // parse media
+                    if (obj.SelectToken("attachments") != null)
                     {
-                        postCount++;
-                        Post post = new Post((string)obj.SelectToken("message"),
-                                             (DateTime)obj.SelectToken("created_time"),
-                                             new List<Uri>());
+                        // primary media
+                        Uri mediaLink = new Uri(obj.SelectToken("attachments.data[0].media.image.src").ToString());
+                        post.Images.Add(mediaLink);
 
-                        // media check
-                        if (attachmentCheck != null)
+                        // additional media
+                        if (obj.SelectToken("attachments.data[0].subattachments") != null)
                         {
-                            Uri media = new Uri(obj.SelectToken("attachments.data[0].media.image.src").ToString());
-                            post.Images.Add(media);
+                            bool parsing = true;
+                            int subattachmentCount = 1;
 
-                            // submedia check
-                            JToken subattachmentCheck = obj.SelectToken("attachments.data[0].subattachments");
-
-                            // retarded solution but it works
-                            if (subattachmentCheck != null)
+                            while (parsing)
                             {
-                                bool parsing = true;
-                                int subattachmentCount = 1;
-
-                                while (parsing)
+                                if (obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src") != null)
                                 {
-                                    if (obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src") != null)
-                                    {
-                                        Uri subAttachment = new Uri(obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src").ToString());
-                                        post.Images.Add(subAttachment);
-                                        subattachmentCount++;
-                                    }
-                                    else
-                                    {
-                                        parsing = false;
-                                    }
+                                    Uri subAttachment = new Uri(obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src").ToString());
+                                    post.Images.Add(subAttachment);
+                                    subattachmentCount++;
+                                }
+                                else
+                                {
+                                    parsing = false;
                                 }
                             }
                         }
-
-                        posts.Add(post);
-                        Logger.WriteLine($"[Page {pageCount}] Fetched post from {post.Date} with {post.Images.Count} images.", 0, ConsoleColor.Yellow);
                     }
+
+                    posts.Add(post);                 
+                }           
+            }
+
+            Logger.WriteLine($"Fetched [{posts.Count}] posts.", 0, ConsoleColor.Green);
+            return posts;
+        }
+
+        /// <summary>
+        /// Black magic that fetches scheduled Facebook posts from a given page.
+        /// </summary>
+        public List<Post> FetchScheduledPosts(string page)
+        {
+            List<Post> posts = new List<Post>();
+            List<string> pageMemory = new List<string>();
+            string nextPage = null;
+            int pageCount = 0;
+            int postCount = 0;
+            DateTime previousDate = DateTime.MinValue;
+            bool processing = true;
+
+            while (processing)
+            {
+                dynamic result = null;
+
+                // Change request string based on availability of next page
+                string request = "scheduled_posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25&after=" + nextPage;
+
+                if (string.IsNullOrEmpty(nextPage))
+                {
+                    request = "scheduled_posts?fields=id,created_time,message,attachments{media,subattachments.limit(100){media}}&limit=25";
+                }
+
+                result = _apiHandler.Get<dynamic>(page, request);
+                result.Wait();
+
+                if (result.Result == null)
+                {
+                    processing = false;
+                    break;
+                }
+
+                // Pagination check
+                try
+                {
+                    nextPage = JsonConvert.DeserializeObject<JObject>(result.Result["paging"].ToString()).SelectToken("cursors.after").ToString();
+                    pageCount++;
+                }
+                catch
+                {
+                    nextPage = null;
+                }
+
+                if (!pageMemory.Contains(nextPage) && nextPage != null)
+                {
+                    pageMemory.Add(nextPage);
+                }
+                else
+                {
+                    processing = false;
+                    break;
+                }
+
+                // Convert results to objects
+                var postObjects = JsonConvert.DeserializeObject<JToken>(result.Result["data"].ToString());
+
+                foreach (JObject obj in postObjects)
+                {
+                    if (obj.SelectToken("message") == null && obj.SelectToken("attachments") == null)
+                    {
+                        // useless post, return
+                        continue;
+                    }
+
+                    Post post = new Post((string)obj.SelectToken("message"),
+                        (DateTime)obj.SelectToken("created_time"),
+                        new List<Uri>());
+
+                    // parse media
+                    if (obj.SelectToken("attachments") != null)
+                    {
+                        // primary media
+                        Uri mediaLink = new Uri(obj.SelectToken("attachments.data[0].media.image.src").ToString());
+                        post.Images.Add(mediaLink);
+
+                        // additional media
+                        if (obj.SelectToken("attachments.data[0].subattachments") != null)
+                        {
+                            bool parsing = true;
+                            int subattachmentCount = 1;
+
+                            while (parsing)
+                            {
+                                if (obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src") != null)
+                                {
+                                    Uri subAttachment = new Uri(obj.SelectToken($"attachments.data[0].subattachments.data[{subattachmentCount}].media.image.src").ToString());
+                                    post.Images.Add(subAttachment);
+                                    subattachmentCount++;
+                                }
+                                else
+                                {
+                                    parsing = false;
+                                }
+                            }
+                        }
+                    }
+
+                    posts.Add(post);
                 }
             }
 
+            Logger.WriteLine($"Fetched [{posts.Count}] scheduled posts.", 0, ConsoleColor.Green);
             return posts;
         }
     }
