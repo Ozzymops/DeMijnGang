@@ -1,3 +1,8 @@
+# Setup
+- [ ] Remove LocalWP
+- [ ] Install XAMPP
+- [ ] Symlink `~\Projects\DeMijnGangSite` to relevant folders within XAMPP
+- [ ] Symlink `~\Projects\DeMijnGangSite\htdocs\wp-content\themes` with `~\Projects\DeMijnGangTheme\dev`
 # De MijnGang Theme 1.1
 - [ ] dev/release split -> only upload necessary files to reduce bloat
 	- [ ] shell link to site instance
