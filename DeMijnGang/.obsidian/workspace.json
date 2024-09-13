@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "b6f4fa3e58c0bca2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "424172845eafd882",
             "type": "leaf",
             "pinned": true,
@@ -34,21 +46,9 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "df81f2aaa483795d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -178,11 +178,13 @@
       "meld-encrypt:Encrypt/Decrypt": false
     }
   },
-  "active": "df81f2aaa483795d",
+  "active": "13740429e08b9171",
   "lastOpenFiles": [
-    "Bookmarks.md",
     "Notes.md",
+    "Untitled.md",
     "To do.md",
+    "Naamloos.jpg",
+    "Bookmarks.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",
     "FileZilla.md"
