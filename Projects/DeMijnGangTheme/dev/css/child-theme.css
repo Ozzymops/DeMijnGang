@@ -14965,322 +14965,103 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /* #region Global */
+/* Font */
 @font-face {
   font-family: "Bradley Gratis";
   src: url("BradleyGratis.eot");
   src: url("BradleyGratis.eot?#iefix") format("embedded-opentype"), url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff"), url("BradleyGratis.ttf") format("truetype"), url("BradleyGratis.svg#BradleyGratis") format("svg");
 }
-/* #endregion*/
-/* #region Style */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 90% !important;
-  }
-}
-@media (min-width: 768px) {
-  .col-md-4 {
-    width: 25% !important;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .hideme {
-    display: none;
-  }
-}
-
+/* Background */
 body {
-  background-image: url("../img/background.webp");
+  background-image: url("../img/bg.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.entry-content, #right-sidebar {
-  background-image: url("../img/div.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
+/* Navbar */
+/* #endregion */
+/* #region New front page */
+/* Front page container */
+.frontpage-container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
-
-.page-header {
-  background-image: url("../img/div.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 5px;
-  margin-bottom: 20px;
+.frontpage-container .building-img {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-mask-image: url("../img/mask.png");
+  mask-image: url("../img/mask.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.frontpage-container .blurb-img {
+  display: block;
+  width: 33%;
+  height: 50%;
+  position: absolute;
+  transform: translate(15%, -35%) rotate(-5deg);
+}
+.frontpage-container .blurb-txt {
+  z-index: 1;
+  width: 32%;
+  position: absolute;
+  transform: rotate(-5deg) translate(10%, 355px);
   text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: black;
 }
-
-.top-header {
-  background: rgb(0, 0, 0);
-  background-image: url(../img/header-fade-notext.png);
-  background-image: url(../img/header-fade-notext.png), radial-gradient(circle, rgb(255, 255, 255) 10%, rgb(93, 53, 0) 50%, rgb(0, 0, 0) 100%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 150px;
-  display: flex;
-  align-items: center;
+.frontpage-container .map-img {
+  display: block;
+  width: 33%;
+  height: 50%;
+  position: absolute;
+  transform: translate(840px, -35%) rotate(5deg);
 }
-
-.header-title, .header-title a, .header-subtitle {
-  height: 57%;
+.frontpage-container .map-embed {
+  width: 417px;
+  height: 200px;
+  border: 0px;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(5deg) translate(870px, 271px);
+}
+.frontpage-container .title {
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 50%;
+  padding: 10px 20px;
+  text-align: center;
   font-family: "Bradley Gratis";
-  font-size: 110px;
-  letter-spacing: 1px;
+  font-size: 96px;
   text-decoration: none;
   color: white;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0px;
   text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
 }
-@media only screen and (max-width: 1540px) {
-  .header-title, .header-title a, .header-subtitle {
-    font-size: 72px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .header-title, .header-title a, .header-subtitle {
-    font-size: 64px;
-  }
-}
-
-.header-title a:hover {
-  color: rgb(230, 230, 230);
-}
-
-.header-subtitle {
-  font-size: 33px;
-  letter-spacing: 3px;
-  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
-}
-@media only screen and (max-width: 1540px) {
-  .header-subtitle {
-    font-size: 28px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .header-subtitle {
-    font-size: 22px;
-  }
-}
-
-.navbar {
-  background-color: #330f03 !important;
-  --bs-navbar-padding-y: 0 !important;
-}
-
-.nav-link {
-  font-size: 20px;
-  color: white;
-  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
-}
-
-.navbar-brand {
-  display: none !important;
-}
-
-.ms-auto {
-  margin-left: 0 !important;
-}
-
-.navbar-expand-md .navbar-collapse {
-  justify-content: center !important;
-}
-
-.dropdown {
-  --bs-dropdown-spacer: 0;
-}
-.dropdown .dropdown-menu {
-  background-color: #330f03 !important;
-  margin-top: 0;
-}
-.dropdown .dropdown-menu li a {
-  font-size: 20px;
-  color: white;
-  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-@media only screen and (max-width: 768px) {
-  #right-sidebar {
-    margin-top: 20px;
-  }
-}
-
-h1, .h1, .entry-title {
+.frontpage-container .subtitle {
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 26%;
+  left: 50%;
+  padding: 10px 20px;
+  text-align: center;
   font-family: "Bradley Gratis";
-  letter-spacing: 1px;
-}
-
-a {
-  color: #212529;
-}
-
-a:hover {
-  color: #696a6b;
-}
-
-#page-wrapper, #error-404-wrapper {
-  min-height: calc(100vh - 150px - 150px);
-}
-
-#wrapper-footer {
-  background-color: #330f03;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-#wrapper-footer .footer-links {
-  display: flex !important;
-  justify-content: center;
-}
-#wrapper-footer .footer-links a {
-  color: #c7a56b;
-  font-size: 36px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-#wrapper-footer .footer-links a:hover {
+  font-size: 38px;
+  text-decoration: none;
   color: white;
-}
-#wrapper-footer .footer-information {
-  display: flex !important;
-  justify-content: center;
-}
-#wrapper-footer .footer-information a {
-  color: #c7a56b;
-  font-size: 16px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-#wrapper-footer .footer-information p {
-  color: #c7a56b;
-  font-size: 24px;
-  margin: 0;
-}
-#wrapper-footer .footer-information i {
-  color: #c7a56b;
-  font-size: 24px;
-  margin: 0;
-  padding: 7px;
-}
-
-:where(.wp-block-columns) {
-  margin-bottom: 0px;
-}
-
-/* #endregion */
-/* #region Plugin support */
-#featured-image img {
-  max-height: 500px;
-}
-
-#featured-exerpt {
-  padding-left: 5px;
-  margin-left: 5px;
-}
-
-#eventslist div {
-  margin-bottom: 1rem;
-}
-
-#eventslist p {
-  margin-bottom: 0;
-}
-
-.em.em-calendar {
-  --date-color: black;
-  --calendar-background: #c7a56b;
-  --date-background: #c7a56b;
-}
-
-.em-cal-head {
-  --calendar-background: #aa8a53;
-  --header-color: black;
-  font-family: "Bradley Gratis";
-  font-size: 32px;
-}
-.em-cal-head div {
-  overflow: hidden;
-}
-
-.em-cal-day-date {
-  --date-border-color: #330f03 !important;
-}
-@media only screen and (max-width: 1200px) {
-  .em-cal-day-date span {
-    width: 22px !important;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .em-cal-day-date span {
-    width: 22px !important;
-  }
-}
-
-.eventless-today, .eventful-today {
-  --date-color: red;
-  text-shadow: 0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000;
-}
-.eventless-today a:hover, .eventful-today a:hover {
-  background-color: white !important;
-}
-
-.eventful a:hover {
-  background-color: white !important;
-}
-
-.em-modal-title {
-  font-family: "Bradley Gratis";
-  font-size: 32px;
-}
-
-.em-modal-popup {
-  background-image: url("../img/div.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.em.pixelbones a {
-  color: #212529 !important;
-}
-.em.pixelbones a:hover {
-  color: #696a6b !important;
-}
-
-/* #endregion */
-/* #region Per-page tweaks */
-.entry-header {
-  background-image: url("../img/div.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-}
-
-.category-nieuws {
-  background-position: initial !important;
-}
-
-.comments-area {
-  background-image: url("../img/div.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.comments-area .comment-respond {
-  padding: 20px;
-}
-
-.edit-link {
-  display: none;
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
 /* #endregion */

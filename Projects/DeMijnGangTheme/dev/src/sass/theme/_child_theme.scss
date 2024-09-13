@@ -1,4 +1,6 @@
 /* #region Global */
+
+/* Font */
 @font-face {
     font-family: 'Bradley Gratis';
     src: url('BradleyGratis.eot');
@@ -8,378 +10,114 @@
          url('BradleyGratis.ttf') format('truetype'),
          url('BradleyGratis.svg#BradleyGratis') format('svg');
 }
-/* #endregion*/
 
-/* #region Style */
-// Main content width
-@media (min-width: 1400px) {
-    .container {
-        max-width: 90% !important;
-    }
-}
-
-// Sidebar width
-@media (min-width: 768px) {
-    .col-md-4 {
-        width: 25% !important;
-    }
-}
-
-// Useless padding when under certain width
-.hideme {
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
-}
-
-// Background image
+/* Background */
 body {
-    background-image: url("../img/background.webp");
+    background-image: url("../img/bg.webp");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.entry-content, #right-sidebar {
-    background-image: url("../img/div.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 20px;
-}
-
-.page-header {
-    background-image: url("../img/div.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-// Header
-.top-header {
-    background: rgb(0, 0, 0);
-    background-image: url(../img/header-fade-notext.png);
-    background-image: url(../img/header-fade-notext.png), radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(93,53,0,1) 50%, rgba(0,0,0,1) 100%); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 150px;
-    display: flex;
-    align-items: center;
-}
-
-// Header text
-.header-title, .header-title a, .header-subtitle {
-    height: 57%;
-    font-family: "Bradley Gratis";
-    font-size: 110px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0px;
-    text-shadow:
-        2px 2px 0 #000,
-        -2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000;
-
-    @media only screen and (max-width: 1540px) {
-        font-size: 72px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        font-size: 64px;
-    }
-}
-
-.header-title a:hover {
-    color: rgb(230, 230, 230);
-}
-
-.header-subtitle {
-    font-size: 33px;
-    letter-spacing: 3px;
-    text-shadow:
-        1px 1px 0 #000,
-        -1px 1px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000;
-
-    @media only screen and (max-width: 1540px) {
-        font-size: 28px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        font-size: 22px;
-    }
-}
-
-// Navbar
-.navbar {
-    background-color: #330f03 !important;
-    --bs-navbar-padding-y: 0 !important;
-}
-
-// Navbar links outline
-.nav-link {
-    font-size: 20px;
-    color: white;
-    text-shadow:
-        1px 1px 0 #000,
-        -1px 1px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000;
-}
-
-// Hide site name on navbar
-.navbar-brand {
-    display: none !important;
-}
-
-// Center navbar content
-.ms-auto {
-    margin-left: 0 !important;
-}
-
-.navbar-expand-md .navbar-collapse {
-    justify-content: center !important;
-}
-
-// Dropdown
-.dropdown {
-    --bs-dropdown-spacer: 0;
-
-    .dropdown-menu {
-        background-color: #330f03 !important;
-        margin-top: 0;
-
-        li a {
-            font-size: 20px;
-            color: white;
-            text-shadow:
-                1px 1px 0 #000,
-                -1px 1px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000;
-        }
-    }
-}
-
-// Dropdown toggle -> hover
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-// Sidebar
-#right-sidebar {
-    @media only screen and (max-width: 768px) {
-        margin-top: 20px;
-    }   
-}
-
-// Bradley Gratis font for H1
-h1, .entry-title { 
-    font-family: "Bradley Gratis";
-    letter-spacing: 1px;
-}
-
-a {
-    color: #212529;
-}
-
-a:hover {
-    color: #696a6b;
-}
-
-// Minimum height for proper footer placement
-#page-wrapper, #error-404-wrapper {
-    min-height: calc(100vh - 150px - 150px); // - header, - footer
-}
-
-// Footer
-#wrapper-footer {
-    background-color: #330f03;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-
-    // E-Mail/Facebook icons
-    .footer-links {
-        display: flex !important;
-        justify-content: center;      
-
-        a {
-            color: #c7a56b;
-            font-size: 36px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }      
-
-        a:hover {
-            color: white;
-        }
-    }
-
-    // Copyright
-    .footer-information {
-        display: flex !important;
-        justify-content: center;
-
-        a {
-            color: #c7a56b;
-            font-size: 16px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }  
-
-        p {
-            color: #c7a56b;
-            font-size: 24px;
-            margin: 0;
-        }
-
-        i {
-            color: #c7a56b;
-            font-size: 24px;
-            margin: 0;
-            padding: 7px;
-        }
-    }
-}
-
-:where(.wp-block-columns) {
-    margin-bottom: 0px;
-}
-/* #endregion */
-
-/* #region Plugin support */
-// = Events Manager Pro =
-#featured-image img {
-    max-height: 500px;
-}
-
-#featured-exerpt {
-    padding-left: 5px;
-    margin-left: 5px;
-}
-
-#eventslist div {
-    margin-bottom: 1rem;
-}
-
-#eventslist p {
-    margin-bottom: 0;
-}
-
-.em.em-calendar {
-    --date-color: black;
-    --calendar-background: #c7a56b;
-    --date-background: #c7a56b;
-}
-
-.em-cal-head {
-    --calendar-background: #aa8a53;
-    --header-color: black;
-    font-family: "Bradley Gratis";
-    font-size: 32px;
-
-    div {
-        overflow: hidden;
-    }
-}
-
-.em-cal-day-date {
-    --date-border-color: #330f03 !important;
-
-    @media only screen and (max-width: 1200px) {
-        span {
-            width: 22px !important;
-        }       
-    }
-
-    @media only screen and (max-width: 992px) {
-        span {
-            width: 22px !important;
-        }       
-    }
-}
-
-.eventless-today, .eventful-today {
-    --date-color: red;
-    text-shadow:
-        0.5px 0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000;
-    
-    a:hover {
-        background-color: white !important;
-    }
-}
-
-.eventful {
-    a:hover {
-        background-color: white !important;
-    }
-}
-
-// Calendar pop-up
-.em-modal-title {
-    font-family: "Bradley Gratis";
-    font-size: 32px;
-}
-
-.em-modal-popup {
-    background-image: url("../img/div.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.em.pixelbones {
-    a {
-        color: #212529 !important;
-    }
-    
-    a:hover {
-        color: #696a6b !important;
-    }
-}
+/* Navbar */
 
 /* #endregion */
 
-/* #region Per-page tweaks */
-// Nieuws
-.entry-header {
-    background-image: url("../img/div.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 20px;
-}
+/* #region New front page */
 
-.category-nieuws {
-    background-position: initial !important;
-}
+/* Front page container */
+.frontpage-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
 
-// Post
-.comments-area {
-    background-image: url("../img/div.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    .building-img {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
 
-    .comment-respond {
-        padding: 20px;
+        mask-image: url("../img/mask.png");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
     }
+
+    .blurb-img {
+        display: block;
+        width: 33%;
+        height: 50%;
+        position: absolute;
+        transform: translate(15%, -35%) rotate(-5deg);
+    }
+
+    .blurb-txt {
+        z-index: 1;
+        width: 32%;
+        position: absolute;
+        transform: rotate(-5deg) translate(10%, 355px);
+        text-align: center;
+        font-family: "Roboto";
+        font-size: 14px;
+        color: black;
+    }
+
+    .map-img {
+        display: block;
+        width: 33%;
+        height: 50%;
+        position: absolute;
+        transform: translate(840px, -35%) rotate(5deg);
+    }
+
+    .map-embed {
+        width: 417px;
+        height: 200px;
+        border: 0px;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(5deg) translate(870px, 271px);
+    }
+
+    .title {
+        z-index: 1;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 10%;
+        left: 50%;
+        padding: 10px 20px;
+        text-align: center;
+        font-family: "Bradley Gratis";
+        font-size: 96px;
+        text-decoration: none;
+        color: white;
+        text-shadow:
+            2px 2px 0 #000,
+            -2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000;
+    }
+
+    .subtitle {
+        z-index: 1;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 26%;
+        left: 50%;
+        padding: 10px 20px;
+        text-align: center;
+        font-family: "Bradley Gratis";
+        font-size: 38px;
+        text-decoration: none;
+        color: white;
+        text-shadow:
+            1.5px 1.5px 0 #000,
+            -1.5px 1.5px 0 #000,
+            -1.5px -1.5px 0 #000,
+            1.5px -1.5px 0 #000;
+    }
+
 }
 
-// "Edit" button
-.edit-link {
-    display: none;
-}
 /* #endregion */

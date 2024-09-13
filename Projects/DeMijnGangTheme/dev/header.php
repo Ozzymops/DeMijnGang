@@ -32,6 +32,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
+	<!--
 	<header id="wrapper-navbar">
 
 		<div class="top-header">
@@ -43,12 +44,8 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 					</div>			
 				</div>
 			</div>
-			<!--
-			<div class="row">
-				<img class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header.png" alt="Header image" >
-			</div>
-			-->
 		</div>
+	-->
 
 		<a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">
 			<?php esc_html_e( 'Skip to content', 'understrap' ); ?>
