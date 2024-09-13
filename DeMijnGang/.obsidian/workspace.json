@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "b6f4fa3e58c0bca2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "424172845eafd882",
             "type": "leaf",
             "pinned": true,
@@ -46,9 +34,21 @@
               },
               "pinned": true
             }
+          },
+          {
+            "id": "df81f2aaa483795d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "To do.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "To do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "To do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "To do.md"
               }
             }
           }
@@ -178,13 +178,11 @@
       "meld-encrypt:Encrypt/Decrypt": false
     }
   },
-  "active": "13740429e08b9171",
+  "active": "df81f2aaa483795d",
   "lastOpenFiles": [
-    "Notes.md",
-    "Untitled.md",
-    "To do.md",
-    "Naamloos.jpg",
     "Bookmarks.md",
+    "Notes.md",
+    "To do.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",
     "FileZilla.md"
