@@ -32,6 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
+				<!-- Home page only! -->
 				<?php if (is_front_page()) { ?>
 					<div class="frontpage-container">
 						<h1 class="title">De MijnGang</h1>
@@ -39,8 +40,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<p class="blurb-txt">Stichting De MijnGang is gevestigd in het zuidelijkste puntje van Nederland, Heerlen; Heerlen-Noord om precies te zijn.<br /><br />Wij zijn gestart met ons te richten op het sociale welzijn van ouderen in de buurt om zo eenzaamheid te minimaliseren. Samenzijn is na de coronacrisis niet meer vanzelfsprekend en al helemaal niet onder ouderen!<br /><br />Samen is toch zoveel leuker dan alleen?</p>
 						<iframe class="map-embed" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ8b-5eXq9wEcRmevC_epgSrs&key=AIzaSyApX6kuZsXjGYNDxRKIELKivly8wwksqaM"></iframe>
 						<img class="building-img" src="<?php echo get_stylesheet_directory_uri();?>/img/building.webp" />
-						<img class="blurb-img" src="<?php echo get_stylesheet_directory_uri();?>/img/div.png" />
-						<img class="map-img" src="<?php echo get_stylesheet_directory_uri();?>/img/div.png" />
+						<img class="blurb-img" src="<?php echo get_stylesheet_directory_uri();?>/img/div.webp" />
+						<img class="map-img" src="<?php echo get_stylesheet_directory_uri();?>/img/div.webp" />
 					</div>					
 				<?php } ?>
 

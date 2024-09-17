@@ -1,3 +1,5 @@
+## To fix
+- Socials a:hover not working
 ## Important
 Large, readable font
 High contrast text

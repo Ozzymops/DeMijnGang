@@ -14971,6 +14971,11 @@ figure.woocommerce-product-gallery__wrapper {
   src: url("BradleyGratis.eot");
   src: url("BradleyGratis.eot?#iefix") format("embedded-opentype"), url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff"), url("BradleyGratis.ttf") format("truetype"), url("BradleyGratis.svg#BradleyGratis") format("svg");
 }
+/* WordPress: hide Edit button */
+.post-edit-link {
+  display: none;
+}
+
 /* Background */
 body {
   background-image: url("../img/bg.webp");
@@ -14978,8 +14983,116 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body p {
+  color: white;
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+}
 
 /* Navbar */
+#wrapper-navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.navbar {
+  background-image: url("../img/div-dark.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  padding: 0px;
+  -webkit-mask-image: url("../img/mask.png");
+  mask-image: url("../img/mask.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.navbar .ms-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.navbar .nav-link {
+  color: white;
+  padding: 0px;
+  font-size: 24px;
+  font-family: "Bradley Gratis";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+}
+
+/* Content */
+#page-wrapper {
+  padding-bottom: 0px;
+}
+
+/* Footer */
+#wrapper-footer {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #330f03;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.footer-container a, .footer-container p, .footer-container i {
+  color: #c7a56b;
+}
+.footer-container a:hover {
+  color: white !important;
+}
+.footer-container .footer-copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-basis: 33%;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+.footer-container .footer-copyright i {
+  padding-top: 0.5rem;
+}
+.footer-container .footer-copyright p {
+  padding-top: 0.1rem;
+  padding-left: 0.5rem;
+  margin: 0px;
+}
+.footer-container .footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-basis: 33%;
+  font-size: 38px;
+  margin-bottom: 0px;
+}
+.footer-container .footer-socials a {
+  padding: 0px;
+  margin-right: 1rem;
+}
+.footer-container .footer-policies {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-basis: 33%;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+.footer-container .footer-policies a {
+  padding: 0px;
+  margin-left: 1rem;
+}
+
 /* #endregion */
 /* #region New front page */
 /* Front page container */
@@ -14987,6 +15100,7 @@ body {
   width: 100%;
   position: relative;
   display: inline-block;
+  margin-bottom: 10rem;
 }
 .frontpage-container .building-img {
   display: block;
@@ -15019,6 +15133,7 @@ body {
   font-family: "Roboto";
   font-size: 14px;
   color: black;
+  text-shadow: none !important;
 }
 .frontpage-container .map-img {
   display: block;
@@ -15047,6 +15162,9 @@ body {
   font-size: 96px;
   text-decoration: none;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
 }
 .frontpage-container .subtitle {
@@ -15061,7 +15179,18 @@ body {
   font-size: 38px;
   text-decoration: none;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+}
+
+.menu-image {
+  max-height: 250px;
+}
+
+.event-image {
+  max-height: 300px;
 }
 
 /* #endregion */
