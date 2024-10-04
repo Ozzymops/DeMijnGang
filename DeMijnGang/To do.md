@@ -1,3 +1,6 @@
+feature-restaurantmenu.php
+function demijngang_restaurantmenu_shortcodes -> separate by title, description, and image. make a generic function for title/description and a specialized one for image
+
 # De MijnGang Theme 1.1
 - [ ] dev/release split -> only upload necessary files to reduce bloat
 - [ ] Revamp in local -> modern news grid layout (?)

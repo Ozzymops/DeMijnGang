@@ -14978,13 +14978,18 @@ figure.woocommerce-product-gallery__wrapper {
 
 /* Background */
 body {
+  /* Background */
   background-image: url("../img/bg.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  /* Font */
 }
 body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body p {
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
@@ -14993,6 +14998,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   position: sticky;
   top: 0;
   overflow: hidden;
+  z-index: 100;
 }
 
 .navbar {
@@ -15049,7 +15055,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 .footer-container a, .footer-container p, .footer-container i {
   color: #c7a56b;
 }
-.footer-container a:hover {
+.footer-container a:hover, .footer-container i:hover {
   color: white !important;
 }
 .footer-container .footer-copyright {
@@ -15128,10 +15134,10 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   z-index: 1;
   width: 32%;
   position: absolute;
-  transform: rotate(-5deg) translate(10%, 355px);
+  transform: rotate(-5deg) translate(10%, 350px);
   text-align: center;
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 15px;
   color: black;
   text-shadow: none !important;
 }
