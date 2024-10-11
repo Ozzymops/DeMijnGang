@@ -1,6 +1,14 @@
-feature-restaurantmenu.php
-function demijngang_restaurantmenu_shortcodes -> separate by title, description, and image. make a generic function for title/description and a specialized one for image
-
+# De MijnGang
+- [ ] Reservation form (upfront payment) for dinner on Wednesdays
+# De MijnGang Plugin
+- [ ] Rotating weekly menu for Wednesdays (static offer, wildcard on fifth occurence in the month)
+- [ ] UI clean-up
+- [ ] Find a way to keep picture uploaded when changing information
+- [ ] Remove unused pictures either on change or scheduled
+# Koempelkast
+- [ ] Inspect site, see what needs to be changed
+- [ ] Come up with a fair price (hourly? total?)
+- [ ] Facebook plugin to synchronize wall with page
 # De MijnGang Theme 1.1
 - [ ] dev/release split -> only upload necessary files to reduce bloat
 - [ ] Revamp in local -> modern news grid layout (?)
