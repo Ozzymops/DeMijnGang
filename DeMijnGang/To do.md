@@ -1,5 +1,3 @@
-# De MijnGang
-- [ ] Reservation form (upfront payment) for dinner on Wednesdays
 # De MijnGang Plugin
 - [ ] Rotating weekly menu for Wednesdays (static offer, wildcard on fifth occurence in the month)
 - [ ] UI clean-up

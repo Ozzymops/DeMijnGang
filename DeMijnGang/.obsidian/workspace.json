@@ -34,21 +34,8 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "4517dcc1feade851",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "To do.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bookmarks.md",
+                "file": "To do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bookmarks.md",
+                "file": "To do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bookmarks.md"
+                "file": "To do.md"
               }
             }
           }
@@ -178,12 +165,12 @@
       "meld-encrypt:Encrypt/Decrypt": false
     }
   },
-  "active": "424172845eafd882",
+  "active": "12d0906830888ab8",
   "lastOpenFiles": [
+    "Bookmarks.md",
     "Theme redesign.md",
     "To do.md",
     "Notes.md",
-    "Bookmarks.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",
     "FileZilla.md"

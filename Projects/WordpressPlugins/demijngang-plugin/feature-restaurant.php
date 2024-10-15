@@ -25,6 +25,8 @@
 				</form>
 			</div>
 		<?php
+		// DEBUG
+		demijngang_restaurant_update();
 	}
 	
 	// Settings
@@ -44,7 +46,7 @@
 
 		add_settings_section('restaurant_lunch_1_section', 'Lunch: gerecht 1', null, 'demijngang');
 		add_settings_section('restaurant_lunch_2_section', 'Lunch: gerecht 2', null, 'demijngang');
-		add_settings_section('restaurant_dinner_section', 'Avondeten', null, 'demijngang');
+		//add_settings_section('restaurant_dinner_section', 'Avondeten', null, 'demijngang');
 
 		add_settings_field('restaurant_lunch_1_title', 'Gerecht', function() { return demijngang_restaurant_callback('restaurant_lunch_1_title', 0); }, 'demijngang', 'restaurant_lunch_1_section');
 		add_settings_field('restaurant_lunch_1_description', 'Beschrijving', function() { return demijngang_restaurant_callback('restaurant_lunch_1_description', 1); }, 'demijngang', 'restaurant_lunch_1_section');
@@ -54,9 +56,9 @@
 		add_settings_field('restaurant_lunch_2_description', 'Beschrijving', function() { return demijngang_restaurant_callback('restaurant_lunch_2_description', 1); }, 'demijngang', 'restaurant_lunch_2_section');
 		add_settings_field('restaurant_lunch_2_image', 'Foto', function() { return demijngang_restaurant_callback('restaurant_lunch_2_image', 2); }, 'demijngang', 'restaurant_lunch_2_section');
 
-		add_settings_field('restaurant_dinner_title', 'Gerecht', function() { return demijngang_restaurant_callback('restaurant_dinner_title', 0); }, 'demijngang', 'restaurant_dinner_section');
-		add_settings_field('restaurant_dinner_description', 'Beschrijving', function() { return demijngang_restaurant_callback('restaurant_dinner_description', 1); }, 'demijngang', 'restaurant_dinner_section');
-		add_settings_field('restaurant_dinner_image', 'Foto', function() { return demijngang_restaurant_callback('restaurant_dinner_image', 2); }, 'demijngang', 'restaurant_dinner_section');
+		//add_settings_field('restaurant_dinner_title', 'Gerecht', function() { return demijngang_restaurant_callback('restaurant_dinner_title', 0); }, 'demijngang', 'restaurant_dinner_section');
+		//add_settings_field('restaurant_dinner_description', 'Beschrijving', function() { return demijngang_restaurant_callback('restaurant_dinner_description', 1); }, 'demijngang', 'restaurant_dinner_section');
+		//add_settings_field('restaurant_dinner_image', 'Foto', function() { return demijngang_restaurant_callback('restaurant_dinner_image', 2); }, 'demijngang', 'restaurant_dinner_section');
 	}
 	add_action('admin_init', 'demijngang_restaurant_settings');
 
@@ -118,6 +120,52 @@
 		return !empty($image) ? $image : plugin_dir_url(__FILE__) . 'images/placeholder.jpg';
 	}
 	
+	// Schedule
+	function demijngang_restaurant_schedule_activate() {
+		if (!wp_next_scheduled('demijngang_restaurant_update')) {
+			wp_schedule_event(strtotime('next Wednesday'), 'weekly', 'demijngang_restaurant_update');
+		}
+	}
+	register_activation_hook(__FILE__, 'demijngang_restaurant_schedule_activate');
+
+	function demijngang_restaurant_schedule_deactivate() {
+		wp_clear_scheduled_hook('demijngang_restaurant_update');
+	}
+	register_deactivation_hook(__FILE__, 'demijngang_restaurant_schedule_deactivate');
+
+	function demijngang_restaurant_update() {
+		$titles = [
+			1 => 'Standaard maaltijd',
+			2 => 'Pasta',
+			3 => 'Standaard maaltijd',
+			4 => 'Buitenlandse maaltijd',
+			5 => 'Verassing van de keuken',
+		];
+
+		$descriptions = [
+			1 => '',
+			2 => '',
+			3 => '',
+			4 => '',
+			5 => '',
+		];
+		
+		$images = [
+			1 => '',
+			2 => '',
+			3 => '',
+			4 => '',
+			5 => '',
+		];
+
+		$week = demijngang_restaurant_weeknumber();
+		update_option('restaurant_dinner_title', isset($values[$week]) ? $values[$week] : '');
+	}
+
+	function demijngang_restaurant_weeknumber() {
+		return ceil(date('j') / 7);
+	}
+
 	// Scripts
 	function demijngang_enqueue_scripts($hook) {
 		if ($hook !== 'demijngang_menu' && $hook !== 'demijngang_restaurantmenu_page') {
