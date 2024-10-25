@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 4px !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    max-height: 7vh;
+}
+
+th {
+    font-size: 24px !important;
+}
+
+th:nth-child(1), th:nth-child(2), th:nth-child(4) {
+    width: 5vw !important;
+}
+
+th:nth-child(3) {
+    width: 20vw;
+}
+
+td input, textarea {
+    width: 100%;
+}
+
+td textarea {
+    height: 10vh;
+}
+
+td input[type=file] {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+img {
+    max-width: 250px;
+    text-align: center;
+}
