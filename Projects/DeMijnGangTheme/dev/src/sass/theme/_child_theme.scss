@@ -18,6 +18,8 @@
 
 /* Background */
 body {
+    min-height: 100%;
+
     /* Background */
     background-image: url("../img/bg.webp");
     background-position: center top;
@@ -85,6 +87,50 @@ body {
     padding-bottom: 0px;
 }
 
+.entry-content {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    background-image: url("../img/div.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: url("../img/mask.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+}
+
+.entry-content-stretch-top {
+    margin-top: 22vh;
+}
+
+/* Blog/News */
+#archive-wrapper {
+    #main {
+        text-align: center;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+        background-image: url("../img/div.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: url("../img/mask.png");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+    }
+
+    .entry-title {
+        margin-top: 22vh;
+    }
+
+    .entry-content {
+        // overwrite cuz lmao
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+        mask-image: none;
+    }
+}
+
 /* Footer */
 #wrapper-footer {
     padding-top: 0px;
@@ -104,20 +150,16 @@ body {
         color: #c7a56b;
     }
 
-    a:hover, i:hover {
-        color: white !important;
-    }
-
     .footer-copyright {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         flex-basis: 33%;
-        font-size: 24px;
+        font-size: 16px;
         margin-bottom: 0px;
 
         i {
-            padding-top: 0.5rem;
+            padding-top: 0.35rem;
         }
 
         p {
@@ -139,6 +181,10 @@ body {
             padding: 0px;
             margin-right: 1rem;
         }
+
+        a:hover, i:hover {
+            color: white !important;
+        }
     }
 
     .footer-policies {
@@ -152,6 +198,10 @@ body {
         a {
             padding: 0px;
             margin-left: 1rem;
+        }
+
+        a:hover, i:hover {
+            color: white !important;
         }
     }
 }
@@ -267,6 +317,10 @@ body {
 
 .event-image {
     max-height: 300px;
+}
+
+.wp-block-latest-posts__list {
+    text-align: center;
 }
 
 /* #endregion */

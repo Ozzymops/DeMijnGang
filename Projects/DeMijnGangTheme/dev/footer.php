@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="footer-container">
 		<div class="footer-copyright">
 			<i class="far fa-copyright"></i>
-			<p>De MijnGang</p>
+			<p>Copyright <script>document.write(new Date().getFullYear())</script> De MijnGang ALLE RECHTEN VOORBEHOUDEN</p>
 		</div>
 		<div class="footer-socials">
 			<a href="mailto:demijngang@outlook.com"><i class="fas fa-at"></i></a>

@@ -12,6 +12,7 @@
 	add_action('admin_menu', 'demijngang_food_constructor');
 
 	function demijngang_food_page() {
+		demijngang_food_schedule_update();
 		wp_enqueue_style('feature-restaurant', plugins_url( '/feature-restaurant.css', __FILE__ ), false, '1.0', 'all' );
 		?>
 			<div class="wrap">
@@ -159,14 +160,14 @@
 					<div style="display: flex; justify-content: center;">
 						<div style="text-align: center; padding: 25px;">
 							<h2>Huidig avondeten:</h2>
-							<h3 style="text-align: center;">Voor vrijdag <?php $date = get_option('next_friday'); $formattedDate = null; if ($date && $date instanceof DateTime) { $formattedDate = $date->format('d/m'); } else { $formattedDate = 'Not Set'; } echo esc_html($formattedDate); ?></h3>
+							<h3 style="text-align: center;">Voor woensdag <?php $date = get_option('next_wednesday'); $formattedDate = null; if ($date && $date instanceof DateTime) { $formattedDate = $date->format('d/m'); } else { $formattedDate = 'Not Set'; } echo esc_html($formattedDate); ?></h3>
 							<p style="font-size: 16px;"><?php echo get_option("title-dinner_current"); ?></p>
 							<p><?php echo get_option("description-dinner_current"); ?></p>
 							<img src="<?php echo get_option('photo-dinner_current'); ?>" />
 						</div>
 					</div>
 					<hr />
-					<h3 style="text-align: center;">Voor woensdag <?php $date = get_option('next_wednesday'); $formattedDate = null; if ($date && $date instanceof DateTime) { $formattedDate = $date->format('d/m'); } else { $formattedDate = 'Not Set'; } echo esc_html($formattedDate); ?></h3>
+					<h3 style="text-align: center;">Voor vrijdag <?php $date = get_option('next_friday'); $formattedDate = null; if ($date && $date instanceof DateTime) { $formattedDate = $date->format('d/m'); } else { $formattedDate = 'Not Set'; } echo esc_html($formattedDate); ?></h3>
 					<div style="display: flex; justify-content: center;">
 						<div style="text-align: center; padding: 25px;">
 							<h2>Lunch 1:</h2>
@@ -184,7 +185,6 @@
 				</div>
 			</div>
 		<?php
-		demijngang_food_schedule_update();
 	}
 
 	function demijngang_food_options() {
@@ -197,9 +197,9 @@
 		register_setting('demijngang_food_options_group', 'description-lunch_2', 'sanitize-textarea-field');
 		register_setting('demijngang_food_options_group', 'photo-lunch_2', function($image) { return sanitize_image($image, 'photo-lunch_2'); });
 
-		register_setting('demijngang_food_options_group', 'title-dinner_current', 'sanitize_text_field');
-		register_setting('demijngang_food_options_group', 'description-dinner_current', 'sanitize-textarea-field');
-		register_setting('demijngang_food_options_group', 'photo-dinner_current', function($image) { return sanitize_image($image, 'photo-dinner_current'); });
+		register_setting('demijngang_food_options_group', 'title-dinner_current');
+		register_setting('demijngang_food_options_group', 'description-dinner_current');
+		register_setting('demijngang_food_options_group', 'photo-dinner_current');
 
 		register_setting('demijngang_food_options_group', 'title-dinner_1', 'sanitize_text_field');
 		register_setting('demijngang_food_options_group', 'description-dinner_1', 'sanitize-textarea-field');
@@ -292,11 +292,6 @@
 			5 => get_option('photo-dinner_5'),
 		];
 
-		$week = demijngang_food_schedule_week();
-		update_option('title-dinner_current', isset($titles[$week]) ? $titles[$week] : '');
-		update_option('description-dinner_current', isset($descriptions[$week]) ? $descriptions[$week] : '');
-		update_option('photo-dinner_current', isset($images[$week]) ? $images[$week] : '');
-
 		// get next instance of Wednesday and Friday
 		$today = new DateTime();
 		$nextWed = clone $today;
@@ -305,17 +300,22 @@
 		$nextWed->modify('next Wednesday');
 		$nextFri->modify('next Friday');
 
+		$week = demijngang_food_schedule_week($nextWed);
+		update_option('title-dinner_current', isset($titles[$week]) ? $titles[$week] : '');
+		update_option('description-dinner_current', isset($descriptions[$week]) ? $descriptions[$week] : '');
+		update_option('photo-dinner_current', isset($images[$week]) ? $images[$week] : '');
+		
 		update_option('next_wednesday', $nextWed);
 		update_option('next_friday', $nextFri);
 	}
 
-	function demijngang_food_schedule_week() {
-		return ceil(date('j') / 7);
+	function demijngang_food_schedule_week($occurence) {
+		return ceil($occurence->format('j') / 7);
 	}
 
 	function demijngang_food_schedule_activate() {
 		if (!wp_next_scheduled('demijngang_food_schedule_update')) {
-			wp_schedule_event(strtotime('next Wednesday'), 'weekly', 'demijngang_food_schedule_update');
+			wp_schedule_event(strtotime('next Saturday'), 'weekly', 'demijngang_food_schedule_update');
 		}
 	}
 	register_activation_hook(__FILE__, 'demijngang_food_schedule_activate');

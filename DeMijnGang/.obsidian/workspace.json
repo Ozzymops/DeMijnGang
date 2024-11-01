@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "12d0906830888ab8",
+            "id": "4a1a17c52750c32b",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -22,20 +22,19 @@
             }
           },
           {
-            "id": "424172845eafd882",
+            "id": "8807f96d7eabdeb6",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Bookmarks.md",
                 "mode": "source",
                 "source": false
-              },
-              "pinned": true
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To do.md",
+                "file": "Bookmarks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "To do.md",
+                "file": "Bookmarks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "To do.md"
+                "file": "Bookmarks.md"
               }
             }
           }
@@ -165,11 +164,12 @@
       "meld-encrypt:Encrypt/Decrypt": false
     }
   },
-  "active": "12d0906830888ab8",
+  "active": "8807f96d7eabdeb6",
   "lastOpenFiles": [
-    "Bookmarks.md",
-    "Theme redesign.md",
     "To do.md",
+    "Naamloos.jpg",
+    "Theme redesign.md",
+    "Bookmarks.md",
     "Notes.md",
     "DeMijnGangSite.md",
     "EventsManager events list.md",

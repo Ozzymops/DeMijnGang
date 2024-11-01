@@ -1,20 +1,26 @@
-# De MijnGang Plugin
-- [ ] Rotating weekly menu for Wednesdays (static offer, wildcard on fifth occurence in the month)
-- [ ] UI clean-up
-- [ ] Find a way to keep picture uploaded when changing information
-- [ ] Remove unused pictures either on change or scheduled
-# Koempelkast
-- [ ] Inspect site, see what needs to be changed
-- [ ] Come up with a fair price (hourly? total?)
-- [ ] Facebook plugin to synchronize wall with page
+# De MijnGang
+- [ ] Incorporate interesting aspects from Koempelkast?
+- [ ] Either setup a backup service or simply delete the plugin
+- [ ] Clickable links to donator sites
+- [ ] IMPORTANT
+	- [ ] Voorzitter, secretaris, penningsmeester duidelijk benoemen
+	- [ ] Fiscale nummer duidelijk plaatsen
+	- [ ] Beleidsplan
+	- [ ] Financiele verantwoording
+# Koempelkast/
+- [ ] SEO
 # De MijnGang Theme 1.1
-- [ ] dev/release split -> only upload necessary files to reduce bloat
-- [ ] Revamp in local -> modern news grid layout (?)
-- [ ] Nieuws/Posts: grid view
-- [ ] NextGen Gallery: CSS
-- [ ] NinjaForms: CSS
-- [ ] Events Manager post list: grid view, CSS
-- [ ] Events Manager ticket page layout/template -> button styling
+Keep `dev` and `release` folders seperate for uploading/shitty version control; only keep necessary files in `release` to avoid uploading `src` bloat etc.
+- [ ] Follow https://stackoverflow.com/questions/75671911/ripped-paper-effect-with-css-mask and https://www.reddit.com/r/GIMP/comments/1exfbzu/potentially_d_question_how_to_save_images_as_svgs/ for ripped/burnt paper effect
+- [ ] Dropdown menus!
+- [ ] Nestable dropdown menus!
+- [ ] Custom CSS for NextGen Gallery
+- [ ] Custom CSS for NinjaForms
+- [ ] Custom CSS for Events Manager (single event page)
+- [ ] Custom CSS for Events Manager (events list page)
+- [ ] Change donator logos and all logos in general to `.svg` files
+- [ ] Change all existing `.png` files to `.webp` files
+- [ ] Mobile/resolution support
 # De MijnGang App 1.0
 - [ ] Fetch events from site via exported XML
 	- [ ] Asynchronous/check every hour in background (?)
