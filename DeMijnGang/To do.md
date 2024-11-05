@@ -1,12 +1,14 @@
 # De MijnGang
 - [ ] Incorporate interesting aspects from Koempelkast?
-- [ ] Either setup a backup service or simply delete the plugin
 - [ ] Clickable links to donator sites
 - [ ] IMPORTANT
 	- [ ] Voorzitter, secretaris, penningsmeester duidelijk benoemen
 	- [ ] Fiscale nummer duidelijk plaatsen
 	- [ ] Beleidsplan
 	- [ ] Financiele verantwoording
+- [ ] Between In ons gebouw and Samenwerkingen: Ruimte huren?
+	- [ ] Booking Manager/Boekingssysteem plugins
+		- [ ] Name, email, phone, room, payment method (cash/pin, iDeal)
 # Koempelkast/
 - [ ] SEO
 # De MijnGang Theme 1.1
