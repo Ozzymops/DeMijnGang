@@ -13,6 +13,19 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<pre>
+<script>
+    $(document).ready(function(){
+        $("ul.sub-menu").parent().addClass("dropdown");
+        $("ul.sub-menu").addClass("dropdown-menu");
+        $("ul#menuid li.dropdown a").addClass("dropdown-toggle");
+        $("ul.sub-menu li a").removeClass("dropdown-toggle"); 
+        $('.navbar .dropdown-toggle').append('');
+        $('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+    });
+</script>
+</pre>
+
 <?php get_template_part( 'templates/sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper" id="wrapper-footer">

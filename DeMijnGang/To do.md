@@ -1,6 +1,5 @@
 # De MijnGang
 - [ ] Incorporate interesting aspects from Koempelkast?
-- [ ] Clickable links to donator sites
 - [ ] IMPORTANT
 	- [ ] Voorzitter, secretaris, penningsmeester duidelijk benoemen
 	- [ ] Fiscale nummer duidelijk plaatsen
@@ -9,13 +8,19 @@
 - [ ] Between In ons gebouw and Samenwerkingen: Ruimte huren?
 	- [ ] Booking Manager/Boekingssysteem plugins
 		- [ ] Name, email, phone, room, payment method (cash/pin, iDeal)
-# Koempelkast/
+# Koempelkast
 - [ ] SEO
+# Atmachaithanya
+- [ ] Books -> Ebooks
+- [ ] Create `dev` subdomain for `.guru` site
+- [ ] Complete rewrite of the website, from the ground up
+	- [ ] Nice theme
+	- [ ] New images
+	- [ ] Tabs from `.org` site
+	- [ ] News/Pictures -> seperated in tabs
+- [ ] When done, set `dev` subdomain to `live` and redirect `.org` to `.guru` site
 # De MijnGang Theme 1.1
 Keep `dev` and `release` folders seperate for uploading/shitty version control; only keep necessary files in `release` to avoid uploading `src` bloat etc.
-- [ ] Follow https://stackoverflow.com/questions/75671911/ripped-paper-effect-with-css-mask and https://www.reddit.com/r/GIMP/comments/1exfbzu/potentially_d_question_how_to_save_images_as_svgs/ for ripped/burnt paper effect
-- [ ] Dropdown menus!
-- [ ] Nestable dropdown menus!
 - [ ] Custom CSS for NextGen Gallery
 - [ ] Custom CSS for NinjaForms
 - [ ] Custom CSS for Events Manager (single event page)

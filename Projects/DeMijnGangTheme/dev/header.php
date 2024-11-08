@@ -24,6 +24,8 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<script src="https://kit.fontawesome.com/947187bb41.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="preload" as="font" href="/fonts/BradleyGratis.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="/fonts/BradleyGratis.woff" type="font/woff2" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
@@ -33,6 +35,8 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar">
+
+		<div class="nav-background"></div>
 
 		<a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">
 			<?php esc_html_e( 'Skip to content', 'understrap' ); ?>

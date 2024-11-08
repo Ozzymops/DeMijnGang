@@ -3,12 +3,16 @@
 /* Font */
 @font-face {
     font-family: 'Bradley Gratis';
-    src: url('BradleyGratis.eot');
-    src: url('BradleyGratis.eot?#iefix') format('embedded-opentype'),
-         url('BradleyGratis.woff2') format('woff2'),
-         url('BradleyGratis.woff') format('woff'),
-         url('BradleyGratis.ttf') format('truetype'),
-         url('BradleyGratis.svg#BradleyGratis') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+    src: url('BradleyGratis.woff2') format('woff2'),
+         url('BradleyGratis.woff') format('woff');
+    // url('BradleyGratis.eot')
+    // url('BradleyGratis.ttf') format('truetype'),
+    // url('BradleyGratis.svg#BradleyGratis') format('svg');
+    // url('BradleyGratis.eot?#iefix') format('embedded-opentype'),
 }
 
 /* WordPress: hide Edit button */
@@ -16,39 +20,63 @@
     display: none;
 }
 
+/* Mask: destroyed edges */
+.mask-destroyed-edge {
+    mask-image: url("../img/mask-destroyed.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+}
+
+/* Mask: ripped paper edge */
+.mask-ripped-edge {
+    -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x,
+                  linear-gradient(white, white) no-repeat center/100% calc(100% - 2*50px),
+                  url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
+}
+
 /* Background */
 body {
     min-height: 100%;
 
     /* Background */
-    background-image: url("../img/bg.webp");
+    background-image: url("../img/background.webp");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
 
     /* Font */
-    h1, h2, h3, h4, p {
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-smoothing: antialiased;
-        text-shadow:
-            1.5px 1.5px 0 #000,
-            -1.5px 1.5px 0 #000,
-            -1.5px -1.5px 0 #000,
-            1.5px -1.5px 0 #000;
+    h1, h2, h3, h4 {
+        color: black;
     }
+
+    p {
+        font-size: 18px;
+        color: black;
+    }
+}
+
+/* Header */
+.header-title {
+    color: white;
+    text-shadow:
+        1.5px 1.5px 0 #000,
+        -1.5px 1.5px 0 #000,
+        -1.5px -1.5px 0 #000,
+        1.5px -1.5px 0 #000;
 }
 
 /* Navbar */
 #wrapper-navbar {
     position: sticky;
     top: 0;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 100;
 }
 
-.navbar {
+.nav-background {
+    height: 5vh;
+
     background-image: url("../img/div-dark.webp");
     background-size: cover;
     background-position: center;
@@ -56,10 +84,14 @@ body {
     background-color: white;
     padding: 0px;
 
-    mask-image: url("../img/mask.png");
+    mask-image: url("../img/mask-destroyed.webp");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+}
+
+.navbar {
+    transform: translateY(-5.5vh);
 
     .ms-auto {
         margin-left: auto !important;
@@ -82,6 +114,26 @@ body {
     }
 }
 
+/* Hover dropdown */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+
+/* Nested dropdown */
+.menu-item-has-children .menu-item-has-children:hover > .dropdown-menu {
+    display: inline-block;
+    left: 9em;
+    top: -1ex;
+}
+
+.menu-item-has-children .menu-item-has-children:hover {
+    background-color: WhiteSmoke;
+}
+
 /* Content */
 #page-wrapper {
     padding-bottom: 0px;
@@ -93,37 +145,28 @@ body {
     background-image: url("../img/div.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    mask-image: url("../img/mask.png");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: cover;
-}
-
-.entry-content-stretch-top {
-    margin-top: 22vh;
+    -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x,
+                  linear-gradient(white, white) no-repeat center/100% calc(100% - 2*50px),
+                  url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
 }
 
 /* Blog/News */
 #archive-wrapper {
     #main {
         text-align: center;
+        padding-top: 25px;
         padding-left: 0.5vw;
         padding-right: 0.5vw;
+        padding-bottom: 25px;
         background-image: url("../img/div.webp");
         background-repeat: no-repeat;
         background-size: cover;
-        mask-image: url("../img/mask.png");
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: cover;
-    }
-
-    .entry-title {
-        margin-top: 22vh;
+        -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x,
+                      linear-gradient(white, white) no-repeat center/100% calc(100% - 2*50px),
+                      url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
     }
 
     .entry-content {
-        // overwrite cuz lmao
         padding-left: 0;
         padding-right: 0;
         background-image: none;
@@ -207,9 +250,8 @@ body {
 }
 /* #endregion */
 
-/* #region New front page */
+/* #region Front page */
 
-/* Front page container */
 .frontpage-container {
     width: 100%;
     position: relative;
@@ -223,7 +265,7 @@ body {
         margin-left: auto;
         margin-right: auto;
 
-        mask-image: url("../img/mask.png");
+        mask-image: url("../img/mask-destroyed.png");
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: cover;
@@ -324,3 +366,5 @@ body {
 }
 
 /* #endregion */
+
+/* #region Plugins */
