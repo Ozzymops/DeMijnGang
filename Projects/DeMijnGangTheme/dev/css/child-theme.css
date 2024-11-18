@@ -14968,29 +14968,55 @@ figure.woocommerce-product-gallery__wrapper {
 /* Font */
 @font-face {
   font-family: "Bradley Gratis";
-  src: url("BradleyGratis.eot");
-  src: url("BradleyGratis.eot?#iefix") format("embedded-opentype"), url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff"), url("BradleyGratis.ttf") format("truetype"), url("BradleyGratis.svg#BradleyGratis") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff");
 }
 /* WordPress: hide Edit button */
 .post-edit-link {
   display: none;
 }
 
+/* Mask: destroyed edges */
+.mask-destroyed-edge {
+  -webkit-mask-image: url("../img/mask-destroyed.png");
+  mask-image: url("../img/mask-destroyed.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+/* Mask: ripped paper edge */
+.mask-ripped-edge {
+  -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x, linear-gradient(white, white) no-repeat center/100% calc(100% - 100px), url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
+}
+
 /* Background */
 body {
   min-height: 100%;
   /* Background */
-  background-image: url("../img/bg.webp");
+  background-image: url("../img/background.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   /* Font */
 }
-body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body p {
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4 {
+  color: black;
+}
+body p {
+  font-size: 18px;
+  color: black;
+}
+
+/* Header */
+.header-title {
   color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
@@ -14998,25 +15024,29 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 #wrapper-navbar {
   position: sticky;
   top: 0;
-  overflow: hidden;
   z-index: 100;
 }
 
-.navbar {
+.nav-background {
+  height: 5vh;
   background-image: url("../img/div-dark.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
   padding: 0px;
-  -webkit-mask-image: url("../img/mask.png");
-  mask-image: url("../img/mask.png");
+  -webkit-mask-image: url("../img/mask-destroyed.webp");
+  mask-image: url("../img/mask-destroyed.webp");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-size: cover;
   mask-size: cover;
+}
+
+.navbar {
+  transform: translateY(-5.5vh);
 }
 .navbar .ms-auto {
   margin-left: auto !important;
@@ -15033,6 +15063,26 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
+/* Hover dropdown */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
+/* Nested dropdown */
+.menu-item-has-children .menu-item-has-children:hover > .dropdown-menu {
+  display: inline-block;
+  left: 9em;
+  top: -1ex;
+}
+
+.menu-item-has-children .menu-item-has-children:hover {
+  background-color: WhiteSmoke;
+}
+
 /* Content */
 #page-wrapper {
   padding-bottom: 0px;
@@ -15044,39 +15094,20 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   background-image: url("../img/div.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-mask-image: url("../img/mask.png");
-  mask-image: url("../img/mask.png");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-}
-
-.entry-content-stretch-top {
-  margin-top: 22vh;
+  -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x, linear-gradient(white, white) no-repeat center/100% calc(100% - 100px), url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
 }
 
 /* Blog/News */
 #archive-wrapper #main {
   text-align: center;
+  padding-top: 25px;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
+  padding-bottom: 25px;
   background-image: url("../img/div.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-mask-image: url("../img/mask.png");
-  mask-image: url("../img/mask.png");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-}
-#archive-wrapper .entry-title {
-  margin-top: 22vh;
+  -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x, linear-gradient(white, white) no-repeat center/100% calc(100% - 100px), url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
 }
 #archive-wrapper .entry-content {
   padding-left: 0;
@@ -15152,8 +15183,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 }
 
 /* #endregion */
-/* #region New front page */
-/* Front page container */
+/* #region Front page */
 .frontpage-container {
   width: 100%;
   position: relative;
@@ -15166,8 +15196,8 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  -webkit-mask-image: url("../img/mask.png");
-  mask-image: url("../img/mask.png");
+  -webkit-mask-image: url("../img/mask-destroyed.png");
+  mask-image: url("../img/mask-destroyed.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -15256,6 +15286,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 }
 
 /* #endregion */
+/* #region Plugins */
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

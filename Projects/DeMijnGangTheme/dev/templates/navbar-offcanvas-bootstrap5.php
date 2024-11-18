@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					'menu_class'      => 'navbar-nav justify-content-end flex-grow-1 pe-3',
 					'fallback_cb'     => '',
 					'menu_id'         => 'main-menu',
-					'depth'           => 2,
+					'depth'           => 4,
 					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 				)
 			);
