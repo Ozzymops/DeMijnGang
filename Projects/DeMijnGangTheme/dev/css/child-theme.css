@@ -14964,8 +14964,35 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
-/* #region Global */
-/* Font */
+/* Home page */
+.home-cover {
+  width: 105%;
+  transform: translateX(-2.5%);
+  min-height: 340px;
+}
+.home-cover h1, .home-cover .h1, .home-cover h2, .home-cover .h2 {
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  font-family: "Bradley Gratis";
+}
+.home-cover h1, .home-cover .h1 {
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
+}
+.home-cover h2, .home-cover .h2 {
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+}
+
+.maps-embed {
+  height: 60%;
+  width: 100%;
+}
+
+/* #region Shared */
 @font-face {
   font-family: "Bradley Gratis";
   font-weight: 400;
@@ -14974,15 +15001,9 @@ figure.woocommerce-product-gallery__wrapper {
   unicode-range: U+000-5FF;
   src: url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff");
 }
-/* WordPress: hide Edit button */
-.post-edit-link {
-  display: none;
-}
-
-/* Mask: destroyed edges */
-.mask-destroyed-edge {
-  -webkit-mask-image: url("../img/mask-destroyed.png");
-  mask-image: url("../img/mask-destroyed.png");
+.mask-destroyed_edges {
+  -webkit-mask-image: url("../img/mask-destroyed.webp");
+  mask-image: url("../img/mask-destroyed.webp");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -14991,12 +15012,24 @@ figure.woocommerce-product-gallery__wrapper {
   mask-size: cover;
 }
 
-/* Mask: ripped paper edge */
-.mask-ripped-edge {
+.mask-ripped_edges {
   -webkit-mask: url("../img/mask-ripped_top.webp") top/auto 50px repeat-x, linear-gradient(white, white) no-repeat center/100% calc(100% - 100px), url("../img/mask-ripped_bot.webp") bottom/auto 50px repeat-x;
 }
 
-/* Background */
+/* Hide WordPress' Edit button in admin view */
+.post-edit-link {
+  display: none;
+}
+
+/* Understrap */
+.wrapper {
+  padding: 0;
+}
+
+.container {
+  max-width: 85%;
+}
+
 body {
   min-height: 100%;
   /* Background */
@@ -15010,7 +15043,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4 {
   color: black;
 }
 body p {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
 }
 
@@ -15027,26 +15060,22 @@ body p {
   z-index: 100;
 }
 
-.nav-background {
-  height: 5vh;
+.navbar-background {
+  width: 100vw;
+  height: 45px;
+  position: absolute;
+  top: 0;
   background-image: url("../img/div-dark.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  padding: 0px;
-  -webkit-mask-image: url("../img/mask-destroyed.webp");
-  mask-image: url("../img/mask-destroyed.webp");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: cover;
-  mask-size: cover;
+  padding: 0;
 }
 
 .navbar {
-  transform: translateY(-5.5vh);
+  z-index: 99;
+  padding-top: 2px;
 }
 .navbar .ms-auto {
   margin-left: auto !important;
@@ -15237,40 +15266,6 @@ body p {
   position: absolute;
   z-index: 1;
   transform: rotate(5deg) translate(870px, 271px);
-}
-.frontpage-container .title {
-  z-index: 1;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 10%;
-  left: 50%;
-  padding: 10px 20px;
-  text-align: center;
-  font-family: "Bradley Gratis";
-  font-size: 96px;
-  text-decoration: none;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
-}
-.frontpage-container .subtitle {
-  z-index: 1;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 26%;
-  left: 50%;
-  padding: 10px 20px;
-  text-align: center;
-  font-family: "Bradley Gratis";
-  font-size: 38px;
-  text-decoration: none;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
 .menu-image {

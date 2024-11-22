@@ -21,6 +21,7 @@
 - [ ] When done, set `dev` subdomain to `live` and redirect `.org` to `.guru` site
 # De MijnGang Theme 1.1
 Keep `dev` and `release` folders seperate for uploading/shitty version control; only keep necessary files in `release` to avoid uploading `src` bloat etc.
+- [ ] Loader: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader5
 - [ ] Custom CSS for NextGen Gallery
 - [ ] Custom CSS for NinjaForms
 - [ ] Custom CSS for Events Manager (single event page)
