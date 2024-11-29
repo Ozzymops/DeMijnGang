@@ -14983,6 +14983,11 @@ figure.woocommerce-product-gallery__wrapper {
 .home-cover h1, .home-cover .h1 {
   text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
 }
+@media screen and (max-width: 600px) {
+  .home-cover h1, .home-cover .h1 {
+    font-size: 84px !important;
+  }
+}
 .home-cover h2, .home-cover .h2 {
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
@@ -15001,6 +15006,10 @@ figure.woocommerce-product-gallery__wrapper {
   unicode-range: U+000-5FF;
   src: url("BradleyGratis.woff2") format("woff2"), url("BradleyGratis.woff") format("woff");
 }
+.fancy-font {
+  font-family: "Bradley Gratis";
+}
+
 .mask-destroyed_edges {
   -webkit-mask-image: url("../img/mask-destroyed.webp");
   mask-image: url("../img/mask-destroyed.webp");
@@ -15092,15 +15101,70 @@ body p {
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
+@media screen and (max-width: 600px) {
+  .navbar-collapse {
+    background-image: url("../img/div-dark.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-align: center;
+  }
+}
 /* Hover dropdown */
 .dropdown:hover > .dropdown-menu {
   display: block;
 }
 
-.dropdown > .dropdown-toggle:active {
-  pointer-events: none;
+.dropdown-toggle::after {
+  color: white;
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
 }
 
+@media screen and (min-width: 601px) {
+  .dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dropdown-toggle::after {
+    display: none; /* Remove dorito */
+  }
+  .dropdown-toggle {
+    margin-top: 15px;
+  }
+  .dropdown-menu[data-bs-popper] {
+    margin-top: 0;
+  }
+  .dropdown-menu {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+    display: inline-block !important;
+    text-align: center;
+    /*
+    li::before {
+        content: '▶';
+        position: absolute;
+        left: -1.5em;
+        top: .35em;
+    }
+    */
+  }
+  .dropdown-menu .dropdown-menu {
+    display: inline-block !important;
+  }
+  .dropdown-menu a {
+    color: white;
+    padding: 0px;
+    font-size: 24px;
+    font-family: "Bradley Gratis";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+  }
+}
 /* Nested dropdown */
 .menu-item-has-children .menu-item-has-children:hover > .dropdown-menu {
   display: inline-block;
@@ -15108,10 +15172,11 @@ body p {
   top: -1ex;
 }
 
-.menu-item-has-children .menu-item-has-children:hover {
-  background-color: WhiteSmoke;
+@media screen and (min-width: 601px) {
+  .menu-item-has-children .menu-item-has-children:hover {
+    background-color: WhiteSmoke;
+  }
 }
-
 /* Content */
 #page-wrapper {
   padding-bottom: 0px;
@@ -15152,6 +15217,14 @@ body p {
   padding-bottom: 0px;
 }
 
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column !important;
+  }
+  .footer-container .footer-copyright, .footer-container .footer-socials, .footer-container .footer-policies {
+    justify-content: center !important;
+  }
+}
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -15282,6 +15355,12 @@ body p {
 
 /* #endregion */
 /* #region Plugins */
+#em-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* #endregion */
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
