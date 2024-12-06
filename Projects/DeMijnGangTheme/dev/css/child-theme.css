@@ -15030,6 +15030,11 @@ figure.woocommerce-product-gallery__wrapper {
   display: none;
 }
 
+/* Hide branding in navbar */
+.navbar-brand {
+  display: none;
+}
+
 /* Understrap */
 .wrapper {
   padding: 0;
@@ -15116,6 +15121,15 @@ body p {
   display: block;
 }
 
+.dropdown-menu {
+  color: white;
+  background-color: #d5af73;
+}
+.dropdown-menu a, .dropdown-menu a:hover {
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+}
+
 .dropdown-toggle::after {
   color: white;
   text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
@@ -15137,8 +15151,6 @@ body p {
     margin-top: 0;
   }
   .dropdown-menu {
-    background-color: transparent !important;
-    border: none;
     color: white;
     display: inline-block !important;
     text-align: center;
@@ -15155,14 +15167,13 @@ body p {
     display: inline-block !important;
   }
   .dropdown-menu a {
-    color: white;
     padding: 0px;
     font-size: 24px;
     font-family: "Bradley Gratis";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
   }
 }
 /* Nested dropdown */
@@ -15221,7 +15232,7 @@ body p {
   .footer-container {
     flex-direction: column !important;
   }
-  .footer-container .footer-copyright, .footer-container .footer-socials, .footer-container .footer-policies {
+  .footer-container .footer-copyright, .footer-container .footer-socialmedia, .footer-container .footer-policies {
     justify-content: center !important;
   }
 }
@@ -15253,7 +15264,7 @@ body p {
   padding-left: 0.5rem;
   margin: 0px;
 }
-.footer-container .footer-socials {
+.footer-container .footer-socialmedia {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15261,11 +15272,11 @@ body p {
   font-size: 38px;
   margin-bottom: 0px;
 }
-.footer-container .footer-socials a {
+.footer-container .footer-socialmedia a {
   padding: 0px;
   margin-right: 1rem;
 }
-.footer-container .footer-socials a:hover, .footer-container .footer-socials i:hover {
+.footer-container .footer-socialmedia a:hover, .footer-container .footer-socialmedia i:hover {
   color: white !important;
 }
 .footer-container .footer-policies {
@@ -15358,6 +15369,12 @@ body p {
 #em-wrapper {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+/* #endregion */
+/* #region Temporary hacks */
+#menu-item-650 > ul:nth-child(2) {
+  left: 11.75em;
 }
 
 /* #endregion */

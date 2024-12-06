@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<i class="far fa-copyright"></i>
 			<p>Copyright <script>document.write(new Date().getFullYear())</script> De MijnGang ALLE RECHTEN VOORBEHOUDEN</p>
 		</div>
-		<div class="footer-socials">
+		<div class="footer-socialmedia">
 			<a href="mailto:demijngang@outlook.com"><i class="fas fa-at"></i></a>
 			<a href="https://www.facebook.com/demijngang/"><i class="fab fa-facebook"></i></a>
 			<a href="https://web.whatsapp.com/send?phone=458514900"><i class="fab fa-whatsapp"></i></a>

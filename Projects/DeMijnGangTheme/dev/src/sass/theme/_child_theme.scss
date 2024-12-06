@@ -80,6 +80,11 @@
     display: none;
 }
 
+/* Hide branding in navbar */
+.navbar-brand {
+    display: none;
+}
+
 /* Understrap */
 .wrapper {
     padding: 0;
@@ -182,6 +187,20 @@ body {
     display: block;
 }
 
+.dropdown-menu {
+    color: white;
+    background-color: #d5af73;
+
+    a, a:hover {
+        color: white;
+        text-shadow:
+            1px 1px 0 #000,
+            -1px 1px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000;
+    }
+}
+
 .dropdown-toggle::after {
     color: white;
     text-shadow:
@@ -211,8 +230,6 @@ body {
     }
 
     .dropdown-menu {
-        background-color: transparent !important;
-        border: none;
         color: white;
         display: inline-block !important;
         text-align: center;
@@ -231,7 +248,6 @@ body {
         }
 
         a {
-            color: white;
             padding: 0px;
             font-size: 24px;
             font-family: "Bradley Gratis";
@@ -239,10 +255,10 @@ body {
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
             text-shadow:
-                1.5px 1.5px 0 #000,
-                -1.5px 1.5px 0 #000,
-                -1.5px -1.5px 0 #000,
-                1.5px -1.5px 0 #000;
+                1px 1px 0 #000,
+                -1px 1px 0 #000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000;
         }
     }
 }
@@ -310,7 +326,7 @@ body {
     .footer-container {
         flex-direction: column !important;
 
-        .footer-copyright, .footer-socials, .footer-policies {
+        .footer-copyright, .footer-socialmedia, .footer-policies {
             justify-content: center !important;
         }
     }
@@ -348,7 +364,7 @@ body {
         }
     }
 
-    .footer-socials {
+    .footer-socialmedia {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -466,4 +482,10 @@ body {
 	padding-bottom: 20px;
 }
 
+/* #endregion */
+
+/* #region Temporary hacks */
+#menu-item-650 > ul:nth-child(2) {
+	left: 11.75em;
+}
 /* #endregion */
