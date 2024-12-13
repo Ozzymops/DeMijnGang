@@ -1,3 +1,12 @@
+# Calendar/Mollie
+https://github.com/mollie/mollie-api-php
+https://docs.mollie.com/reference/overview
+https://wpbookingcalendar.com/faq/custom-gateway-in-7-0/
+- [ ] Set up Mollie PHP library using Composer
+- [ ] Find and note Calendar gateway hooks
+- [ ] Write custom gateway (generating urls, callbacks, confirmation, database, etc.)
+- [ ] Write custom configuration page for Calendar implementation
+- [ ] Configure Mollie webhooks etc.
 # De MijnGang
 - [ ] Incorporate interesting aspects from Koempelkast?
 - [ ] IMPORTANT
