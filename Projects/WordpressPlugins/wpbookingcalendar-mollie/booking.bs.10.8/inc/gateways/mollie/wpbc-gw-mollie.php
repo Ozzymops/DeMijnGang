@@ -211,6 +211,270 @@ class WPBC_Gateway_API_MOLLIE extends WPBC_Gateway_API {
 		$payment_form = ob_get_clean();
 		return $output . $payment_form;
 	}
+
+	public function init_settings_fields() {
+		$this->fields = array();
+		
+		$this->fields['is_active'] = array(
+			'type' => 'checkbox',
+			'default' => 'On',
+			'title' => __('Enable / Disable', 'booking'),
+			'label' => __('Enable this payment gateway', 'booking'),
+			'description' => '',
+			'group' => 'general'
+		);
+
+		$this->fields['account_mode'] = array(
+			'type' => 'radio',
+			'default' => 'test',
+			'title' => __('Choose payment account', 'booking'),
+			'description' => '',
+			'description_tag' => 'span',
+			'css' => '',
+			'options' => array(
+				'test' => array('title' => __('TEST', 'booking'), 'attr' => array('id' => 'mollie_mode_test')),
+				'live' => array('title' => __('LIVE', 'booking'), 'attr' => array('id' => 'mollie_mode_live'))
+				),
+			'group' => 'general'
+		);
+
+		$this->fields['publishable_key'] = array(
+			'type' => 'text',
+			'default' => (wpbc_is_this_demo() ? 'TEST KEY HERE' : ''),
+			'title' => __('Publishable key', 'booking'),
+			'description' => __('Required', 'booking') . '.<br/>' . sprintf(__('This parameter has to be assigned by %s', 'booking'), 'Mollie') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description_tag' => 'span',
+			'css' => '',
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_grayed wpbc_sub_settings_mode_live'
+		);
+
+		$this->fields['secret_key'] = array(
+			'type' => 'text',
+			'default' => (wpbc_is_this_demo() ? 'SECRET KEY HERE' : ''),
+			'title' => __('Secret key', 'booking'),
+			'description' => __('Required', 'booking') . '.<br/>' . sprintf(__('This parameter has to be assigned by %s', 'booking'), 'Mollie') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description_tag' => 'span',
+			'css' => '',
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_grayed wpbc_sub_settings_mode_live'
+		);
+
+		$this->fields['publishable_key_test'] = array(
+			'type' => 'text',
+			'default' => (wpbc_is_this_demo() ? 'TEST KEY HERE' : ''),
+			'title' => __('Publishable key', 'booking') . ' (' . __('TEST', 'booking') . ')',
+			'description' => __('Required', 'booking') . '.<br/>' . sprintf(__('This parameter has to be assigned by %s', 'booking'), 'Mollie') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description_tag' => 'span',
+			'css' => '',
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_grayed wpbc_sub_settings_mode_test'
+		);
+
+		$this->fields['secret_key_test'] = array(
+			'type' => 'text',
+			'default' => (wpbc_is_this_demo() ? 'SECRET KEY HERE' : ''),
+			'title' => __('Secret key', 'booking') . ' (' . __('TEST', 'booking') . ')',
+			'description' => __('Required', 'booking') . '.<br/>' . sprintf(__('This parameter has to be assigned by %s', 'booking'), 'Mollie') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description_tag' => 'span',
+			'css' => '',
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_grayed wpbc_sub_settings_mode_test'
+		);
+
+		$currency_list = array(
+			'EUR' => __('Euros', 'booking'),
+			'USD' => __( 'U.S. Dollars', 'booking' ),
+			'GBP' => __( 'Pounds Sterling', 'booking' )
+		);
+
+		$this->fields['curency'] = array(
+			'type' => 'select',
+			'default' => 'EUR',
+			'title' => __('Accepted currency', 'booking'),
+			'description' => __('The gateway-processed currency code.', 'booking'),
+			'description_tag' => 'span',
+			'css' => '',
+			'options' => $currency_list,
+			'group' => 'general'
+		);
+
+		$payment_methods_list = array(
+			'card' => __('Card', 'booking'),
+			'ideal' => 'iDEAL'
+		);
+
+		$this->fields['payment_methods'] = array(
+			'type' => 'select',
+			'multiple' => true,
+			'default' => 'EUR',
+			'title' => __('Payment methods', 'booking'),
+			'description' => __('Select one or several payment methods.', 'booking') . ' ' . __('Use CTRL to select multiple options.', 'booking'),
+			'description_tag' => 'p',
+			'css' => 'width: 100%; height: 20em;',
+			'options' => $payment_methods_list,
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_payment_button_title wpbc_sub_settings_grayed'
+		);
+
+		$this->fields['payment_mode'] = array(
+			'type' => 'select',
+			'default' => 'payment',
+			'title' => __('Payment mode', 'booking'),
+			'description' => __('Accept one-time payments, or save payment details for later use.', 'booking'),
+			'description_tag' => 'span',
+			'css' => '',
+			'option' => array(
+				'payment' => __('Accept one-time payments', 'booking'),
+				'setup' => __('Save payment details for later use', 'booking')
+				),
+			'group' => 'general'
+		);
+
+		$this->fields['payment_button_title'] = array(
+			'type' => 'text',
+			'default' => __('Pay via', 'booking') . ' Mollie',
+			'placeholder' => __('Pay via', 'booking') . ' Mollie',
+			'title' => __('Payment button title', 'booking'),
+			'description' => __('Enter the title of the payment button', 'booking'),
+			'description_tag' => 'p',
+			'css' => 'width: 100%;',
+			'group' => 'general'
+		);
+
+		$this->fields['subject'] = array(
+			'type' => 'textarea',
+			'default' => sprintf(__('Payment for booking %s on these day(s): %s'  ,'booking'), '[resource_title]', '[dates]'),
+			'placeholder' => sprintf(__('Payment for booking %s on these day(s): %s'  ,'booking'), '[resource_title]', '[dates]'),
+			'title' => __('Payment description at gateway website', 'booking'),
+			'description' => sprintf(__('Enter the service name or the reason for the payment here.', 'booking'), '<br/>', '</b>') . '<br/>' .  __('You can use any shortcodes, which you have used in content of booking fields data form.', 'booking'),
+			'description_tag' => 'p',
+			'css' => 'width:100%',
+			'rows' => 2,
+			'group' => 'general',
+			'tr_class' => 'wpbc_sub_settings_is_description_show wpbc_sub_settings_grayedNO',
+		);
+
+		$this->fields['order_succesful_prefix'] = array(
+			'type' => 'pure_html',
+			'group' => 'auto_approve_cancel',
+			'html' => '<tr valign="top" class="wpbc_tr_mollie_order_successful"><th scope="row">' . WPBC_Settings_API::label_static('mollie_order_successful', array('title' => __('Return URL after successful order', 'booking'), 'label_css' => '')) . '</th><td><fieldset><code style="font-size: 14px;">' . get_option('siteurl') . '</code',
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['order_successful'] = array(
+			'type' => 'text',
+			'default' => '/successful',
+			'placeholder' => '/successful',
+			'css' => 'width: 75%;',
+			'group' => 'auto_approve_cancel',
+			'only_field' => true,
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['order_succesful_sufix'] = array(
+			'type' => 'pure_html',
+			'group' => 'auto_approve_cancel',
+			'html' => '<p class="description" style="line-height: 1.7em; margin: 0;">' . __('Return URL after completing payment.', 'booking') . '<br/>' . sprintf(__('For example, a page that displays %s"Thank you for the payment"%s.', 'booking'), '<b>', '</b>') . '</p></fieldset></td></tr>',
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['order_failed_prefix'] = array(
+			'type' => 'pure_html',
+			'group' => 'auto_approve_cancel',
+			'html' => '<tr valign="top" class="wpbc_tr_mollie_order_failed"><th scope="row">' . WPBC_Settings_API::label_static('mollie_order_failed', array('title' => __('Return URL after failed order', 'booking'), 'label_css' => '')) . '</th><td><fieldset><code style="font-size: 14px;">' . get_option('siteurl') . '</code',
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['order_failed'] = array(
+			'type' => 'text',
+			'default' => '/failed',
+			'placeholder' => '/failed',
+			'css' => 'width: 75%;',
+			'group' => 'auto_approve_cancel',
+			'only_field' => true,
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['order_failed_sufix'] = array(
+			'type' => 'pure_html',
+			'group' => 'auto_approve_cancel',
+			'html' => '<p class="description" style="line-height: 1.7em; margin: 0;">' . __('Return URL after completing payment.', 'booking') . '<br/>' . sprintf(__('For example, a page that displays %s"Payment canceled"%s.', 'booking'), '<b>', '</b>') . '</p></fieldset></td></tr>',
+			'tr_class' => 'relay_response_sub_class'
+		);
+
+		$this->fields['is_auto_approve_cancell_booking'] = array(
+			'type' => 'checkbox',
+			'default' => 'Off',
+			'title' => __('Automatically approve/cancel booking', 'booking'),
+			'label' => __('Check this box to automatically approve bookings, when visitors make a successful payment, or automatically cancel the booking, when visitors make a payment cancellation.', 'booking'),
+			'description' => '<div class="wpbc-settings-notice notice-warning" style="text-align: left;"><strong>' . __('Warning', 'booking') . '!</strong>' . __('This will not work if the visitor leaves the payment page.', 'booking') . '</div>',
+			'description_tag' => 'p',
+			'group' => 'auto_approve_cancel',
+			'tr_class' => 'relay_response_sub_class'
+		);
+	}
+
+	public function get_gateway_info() {
+		$gateway_info = array(
+			'id' => $this->get_id(),
+			'title' => 'Mollie',
+			'currency' => get_bk_option('booking_' . $this->get_id() . '_' . 'curency'),
+			'enabled' => $this->is_gateway_on()
+		);
+
+		return $gateway_info;
+	}
+
+	public function get_payment_status_array() {
+		// TODO: rewrite based on api docs
+		return array(
+			'ok' => array('Mollie:OK'),
+			'pending' => array('Mollie:Pending'),
+			'unknown' => array('Mollie:Unknown'),
+			'error' => array(
+				'Mollie:Failed',
+				'Mollie:Rejected'
+				)
+		);
+	}
+
+	function wpbc_mollie__cents_factor($currency) {
+		$is_cents = 100;
+
+		if (!empty($currency)) {
+			$check_currency = strtolower($currency);
+
+			if (in_array($check_currency, array('bif', 'mga', 'clp', 'djf', 'pyg', 'rwf', 'gnf', 'ugx', 'jpy', 'kmf', 'krw', 'vnd', 'vuv', 'xaf', 'xof', 'xpf'))) {
+				$is_cents = 1;
+			}
+		}
+
+		return $is_cents;
+	}
+
+	function wpbc_mollie__amount_in_mollie($plugin_amount, $currency) {
+		$is_cents = wpbc_mollie__cents_factor($currency);
+		$cents_amount = intval(floatval($plugin_amount * $is_cents));
+		return $cents_amount;
+	}
+
+	function wpbc_mollie__amount_in_plugin($mollie_amount_in_cents, $currency) {
+		$is_cents = wpbc_mollie__cents_factor($currency);
+		return floatval($mollie_amount_in_cents / $is_cents);
+	}
+}
+
+class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
+	public $gateway_api = false;
+
+	public function get_api($init_fields_values = array()) {
+		if ($this->gateway_api === false) {
+			$this->gateway_api = new WPBC_Gateway_API_MOLLIE(WPBC_MOLLIE_GATEWAY_ID, $init_fields_values);
+		}
+
+		return $this->gateway_api;
+	}
 }
 
 
