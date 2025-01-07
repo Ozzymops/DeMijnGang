@@ -14,13 +14,44 @@
 if (!defined('ABSPATH')) exit;
 if (!defined('WPBC_MOLLIE_GATEWAY_ID')) define('WPBC_MOLLIE_GATEWAY_ID', 'mollie');
 
+function wpbc_mollie_transaction_request() {
+	$mollie_obj = wpbc_mollie_get_object();
+	$mollie = $mollie_obj['mollie'];
+	$mollie_options = $mollie_obj['mollie_options'];
+
+	try {
+		$orderId = time();
+		$protocol = isset($_SERVER['HTTPS']) && strcasecmp('off', $_SERVER['HTTPS']) !== 0 ? "https" : "http";
+		$hostname = $_SERVER['HTTP_HOST'];
+		$path = dirname($_SERVER['REQUEST_URI'] ?? $_SERVER['PHP_SELF']);
+
+		$payment = $mollie->payments->create([
+			"amount" => [
+				"currency" => "EUR",
+				"value" => "25.00",
+			],
+			"method" => \Mollie\Api\Types\PaymentMethod::IDEAL,
+			"description" => "Order #{$orderId}",
+			"redirectUrl" => "{$protocol}://{$hostname}{$path}/return.php?order_id={$orderId}",
+			"webhookUrl" => "{$protocol}://{$hostname}{$path}/webhook.php",
+			"metadata" => [
+				"order_id" => $orderId,
+			],
+			"issuer" => ! empty($_POST["issuer"]) ? $_POST["issuer"] : null,
+		]);
+
+		database_write($orderId, $payment->status);
+		header("Location: " . $payment->getCheckoutUrl(), true, 303);
+	}
+	catch (\Mollie\Api\Exceptions\ApiException $e) {
+		echo "API call failed: " . htmlspecialchars($e->getMessage());
+	}
+}
+
 function wpbc_mollie_get_object() {
 	// create and return Mollie api object
 	require_once(dirname(__FILE__) . "/Mollie/vendor/autoload.php");
 	require_once(dirname(__FILE__) . "/Mollie/functions.php");
-
-	// db shit to get keys
-	$mollie_test_key = "test_BSg7zzRM3vffPrUrnBC99qGUSMrwjV";
 
 	// general options
 	$mollie_options = array();
@@ -51,59 +82,21 @@ class WPBC_Gateway_API_MOLLIE extends WPBC_Gateway_API {
 	// create payment form
 	public function get_payment_form($output, $params, $gateway_id = '') {
 		// check if showing 'this' gateway
-		if ((!empty($gateway_id) && $gateway_id !== $this->get_id()) || !$this->is_gateway_on()) { return $output; }
+		if (((!empty($gateway_id)) && ($gateway_id !== $this->get_id())) || (!$this->is_gateway_on())) return $output;
 
 		// mollie integration
 		$mollie_obj = wpbc_mollie_get_object();
 		$mollie = $mollie_obj['mollie'];
 		$mollie_options = $mollie_obj['mollie_options'];
 
-		// get payment methods
-		// actually integrate in future? -> $methods = $mollie->methods->allAvailable();
-		$payment_method = array(
-			'ideal' => 'iDEAL',
-			'creditcard' => 'Credit Card'
-		);
-
 		// build payment form
-		$html_client_id = 'mollie_' . $params['booking_resource_id'];
-		ob_start();
-		
-		?>
-			<div id="<?php echo $html_client_id; ?>" class="mollie_div wpbc-payment-form" style="text-align: left; clear: both;">
-			<form method="post" name="Mollie<?php echo $html_client_id; ?>"
-		<?php
-			echo wp_nonce_field('WPBC_PAY_VIA_MOLLIE', 'wpbc_nonce_' . $html_client_id, true, false);
-			echo '<div class="wpbc_mollie_ajax_response" style="display: block;"></div>';
-		?>
-			<a href="javascript:void(0);" class="wpbc_button_light wpbc_button_gw wpbc_button_gw_mollie" onclick="javsacript:wpbc_pay_via_mollie(<?php echo $params['booking_resource_id']; ?>);"><?php echo $mollie_options['payment_button_title']; ?></a>
-			<table class="wpbc_mollie_payment_table" cellspacing="0" cellpadding="0">
-				<tr>
-					<td><label><?php _e('Pay via', 'booking'); ?></label>:</td>
-					<td>
-						<select name="mollie_payment" style="height: 29px; padding: 0 6px;" size="1">
-						<?php
-							foreach ($payment_method as $payment_method_id => $payment_method_name) {
-								?><option value="<?php echo $payment_method_id; ?>"><?php echo $payment_method_name; ?></option><?php
-							}
-						?>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="display: none;">
-						<input type="hidden" name="mollie_nonce" value="<?php echo $params['__nonce']; ?>" />
-						<input type="hidden" name="purchaseId" maxlength="16" value="<?php echo substr($params['booking_id'], 0, 16); ?>" />
-						<!-- <input type="hidden" name="description" maxlength="32" value="<?php echo $mollie_options['subject']; ?>" /> -->
-						<input type="hidden" name="amount" size="10" title="Cost" value="<?php echo $params['cost_in_gateway']; ?>" />
-					</td>			
-				</tr>	
-			</table>
-			</div>
-		<?php
+		// ob_start();
 
-		$payment_form = ob_get_clean();
-		return $output . $payment_form;
+		wpbc_mollie_transaction_request();
+
+		// $payment_form = ob_get_clean();
+		// return $output . $payment_form;
+		return $output;
 	}
 
 	// settings
@@ -125,7 +118,7 @@ class WPBC_Gateway_API_MOLLIE extends WPBC_Gateway_API {
 			'type' => 'text',
 			'default' => '',
 			'title' => __('Profile ID', 'booking'),
-			'description' => __('Required', 'booking') . '.<br/>' . __('Enter your Mollie profile ID', 'booking') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description' => __('Enter your Mollie profile ID', 'booking') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
 			'description_tag' => 'span',
 			'css' => '',
 			'group' => 'general',
@@ -137,7 +130,7 @@ class WPBC_Gateway_API_MOLLIE extends WPBC_Gateway_API {
 			'type' => 'text',
 			'default' => '',
 			'title' => __('API Key', 'booking'),
-			'description' => __('Required', 'booking') . '.<br/>' . __('Enter your Mollie API key', 'booking') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
+			'description' => __('Enter your Mollie API key', 'booking') . ((wpbc_is_this_demo()) ? wpbc_get_warning_text_in_demo_mode() : ''),
 			'description_tag' => 'span',
 			'css' => '',
 			'group' => 'general',
@@ -259,7 +252,7 @@ class WPBC_Gateway_API_MOLLIE extends WPBC_Gateway_API {
 		$gateway_info = array(
 			'id' => $this->get_id(),
 			'title' => 'Mollie',
-			'currency' => '',
+			'currency' => get_bk_option('booking_' . $this->get_id() . '_curency'),
 			'enabled' => $this->is_gateway_on()
 		);
 
@@ -387,7 +380,7 @@ class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
 	public $gateway_api = false;
 
 	// define interface
-	public function get_api($init_fields_value = array()) {
+	public function get_api($init_fields_values = array()) {
 		if ($this->gateway_api === false) {
 			$this->gateway_api = new WPBC_Gateway_API_MOLLIE(WPBC_MOLLIE_GATEWAY_ID, $init_fields_values);
 		}
@@ -412,8 +405,8 @@ class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
 		$subtabs[WPBC_MOLLIE_GATEWAY_ID] = array(
 			'type' => 'subtab',
 			'title' => 'Mollie',
-			'page_title' => __('Mollie Settings', 'booking'),
-			'hint' => __('Mollie integration', 'booking'),
+			'page_title' => sprintf(__('%s Settings', 'booking'), 'Mollie' ),
+			'hint' => sprintf(__('Integration of %s payment system' ,'booking' ), 'Mollie' ),
 			'link' => '',
 			'position' => '',
 			'css_classes' => '',
@@ -439,7 +432,7 @@ class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
 		do_action('wpbc_hook_settings_page_header', 'gateway_settings');
 		do_action('wpbc_hook_settings_page_header', 'gateway_settings_' . WPBC_MOLLIE_GATEWAY_ID);
 
-		if (!wpbc_is_mu_user_can_be_here('activated_user')) { return false; }
+		if (!wpbc_is_mu_user_can_be_here('activated_user')) return false;
 
 		$submit_form_name = 'wpbc_gateway_' . WPBC_MOLLIE_GATEWAY_ID;
 
@@ -451,7 +444,7 @@ class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
 		?>
 			<div class="clear"></div>
 			<span class="metabox-holder">
-				<form name="<?php echo $submit_formName; ?>" id="<?php echo $submit_form_name; ?>" action="" method="post" autocomplete="off">
+				<form name="<?php echo $submit_form_name; ?>" id="<?php echo $submit_form_name; ?>" action="" method="post" autocomplete="off">
 					<?php
 					wp_nonce_field('wpbc_settings_page_' . $submit_form_name);
 					?>
@@ -492,6 +485,116 @@ class WPBC_Settings_Page_Gateway_MOLLIE extends WPBC_Page_Structure {
 
 	// check if data is updated
 	public function maybe_update() {
-		
+		$init_fields_values = array();
+		$this->get_api($init_fields_values);
+
+		$submit_form_name = 'wpbc_gateway_' . WPBC_MOLLIE_GATEWAY_ID;
+		$this->get_api()->validated_form_id = $submit_form_name;
+
+		if (isset($_POST['is_form_sbmitted_' . $submit_form_name])) {
+			$nonce_gen_time = check_admin_referer('wpbc_settings_page_' . $submit_form_name);
+			$this->update();
+		}
+	}
+
+	// actually update
+	public function update() {
+		$validated_fields = $this->get_api()->validate_post();
+		$validated_fields = apply_filters('wpbc_gateway_mollie_validate_fields_before_saving', $validated_fields);
+		$this->get_api()->save_to_db($validated_fields);
+		wpbc_show_message(__('Settings saved.', 'booking'), 5);
+	}
+
+	// css for this page
+	private function css() {
+		?>
+			<style type="text/css">
+				.wpbc-help-message {
+					border: none;
+					margin: 0 !important;
+					padding: 0 !important;
+				}
+
+				@media (max-width: 399px) {
+					
+				}
+			</style>
+		<?php
+	}
+
+	// javascript for this page
+	private function enqueue_js() {
+
 	}
 }
+add_action('wpbc_menu_created', array(new WPBC_Settings_Page_Gateway_MOLLIE(), '__construct'));
+
+// validate fields
+function wpbc_gateway_mollie_validate_fields_before_saving__all($validated_fields) {
+	$validated_fields['return_url'] = wpbc_make_link_relative($validated_fields['return_url']);
+	$validated_fields['cancel_return_url'] = wpbc_make_link_relative($validated_fields['cancel_return_url']);
+
+	if (wpbc_is_this_demo()) {
+		$validated_fields['profileId'] = '';
+		$validated_fields['key'] = '';
+		$validated_fields['test_key'] = '';
+		$validated_fields['test'] = 'TEST';
+	}
+
+	return $validated_fields;
+}
+add_filter('wpbc_gateway_mollie_validate_fields_before_saving', 'wpbc_gateway_mollie_validate_fields_before_saving__all', 10, 1);
+
+function wpbc_booking_activate_MOLLIE() {
+	$op_prefix = 'booking_' . WPBC_MOLLIE_GATEWAY_ID . '_';
+
+	add_bk_option($op_prefix . 'is_active', 'Off');
+	add_bk_option($op_prefix . 'subject', sprintf(__('Payment for booking %s on these day(s): %s', 'booking'), '[resource_title]', '[dates]'));
+	add_bk_option($op_prefix . 'return_url', '/successful');
+	add_bk_option($op_prefix . 'cancel_return_url', '/failed');
+	add_bk_option($op_prefix . 'payment_button_title', __('Pay via', 'booking') . ' Mollie');
+	add_bk_option($op_prefix . 'profileId', '');
+	add_bk_option($op_prefix . 'key', '');
+	add_bk_option($op_prefix . 'test_key', '');
+	add_bk_option($op_prefix . 'test', 'TEST');
+	add_bk_option($op_prefix . 'is_auto_approve_cancell_booking', 'Off');
+}
+add_bk_action('wpbc_other_versions_activation', 'wpbc_booking_activate_MOLLIE');
+
+function wpbc_booking_deactivate_MOLLIE() {
+	$op_prefix = 'booking_' . WPBC_MOLLIE_GATEWAY_ID . '_';
+	
+	delete_bk_option($op_prefix . 'is_active');
+	delete_bk_option($op_prefix . 'subject');
+	delete_bk_option($op_prefix . 'return_url');
+	delete_bk_option($op_prefix . 'cancel_return_url');
+	delete_bk_option($op_prefix . 'payment_button_title');
+	delete_bk_option($op_prefix . 'profileId');
+	delete_bk_option($op_prefix . 'key');
+	delete_bk_option($op_prefix . 'test_key');
+	delete_bk_option($op_prefix . 'test');
+	delete_bk_option($op_prefix . 'is_description_show');
+	delete_bk_option($op_prefix . 'is_auto_approve_cancell_booking');
+}
+add_bk_action('wpbc_other_versions_deactivation', 'wpbc_booking_deactivate_MOLLIE');
+
+// ajax
+function wpbc_ajax_WPBC_PAY_VIA_MOLLIE() {
+	$nonce = (isset($_REQUEST['wpbc_nonce'])) ? $_REQUEST['wpbc_nonce'] : '';
+
+	if ($nonce === '') return false;
+
+	if (wpbc_is_use_nonce_at_front_end()) {
+		if (!wp_verify_nonce($nonce, $_POST['action'])) {
+			wp_die(
+				sprintf(__('%sError!%s Request does not pass security checks. Please refresh the page and try again.', 'booking'), '<strong>', '</strong>') . '<br/>' .
+				sprintf(__('Please check %shere%s for more information.', 'booking'), '<a href="https://wpbookingcalendar.com/faq/request-do-not-pass-security-check/?after_update=10.1.1" target="_blank">', '</a>')
+			);
+		}
+	}
+
+	wpbc_mollie_transaction_request();
+	wp_die('');
+}
+add_action('wp_ajax_nopriv_' . 'WPBC_PAY_VIA_MOLLIE', 'wpbc_ajax_' . 'WPBC_PAY_VIA_MOLLIE');
+add_action('wp_ajax_' . 'WPBC_PAY_VIA_MOLLIE', 'wpbc_ajax_' . 'WPBC_PAY_VIA_MOLLIE');
