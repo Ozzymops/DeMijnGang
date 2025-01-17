@@ -1,44 +1,22 @@
-# Calendar/Mollie
-https://github.com/mollie/mollie-api-php
-https://docs.mollie.com/reference/overview
-https://wpbookingcalendar.com/faq/custom-gateway-in-7-0/
-- [ ] Set up Mollie PHP library using Composer
-- [ ] Find and note Calendar gateway hooks
-- [ ] Write custom gateway (generating urls, callbacks, confirmation, database, etc.)
-- [ ] Write custom configuration page for Calendar implementation
-- [ ] Configure Mollie webhooks etc.
-# De MijnGang
-- [ ] Incorporate interesting aspects from Koempelkast?
-- [ ] IMPORTANT
-	- [ ] Voorzitter, secretaris, penningsmeester duidelijk benoemen
-	- [ ] Fiscale nummer duidelijk plaatsen
-	- [ ] Beleidsplan
-	- [ ] Financiele verantwoording
-- [ ] Between In ons gebouw and Samenwerkingen: Ruimte huren?
-	- [ ] Booking Manager/Boekingssysteem plugins
-		- [ ] Name, email, phone, room, payment method (cash/pin, iDeal)
-# Koempelkast
-- [ ] SEO
 # Atmachaithanya
-- [ ] Books -> Ebooks
-- [ ] Create `dev` subdomain for `.guru` site
-- [ ] Complete rewrite of the website, from the ground up
-	- [ ] Nice theme
-	- [ ] New images
-	- [ ] Tabs from `.org` site
-	- [ ] News/Pictures -> seperated in tabs
-- [ ] When done, set `dev` subdomain to `live` and redirect `.org` to `.guru` site
-# De MijnGang Theme 1.1
-Keep `dev` and `release` folders seperate for uploading/shitty version control; only keep necessary files in `release` to avoid uploading `src` bloat etc.
-- [ ] Loader: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader5
-- [ ] Custom CSS for NextGen Gallery
-- [ ] Custom CSS for NinjaForms
-- [ ] Custom CSS for Events Manager (single event page)
-- [ ] Custom CSS for Events Manager (events list page)
-- [ ] Change donator logos and all logos in general to `.svg` files
-- [ ] Change all existing `.png` files to `.webp` files
-- [ ] Mobile/resolution support
-# De MijnGang App 1.0
+- [x] Ashrams: Google Maps integration with pins
+- [x] Blog: find a way to have someone with privileges add, edit and remove blog posts
+- [ ] Facebook Feed: colette2210@hotmail.co.uk / plankie
+- [ ] Ebooks: leave blank
+- [x] Donate page
+- [x] Contact page
+- [x] SEO tags (copy from .guru)
+- [x] .org -> .guru redirect
+- [x] Translate between English, Dutch, Indian
+- [ ] Copy protection
+- [ ] Administration email: srikand@namaha.eu ?
+# Koempelkast
+- [x] SEO tags (tweedehands kleding)
+# De MijnGang
+- [ ] Plugin for calendar/booking management: https://www.wpbookingsystem.com/pricing/
+- [ ] Facebook feed instead of News posts?
+- [ ] Important: voorzitter, secretaris, penningsmeester, fiscale nummer, beleidsplan, financiele verantwoording
+# De MijnGang App
 - [ ] Fetch events from site via exported XML
 	- [ ] Asynchronous/check every hour in background (?)
 	- [ ] Show as 'grouped object,' tap to expand for more information
