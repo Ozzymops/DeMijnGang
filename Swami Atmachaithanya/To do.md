@@ -1,0 +1,1 @@
+- [ ] Copy Protection: unable to right click to copy content / save images.
