@@ -1,3 +1,9 @@
+# Excel
+- [ ] Voorraad sheet
+	- [ ] Overzicht inkomsten/uitgaven
+	- [ ] Overzicht voorraad X: aantal in voorraad/geleverd
+	- [ ] Zichtbaar in oude file?
+
 # Website
 - [ ] Calendar / Booking Management plugin: https://www.wpbookingsystem.com/pricing/
 - [ ] Important (?)
