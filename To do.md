@@ -1,3 +1,15 @@
+# Website
+- LocalWP setup
+	- Create new site in local folder
+	- Delete folder, set symlink to GitHub folder
+- Complete refresh
+	- New theme
+	- Plugin clean-up
+	- Trash clean-up
+	- Content check
+# Theme
+- [ ] 
+
 # Excel
 - [ ] Voorraad sheet
 	- [ ] Overzicht inkomsten/uitgaven
