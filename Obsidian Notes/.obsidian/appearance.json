@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "Bahnschrift",
+  "textFontFamily": "Courier New",
+  "monospaceFontFamily": "Courier",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "nativeMenus": false
+}
