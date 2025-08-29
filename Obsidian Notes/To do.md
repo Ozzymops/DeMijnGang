@@ -1,47 +1,19 @@
-# Website
-- LocalWP setup
-	- Create new site in local folder
-	- Delete folder, set symlink to GitHub folder
-- Complete refresh
-	- New theme
-	- Plugin clean-up
-	- Trash clean-up
-	- Content check
-# Theme
-- [ ] 
-
-# Excel
-- [ ] Voorraad sheet
-	- [ ] Overzicht inkomsten/uitgaven
-	- [ ] Overzicht voorraad X: aantal in voorraad/geleverd
-	- [ ] Zichtbaar in oude file?
-
-# Website
-- [ ] Calendar / Booking Management plugin: https://www.wpbookingsystem.com/pricing/
-- [ ] Important (?)
-	- [ ] Voorzitter, secretaris, penningsmeester
-	- [ ] Fiscale nummer
-	- [ ] Beleidsplan
-	- [ ] Financiële verantwoording
-# Theme
-- [ ] 
-# Plugin
-- [ ] Export Events Manager events in XML or other readable format for App
-# App
-- [ ] Retrieve Events Manager events via export XML from Plugin
-	- [ ] Manual when App is being launched
-	- [ ] Asynchronous / automated check every hour (in background)
-	- [ ] Show event as grouped object, tap to expand for more information
-	- [ ] Store events in local database, compare with retrieved data to reduce excessive processing
-- [ ] Display events on single scrollable page
-	- [ ] Display featured event first-and-foremost
-- [ ] Subscribe to event for push notifications
-- [ ] Participate in event, automatically subscribing and notifying App owner of participation
-- [ ] Ability to comment on events
-- [ ] Push notification for newly added (major) events
-- [ ] Push notification for upcoming (subscribed / major) events
-- [ ] App upload
-	- [ ] Google Play: € 25,- one-time fee
-	- [ ] iOS: € 100,- annual fee, not including machine to build the App
-		- [ ] https://appcircle.io/pricing for machine rental
-	- [ ] Local on WordPress, linked via a QR-code
+# Theme Redesign & Fix for Mobile
+- Set up LocalWP; create new site in local folder, set symlink to GitHub folder.
+- Rewrite theme from scratch; responsiveness #1 concern.
+- Modernize theme with somewhat the same styling.
+- Use Understrap: https://docs.understrap.com/#/understrap-child/, https://nodejs.org/en/download, https://browsersync.io/#install
+- Follow this Youtube tutorial: https://www.youtube.com/watch?v=MoO-UsIvFIs
+---
+# De MijnGang App
+- [ ] Custom plugin for exporting Events Manager events in XML / json.
+- [ ] MAUI application for Android / iOS devices.
+- [ ] Retrieve information from plugin when 1. app is launched; 2. in the background, every hour.
+- [ ] Events stored in local database are shown as grouped objects: tap to expand for more information.
+- [ ] Compare stored events with data from the plugin before applying to reduce redundancy.
+- [ ] Event subscriptions for push notifications. Event participation also subscribes to the event.
+- [ ] Ability to comment on events.
+- [ ] Push notifications for newly added major events and upcoming subscribed events.
+- [ ] App upload fees: Google Play € 25,- one-time fee; iOS € 100,- annual fee.
+- [ ] Consider uploading the app to the website for free distribution via QR-code?
+- [ ] Rentable machine to build iOS application from: https://appcircle.io/pricing.

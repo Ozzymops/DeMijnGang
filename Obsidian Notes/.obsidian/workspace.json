@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "To do.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -196,10 +196,11 @@
   },
   "active": "75f02102f1a612aa",
   "lastOpenFiles": [
-    "Notes.md",
-    "Draft.md",
-    "Bookmarks.md",
+    "Commands.md",
     "To do.md",
+    "Draft.md",
+    "Notes.md",
+    "Bookmarks.md",
     "Gaming/Action RPG/Path of Exile.md",
     "System Configuration/Reinstall Checklist.md",
     "System Configuration/NVIDIA.md",
@@ -226,7 +227,6 @@
     "Gaming/Valorant.md",
     "Gaming/S.T.A.L.K.E.R..md",
     "Gaming/Souls-like/Nioh.md",
-    "Gaming/Souls-like/ELDEN RING.md",
     "Gaming/Souls-like",
     "Gaming/The Elder Scrolls",
     "Gaming/Fallout",
