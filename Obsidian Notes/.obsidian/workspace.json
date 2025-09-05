@@ -8,20 +8,39 @@
         "type": "tabs",
         "children": [
           {
-            "id": "75f02102f1a612aa",
+            "id": "673604c981ed0a40",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "To do.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "To do"
             }
+          },
+          {
+            "id": "75f02102f1a612aa",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Changelog.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Changelog"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,8 +215,11 @@
   },
   "active": "75f02102f1a612aa",
   "lastOpenFiles": [
-    "Commands.md",
     "To do.md",
+    "Changelog.md",
+    "Website/Snippets.md",
+    "Website",
+    "Commands.md",
     "Draft.md",
     "Notes.md",
     "Bookmarks.md",
@@ -225,13 +247,10 @@
     "Gaming/RimWorld.md",
     "Gaming/Baldur's Gate 3.md",
     "Gaming/Valorant.md",
-    "Gaming/S.T.A.L.K.E.R..md",
-    "Gaming/Souls-like/Nioh.md",
     "Gaming/Souls-like",
     "Gaming/The Elder Scrolls",
     "Gaming/Fallout",
     "Gaming/RPG",
-    "Gaming/Action RPG",
     "Untitled.canvas"
   ]
 }
