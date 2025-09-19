@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "To do.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "pinned": true,
@@ -39,8 +39,7 @@
               "title": "Changelog"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,10 +212,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "75f02102f1a612aa",
+  "active": "673604c981ed0a40",
   "lastOpenFiles": [
-    "To do.md",
     "Changelog.md",
+    "To do.md",
     "Website/Snippets.md",
     "Website",
     "Commands.md",
