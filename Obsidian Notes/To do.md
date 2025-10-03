@@ -3,6 +3,7 @@
 - Rewrite theme from scratch; responsiveness #1 concern.
 - Modernize theme with somewhat the same styling.
 - Use Understrap: https://docs.understrap.com/#/understrap-child/, https://nodejs.org/en/download, https://browsersync.io/#install
+- Apply interesting gimmicks from Bootstrap docs: https://getbootstrap.com/docs/5.0/getting-started/introduction/
 - Follow this Youtube tutorial: https://www.youtube.com/watch?v=MoO-UsIvFIs
 ---
 # De MijnGang App

@@ -1,3 +1,12 @@
+# 3-10-2025
+## Website
+- De Koempelkast: adjusted opening times
+## Theme
+- Basically finalized
+- Many a:hover elements
+- Navbar finished, still have to finish mobile navbar
+- Nicer buttons
+- Restructed css file
 # 5-9-2025
 ## Website
 - Ons team: Jan => Josanne
