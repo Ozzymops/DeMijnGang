@@ -1,5 +1,7 @@
 # Theme Redesign & Fix for Mobile
-- Set up LocalWP; create new site in local folder, set symlink to GitHub folder.
+- Figure out a way to properly sync the site between the two workstations.
+- Theme images aren't being synced.
+
 - Rewrite theme from scratch; responsiveness #1 concern.
 - Modernize theme with somewhat the same styling.
 - Use Understrap: https://docs.understrap.com/#/understrap-child/, https://nodejs.org/en/download, https://browsersync.io/#install
