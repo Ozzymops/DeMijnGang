@@ -1,22 +1,25 @@
-# Theme Redesign & Fix for Mobile
-- Figure out a way to properly sync the site between the two workstations.
-- Theme images aren't being synced.
-
-- Rewrite theme from scratch; responsiveness #1 concern.
-- Modernize theme with somewhat the same styling.
-- Use Understrap: https://docs.understrap.com/#/understrap-child/, https://nodejs.org/en/download, https://browsersync.io/#install
-- Apply interesting gimmicks from Bootstrap docs: https://getbootstrap.com/docs/5.0/getting-started/introduction/
-- Follow this Youtube tutorial: https://www.youtube.com/watch?v=MoO-UsIvFIs
+# Site Tweaks
+- Update fotoalbums van Facebook
+- Styling - Footer
+	- Dunner op desktop
+	- Niet sticky op mobile
+	- Copyright/alle rechten voorbehouden tekst moet kleiner qua verticaliteit
+- Styling - Nieuws & Blog
+	- Homepagina Blog preview
+	- Nieuws & Blog paginas functioneel maken
+- Styling - Willekeurig
+	- Aanvraag pas -> witte achtergrond achter Lees de algemene voorwaarden
+	- Ninja Forms -> witte achtergrond in textboxes, misschien beige?
+Doe Styling gerelateerde zaken eerst als hotfixes in de WordPress Customizer, om later te verwerken in een daadwerkelijke release van het thema.
 ---
-# De MijnGang App
-- [ ] Custom plugin for exporting Events Manager events in XML / json.
-- [ ] MAUI application for Android / iOS devices.
-- [ ] Retrieve information from plugin when 1. app is launched; 2. in the background, every hour.
-- [ ] Events stored in local database are shown as grouped objects: tap to expand for more information.
-- [ ] Compare stored events with data from the plugin before applying to reduce redundancy.
-- [ ] Event subscriptions for push notifications. Event participation also subscribes to the event.
-- [ ] Ability to comment on events.
-- [ ] Push notifications for newly added major events and upcoming subscribed events.
-- [ ] App upload fees: Google Play € 25,- one-time fee; iOS € 100,- annual fee.
-- [ ] Consider uploading the app to the website for free distribution via QR-code?
-- [ ] Rentable machine to build iOS application from: https://appcircle.io/pricing.
+# Deprecated: De MijnGang App
+- WordPress plugin voor het exporteren van Events Manager events in XML/json
+- Android/iOS MAUI applicatie
+- App roept plugin aan via api-call, stuurt informatie van events naar app, app slaat op in lokale database na redundancy checks
+- App toont lijst van activiteiten
+	- Gebruiker kan abboneren op activiteiten en krijgen dan een push notification wanneer de activiteit op het punt staat te beginnen, of bijvoorbeeld een dag van te voren, enz.
+	- Gebruiker kan meedoen met een activiteit, waardoor ze ingeschreven staan; meedoen telt ook als abboneren
+	- Gebruiker kan reacties achterlaten op activiteiten, die andere gebruikers weer kunnen lezen
+	- Gebruiker krijgt een push notification wanneer een nieuwe activiteit wordt toegevoegd aan de lijst; alleen grote, belangrijke activiteiten
+- Kosten om te uploaden: Google Play eenmalig € 25,-; iOS jaarlijks € 100,-; gratis op lokale site, minder verspreiding
+	- Machine huren om te builden naar iOS: https://appcircle.io/pricing
