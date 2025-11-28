@@ -1,15 +1,5 @@
 # Site Tweaks
 - Update fotoalbums van Facebook
-- Styling - Footer
-	- Dunner op desktop
-	- Niet sticky op mobile
-	- Copyright/alle rechten voorbehouden tekst moet kleiner qua verticaliteit
-- Styling - Nieuws & Blog
-	- Homepagina Blog preview
-	- Nieuws & Blog paginas functioneel maken
-- Styling - Willekeurig
-	- Aanvraag pas -> witte achtergrond achter Lees de algemene voorwaarden
-	- Ninja Forms -> witte achtergrond in textboxes, misschien beige?
 Doe Styling gerelateerde zaken eerst als hotfixes in de WordPress Customizer, om later te verwerken in een daadwerkelijke release van het thema.
 ---
 # Deprecated: De MijnGang App
