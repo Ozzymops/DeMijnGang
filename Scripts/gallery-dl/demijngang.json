@@ -1,7 +1,0 @@
-{
-	"extractor": {
-	   "facebook": {
-		  "directory": ["{date:%Y}", "{date:%m}"]
-	   }
-	}
-}
