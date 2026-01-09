@@ -12,3 +12,5 @@
 13-12-2025
 - Pagina van de Koempelkast bijgewerkt.
 - Footer spacing hotfix pt. 2.
+14-12-2025
+- Pagina van de Koempelkast bijgewerkt.
