@@ -1,6 +1,17 @@
-# Site Tweaks
-- Update fotoalbums van Facebook
+# Websites
+## Unikko
+- Coaching / participatie website.
+- Layout wordt later geleverd.
+- Inhoud:
+	- Algemene informatie / Home
+	- Achtergrond
+	- Over ons
+	- Tarieven
+	- Verwijzing
+	- Contact
+## De MijnGang
 Doe Styling gerelateerde zaken eerst als hotfixes in de WordPress Customizer, om later te verwerken in een daadwerkelijke release van het thema.
+
 ---
 # Deprecated: De MijnGang App
 - WordPress plugin voor het exporteren van Events Manager events in XML/json
