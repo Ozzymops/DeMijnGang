@@ -17,3 +17,7 @@
 9-1-2026
 - Unikko project opgezet.
 - Unikko: sjabloon pagina's, privacyverklaring, algemene voorwaarden, en custom theme opgezet.
+20-2-2026
+- SV De MijnGang toegevoegd.
+- Arrangementen pagina toegevoegd, Ruimte huren verwijderd.
+- Foto van bank bij de ingang geupdatet.

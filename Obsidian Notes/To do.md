@@ -1,4 +1,12 @@
 # Websites
+# De MijnGang
+- ...
+# Overig
+- Inventarisatiesysteem met in/out scanning voor materiaal leningen (?)
+- Aannemend...
+	- Integratie met barcode scanner
+	- Scannen voor product, handmatig naam/locatie invullen
+	- Website/Applicatie met (printbaar) barcode generator en database interface (leesbaar bij wie of waar het artikel is, hoeveel artikelen nog over zouden moeten zijn, etc.), met de mogelijkheid nieuwe artikelen te registreren
 ## Unikko
 - Coaching / participatie website.
 - Layout wordt later geleverd.
