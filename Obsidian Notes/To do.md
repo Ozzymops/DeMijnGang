@@ -1,7 +1,8 @@
 # Websites
 # De MijnGang
 - ...
-# Overig
+# Inventarisatiesysteem
+- https://snipeitapp.com/
 - Inventarisatiesysteem met in/out scanning voor materiaal leningen (?)
 - Aannemend...
 	- Integratie met barcode scanner
@@ -17,6 +18,7 @@
 	- Tarieven
 	- Verwijzing
 	- Contact
+- 
 ## De MijnGang
 Doe Styling gerelateerde zaken eerst als hotfixes in de WordPress Customizer, om later te verwerken in een daadwerkelijke release van het thema.
 
