@@ -53,7 +53,8 @@
               "title": "Notes"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -231,10 +232,10 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "673604c981ed0a40",
+  "active": "b5504aa83fbba522",
   "lastOpenFiles": [
-    "Changelog.md",
     "To do.md",
+    "Changelog.md",
     "Notes.md",
     "Secure Notes.md",
     "Website/Snippets.md",
