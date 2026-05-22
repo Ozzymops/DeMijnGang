@@ -9,6 +9,10 @@
 	- Scannen voor product, handmatig naam/locatie invullen
 	- Website/Applicatie met (printbaar) barcode generator en database interface (leesbaar bij wie of waar het artikel is, hoeveel artikelen nog over zouden moeten zijn, etc.), met de mogelijkheid nieuwe artikelen te registreren
 ## Unikko
+- [ ] Geen cookies (als mogelijk)
+- [ ] 
+
+
 - Coaching / participatie website.
 - Layout wordt later geleverd.
 - Inhoud:
