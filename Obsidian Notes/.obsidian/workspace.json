@@ -54,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -232,7 +232,7 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "b5504aa83fbba522",
+  "active": "75f02102f1a612aa",
   "lastOpenFiles": [
     "To do.md",
     "Unikko.md",
