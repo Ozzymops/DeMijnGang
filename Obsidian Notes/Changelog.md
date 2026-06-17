@@ -1,6 +1,11 @@
+17-6-2026
+- Unikko
+	- Bloembalken gefixet voor meerdere resoluties
+	- Navigatie resize op basis van meerdere resoluties
+	- Kleine tweaks
 15-6-2026
 - Unikko
-	- Mobile-first volledige rewrite van CSS.
+	- Mobile-first volledige rewrite van CSS
 12-6-2026
 - Unikko
 	- Navigatie balk: schaduw onder knop bij actieve pagina, titel van pagina bovenin verwijderd
