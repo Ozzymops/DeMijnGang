@@ -1,3 +1,7 @@
+18-6-2026
+- Unikko
+	- Credits toegevoegd
+	- Bloembalken blurry en gemasked gemaakt
 17-6-2026
 - Unikko
 	- Bloembalken gefixet voor meerdere resoluties
